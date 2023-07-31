@@ -14,5 +14,11 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+app.get("/login", (req, res) => {
+  res.render("pages/login", {
+    layout: "layouts/auth",
+  });
+});
+
 app.listen(3300);
 console.log("listening to port: 3300");
