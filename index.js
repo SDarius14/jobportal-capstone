@@ -14,5 +14,9 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+app.get("/employee-dashboard", (req, res) => {
+  res.render("pages/employee-dashboard");
+});
+
 app.listen(3300);
 console.log("listening to port: 3300");
