@@ -1,20 +1,16 @@
-<div class="bg-[#244034] h-[50dvh] w-full flex justify-center items-center">
-  <div class="text-white">
-    <h1 class="text-6xl text-eb">Hi, Welcome Back!</h1>
-    
-  </div>
-</div>
+<%- include('../components/listing-header.ejs', { text: 'Hi, Welcome Back!',
+subtext: 'Explore more, log in now.' }) %>
 
 <div class="px-5 mx-auto flex justify-center items-center">
   <div class="bg-white rounded-xl my-10 md:mx-10 w-full md:w-[50dvw] mx">
     <div class="p-5 md:p-10 w-full flex flex-col items-center justify-center">
-      <h1 class="text-eb text-4xl mb-5">Login</h1>
-      <h4 class="text-center text-xl mt-2">
+      <h1 class="text-eb text-[#244034] text-4xl mb-2 font-semibold">Login</h1>
+      <h4 class="text-center text-xl mt-2 font-thin">
         Still don't have an account?
         <span><a href="/signup" class="text-blue-400">Signup</a></span>
       </h4>
 
-      <form class="flex flex-col gap-y-5 w-full px-5 md:px-10">
+      <form class="flex flex-col gap-y-5 w-full px-5 md:px-10 mt-10">
         <div class="w-full">
           <label for="email" class="">Email</label>
           <input
@@ -32,9 +28,33 @@
             name="password"
             id="password"
             class="block px-5 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            placeholder="you@example.com"
+            placeholder="Enter Password"
           />
         </div>
+
+        <div class="flex justify-between">
+          <!-- Checkbox -->
+        <div class="relative flex items-start">
+          <div class="flex h-6 items-center">
+            <input
+              id="comments"
+              aria-describedby="comments-description"
+              name="comments"
+              type="checkbox"
+              class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+          </div>
+          <div class="ml-3 text-sm leading-6">
+            <label for="comments" class="font-medium text-gray-900"
+              >Keep me logged in</label
+            >
+          </div>
+        </div>
+        <!-- Checkbox -->
+
+        <h5 class="text-sm"><a href="/forgot-password">Forget Password?</a></h5>
+        </div>
+
         <button
           type="button"
           class="rounded-md bg-[#31795a] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 uppercase"
