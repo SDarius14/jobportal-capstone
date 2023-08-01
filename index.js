@@ -20,5 +20,11 @@ app.get("/login", (req, res) => {
   });
 });
 
+app.get("/signup", (req, res) => {
+  res.render("pages/signup", {
+    layout: "layouts/auth",
+  });
+});
+
 app.listen(3300);
 console.log("listening to port: 3300");
