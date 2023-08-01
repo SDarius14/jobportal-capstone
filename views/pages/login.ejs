@@ -55,12 +55,44 @@ subtext: 'Explore more, log in now.' }) %>
         <h5 class="text-sm"><a href="/forgot-password">Forget Password?</a></h5>
         </div>
 
-        <button
-          type="button"
-          class="rounded-md bg-[#31795a] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 uppercase"
-        >
-          Login
-        </button>
+        <%- include('../components/wide-button.ejs', {
+          buttonText: 'Login'
+        })%>
+
+        <!-- divider -->
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center">
+            <span class="bg-white px-2 text-sm text-gray-500 uppercase">or</span>
+          </div>
+        </div>
+          <!-- divider -->
+
+
+        <div class="flex justify-between gap-x-5">
+          <%  const buttons = [
+           {
+            buttonText: 'Login with Google',
+            iconSrc: 'https://html.creativegigstf.com/jobi/jobi/images/icon/google.png'
+           },
+           {
+            buttonText: 'Login with Facebook',
+            iconSrc: 'https://html.creativegigstf.com/jobi/jobi/images/icon/facebook.png'
+           }
+          ]
+          %>
+
+        
+           
+          <% buttons.forEach(item => { %>
+            <%- include('../components/oAuth-button', item) %>
+         <% }); %>
+            
+        </div>
+
+
       </form>
     </div>
   </div>
