@@ -485,39 +485,6 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
-
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
-  }
-}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -706,9 +673,6 @@ video {
 .items-center {
   align-items: center;
 }
-.justify-start {
-  justify-content: flex-start;
-}
 .justify-center {
   justify-content: center;
 }
@@ -882,26 +846,12 @@ video {
 .pt-8 {
   padding-top: 2rem;
 }
-.pl-20 {
-  padding-left: 5rem;
-}
-.pb-20 {
-  padding-bottom: 5rem;
-}
-.pl-52 {
-  padding-left: 13rem;
-}
-.pl-60 {
-  padding-left: 15rem;
-}
-.pl-96 {
-  padding-left: 24rem;
-}
-.text-left {
-  text-align: left;
-}
 .text-center {
   text-align: center;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-4xl {
   font-size: 2.25rem;
@@ -922,14 +872,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
 }
 .font-bold {
   font-weight: 700;
@@ -1119,38 +1061,33 @@ video {
     border-color: rgb(0 0 0 / var(--tw-border-opacity));
   }
 
-  .sm\:py-48 {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
-
   .sm\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
 
-  .sm\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+  .sm\:py-48 {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 
   .sm\:pt-24 {
     padding-top: 6rem;
   }
 
-  .sm\:text-6xl {
-    font-size: 3.75rem;
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .sm\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
   }
 
   .sm\:leading-6 {
@@ -1191,6 +1128,11 @@ video {
 
   .lg\:col-span-5 {
     grid-column: span 5 / span 5;
+  }
+
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .lg\:mt-24 {
