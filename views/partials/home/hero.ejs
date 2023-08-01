@@ -89,7 +89,7 @@
 <section>
   <!-- Title -->
   <div class="bg-white py-32 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-2xl px-6 lg:px-14">
       <div class="mx-auto max-w-2xl lg:mx-0">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
           Most Demanding Categories.
@@ -105,25 +105,46 @@
       class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
     >
       <!--  -->
-      <%- include("../../components/molecules/jobcategory-card.ejs",
-      {titleText:"Design & Development.", descriptionText: "2340 vacancy"}); %>
+      <li
+        class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
+      >
+        <div class="flex flex-1 flex-col p-8 text-left">
+          <img
+            class="mx-auto h-20 w-20 flex-shrink-0 rounded-full border border-gray-200 mr-48 p-6 hover:bg-lime-300"
+            src="./assets/images/pen.svg"
+            alt=""
+          />
+
+          <h3
+            class="mt-6 text-lg font-medium text-gray-900 hover:text-green-400"
+          >
+            Customer Marketing & Sales.
+          </h3>
+          <dl class="mt-5 flex flex-grow flex-col justify-between">
+            <dt class="sr-only">Title</dt>
+            <dd class="text-lg text-gray-500">1560 vacancy</dd>
+          </dl>
+        </div>
+      </li>
       <!--  -->
       <li
         class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
       >
-        <div class="flex flex-1 flex-col p-8">
+        <div class="flex flex-1 flex-col p-8 text-left">
           <img
-            class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
+            class="mx-auto h-20 w-20 flex-shrink-0 rounded-full border border-gray-200 mr-48 p-6 hover:bg-lime-300"
             src="./assets/images/person.svg"
             alt=""
           />
 
-          <h3 class="mt-6 text-sm font-medium text-gray-900">
+          <h3
+            class="mt-6 text-lg font-medium text-gray-900 hover:text-green-400"
+          >
             Customer Marketing & Sales.
           </h3>
-          <dl class="mt-1 flex flex-grow flex-col justify-between">
+          <dl class="mt-5 flex flex-grow flex-col justify-between">
             <dt class="sr-only">Title</dt>
-            <dd class="text-sm text-gray-500">1560 vacancy</dd>
+            <dd class="text-lg text-gray-500">1560 vacancy</dd>
           </dl>
         </div>
       </li>
@@ -131,19 +152,21 @@
       <li
         class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
       >
-        <div class="flex flex-1 flex-col p-8">
+        <div class="flex flex-1 flex-col p-8 text-left">
           <img
-            class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
+            class="mx-auto h-20 w-20 flex-shrink-0 rounded-full border border-gray-200 mr-48 p-6 hover:bg-lime-300"
             src="./assets/images/briefcase.svg"
             alt=""
           />
 
-          <h3 class="mt-6 text-sm font-medium text-gray-900">
-            Business Marketing.
+          <h3
+            class="mt-6 text-lg font-medium text-gray-900 hover:text-green-400"
+          >
+            Customer Marketing & Sales.
           </h3>
-          <dl class="mt-1 flex flex-grow flex-col justify-between">
+          <dl class="mt-5 flex flex-grow flex-col justify-between">
             <dt class="sr-only">Title</dt>
-            <dd class="text-sm text-gray-500">2210 vacancy</dd>
+            <dd class="text-lg text-gray-500">1560 vacancy</dd>
           </dl>
         </div>
       </li>
@@ -151,19 +174,21 @@
       <li
         class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
       >
-        <div class="flex flex-1 flex-col p-8">
+        <div class="flex flex-1 flex-col p-8 text-left">
           <img
-            class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
+            class="mx-auto h-20 w-20 flex-shrink-0 rounded-full border border-gray-200 mr-48 p-6 hover:bg-lime-300"
             src="./assets/images/phone.svg"
             alt=""
           />
 
-          <h3 class="mt-6 text-sm font-medium text-gray-900">
-            Business Development.
+          <h3
+            class="mt-6 text-lg font-medium text-gray-900 hover:text-green-400"
+          >
+            Customer Marketing & Sales.
           </h3>
-          <dl class="mt-1 flex flex-grow flex-col justify-between">
+          <dl class="mt-5 flex flex-grow flex-col justify-between">
             <dt class="sr-only">Title</dt>
-            <dd class="text-sm text-gray-500">980 vacancy</dd>
+            <dd class="text-lg text-gray-500">1560 vacancy</dd>
           </dl>
         </div>
       </li>
@@ -171,19 +196,21 @@
       <li
         class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
       >
-        <div class="flex flex-1 flex-col p-8">
+        <div class="flex flex-1 flex-col p-8 text-left">
           <img
-            class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
+            class="mx-auto h-20 w-20 flex-shrink-0 rounded-full border border-gray-200 mr-48 p-6 hover:bg-lime-300"
             src="./assets/images/tag.svg"
             alt=""
           />
 
-          <h3 class="mt-6 text-sm font-medium text-gray-900">
-            Programing & Code
+          <h3
+            class="mt-6 text-lg font-medium text-gray-900 hover:text-green-400"
+          >
+            Customer Marketing & Sales.
           </h3>
-          <dl class="mt-1 flex flex-grow flex-col justify-between">
+          <dl class="mt-5 flex flex-grow flex-col justify-between">
             <dt class="sr-only">Title</dt>
-            <dd class="text-sm text-gray-500">1687 vacancy</dd>
+            <dd class="text-lg text-gray-500">1560 vacancy</dd>
           </dl>
         </div>
       </li>
@@ -191,19 +218,21 @@
       <li
         class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
       >
-        <div class="flex flex-1 flex-col p-8">
+        <div class="flex flex-1 flex-col p-8 text-left">
           <img
-            class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
+            class="mx-auto h-20 w-20 flex-shrink-0 rounded-full border border-gray-200 mr-48 p-6 hover:bg-lime-300"
             src="./assets/images/3d.svg"
             alt=""
           />
 
-          <h3 class="mt-6 text-sm font-medium text-gray-900">
-            Video Edition & 3D work
+          <h3
+            class="mt-6 text-lg font-medium text-gray-900 hover:text-green-400"
+          >
+            Customer Marketing & Sales.
           </h3>
-          <dl class="mt-1 flex flex-grow flex-col justify-between">
+          <dl class="mt-5 flex flex-grow flex-col justify-between">
             <dt class="sr-only">Title</dt>
-            <dd class="text-sm text-gray-500">758 vacancy</dd>
+            <dd class="text-lg text-gray-500">1560 vacancy</dd>
           </dl>
         </div>
       </li>
@@ -211,25 +240,41 @@
       <li
         class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
       >
-        <div class="flex flex-1 flex-col p-8">
+        <div class="flex flex-1 flex-col p-8 text-left">
           <img
-            class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
+            class="mx-auto h-20 w-20 flex-shrink-0 rounded-full border border-gray-200 mr-48 p-6 hover:bg-lime-300"
             src="./assets/images/pencil.svg"
             alt=""
           />
 
-          <h3 class="mt-6 text-sm font-medium text-gray-900">
-            Art & Animation.
+          <h3
+            class="mt-6 text-lg font-medium text-gray-900 hover:text-green-400"
+          >
+            Customer Marketing & Sales.
           </h3>
-          <dl class="mt-1 flex flex-grow flex-col justify-between">
+          <dl class="mt-5 flex flex-grow flex-col justify-between">
             <dt class="sr-only">Title</dt>
-            <dd class="text-sm text-gray-500">1452 vacancy</dd>
+            <dd class="text-lg text-gray-500">1560 vacancy</dd>
           </dl>
         </div>
       </li>
       <!--  -->
-      <%- include("../../components/molecules/jobcategory-card.ejs", {titleText:
-      "Design & Development.", descriptionText: "2340 vacancy"}); %>
+      <li
+        class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-green-500 text-center shadow"
+      >
+        <div class="flex flex-1 flex-col p-8 text-left">
+          <h3 class="text-7xl font-medium text-white font-serif">13k+</h3>
+          <dl class="mt-4 mb-10 flex flex-grow flex-col justify-between">
+            <dt class="sr-only">Title</dt>
+            <dd class="text-lg text-white">Job already posted</dd>
+          </dl>
+          <img
+            class="mx-auto h-20 w-20 flex-shrink-0 rounded-full border border-white mr-48 p-6 hover:bg-lime-300"
+            src="./assets/images/arrow-one.svg"
+            alt=""
+          />
+        </div>
+      </li>
     </ul>
   </div>
   <!-- Cards -->
