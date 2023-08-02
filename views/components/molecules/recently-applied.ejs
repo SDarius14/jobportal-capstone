@@ -1,0 +1,37 @@
+<a
+  href="#"
+  class="flex items-center justify-start bg-white px-2 py-4 hover:bg-gray-50"
+>
+  <div class="flex justify-center items-center mx-4">
+    <img
+      class="h-12 w-12 flex-shrink-0"
+      src="<%= companyImageSource %>"
+      alt=""
+    />
+  </div>
+  <span class="flex items-center space-x-4 flex-1">
+    <span class="flex flex-1 space-x-2 truncate">
+      <span class="flex flex-col truncate text-sm text-gray-500">
+        <span class="truncate"><%= companyName %></span>
+        <span>
+          <span class="font-medium text-gray-900"><%= appliedPosition %></span>
+        </span>
+        <p class="text-xs text-gray-500"><%= dateApplied %></p>
+      </span>
+    </span>
+  </span>
+  <div class="flex items-center">
+    <svg
+      class="h-6 w-6 flex-shrink-0 text-gray-400"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </div>
+</a>
