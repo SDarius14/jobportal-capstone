@@ -97,13 +97,15 @@
       </div>
     </div>
   </div>
-  <!-- Title -->
+  <!-- /Title -->
+
   <!-- Cards -->
   <div class="flex justify-center">
     <ul
       role="list"
       class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 
+    <!-- First Cards -->
     <% 
     const cards = [ { 
         titleText: 'Design & Development.', 
@@ -143,32 +145,33 @@
     ]; 
     %>
 
-  <!-- Cards Foreach -->
-  <% cards.forEach((card) => { %> 
-  <%- include('../../components/molecules/jobcategory-card', card) %> 
-  <% }); %>
+    <!-- /Cards Foreach -->
+    <% cards.forEach((card) => { %> 
+    <%- include('../../components/molecules/jobcategory-card', card) %> 
+    <% }); %>
+    <!-- /First Card -->
 
-  <!-- Last Card --> 
-  <% 
-  const cardsTwo = [ { 
-    titleTextTwo: 'Design & Development.', 
-    descriptionTextTwo: '2340 vacancy', 
-    cardIconTwo: include('../../components/atoms/arrow-one-icon')
-    }
-  ];  
-  %>
+    <!-- Last Card --> 
+    <% 
+    const cardsTwo = [ { 
+      titleTextTwo: 'Design & Development.', 
+      descriptionTextTwo: '2340 vacancy', 
+      cardIconTwo: include('../../components/atoms/arrow-one-icon')
+      }
+    ];  
+    %>
 
-  <!-- CardsTwo Foreach -->
-  <% cardsTwo.forEach((card) => { %> 
-  <%- include('../../components/molecules/jobcategory-card-two', card) %> 
-  <% }); %>
-  <!-- Last Card --> 
+    <!-- Lat Card Foreach -->
+    <% cardsTwo.forEach((card) => { %> 
+    <%- include('../../components/molecules/jobcategory-card-two', card) %> 
+    <% }); %>
+    <!-- /Last Card --> 
 
     <ul>
   <div>
-  <!-- Cards -->
+  <!-- /Cards -->
 </section>
-<!-- Second Section -->
+<!-- /Second Section -->
 
 
 
