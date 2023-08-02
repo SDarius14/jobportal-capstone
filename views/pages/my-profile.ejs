@@ -1,0 +1,119 @@
+<% title = 'My Profile' %>
+
+<!-- Personal Info Array -->
+<% const inputInfos =
+  [ 
+    { 
+      inputName:'first-name', 
+      inputLabel: 'First Name', 
+      inputColSize: 'sm:col-span-3'
+    },
+    { 
+      inputName:'last-name', 
+      inputLabel: 'Last Name', 
+      inputColSize: 'sm:col-span-3'
+    },
+    { 
+      inputName: 'email-address', 
+      inputLabel: 'Email Address', 
+      inputColSize: 'sm:col-span-4'
+    },
+    { 
+      inputName: 'country', 
+      inputLabel: 'Country', 
+      inputColSize: 'sm:col-span-4'
+    },
+    { 
+      inputName:'street-adress', 
+      inputLabel: 'Street Address', 
+      inputColSize: 'col-span-full'
+    },
+    { 
+      inputName: 'city', 
+      inputLabel: 'City', 
+      inputColSize: 'sm:col-span-2 sm:col-start-1'
+    },
+    ,
+    { 
+      inputName: 'state-rovince', 
+      inputLabel: 'State/Province', 
+      inputColSize: 'sm:col-span-2'
+    },
+    { 
+      inputName: 'zip-code', 
+      inputLabel: 'ZIP/Postal Code', 
+      inputColSize: 'sm:col-span-2'
+    },
+
+  ]; %>
+
+  <!-- Profile Info Array -->
+<% const profileInfos =
+  [ 
+    { 
+      inputName:'portfolio', 
+      inputLabel: 'Portfolio', 
+      inputColSize: 'sm:col-span-4'
+    },
+    { 
+      inputName:'position', 
+      inputLabel: 'Position', 
+      inputColSize: 'sm:col-span-4'
+    },
+    { 
+      inputName: 'salary', 
+      inputLabel: 'Desired Monthly Salary', 
+      inputColSize: 'sm:col-span-4',
+      
+    }
+
+  ]; %>
+
+    <!-- Profile Info Array -->
+<% const experiences =
+  [ 
+    { 
+      header:'Work Experience', 
+      inputGroup: [
+        {
+          inputName:'company-name', 
+          inputLabel: 'Company Name', 
+          inputColSize: 'sm:col-span-3'
+        },
+        {
+          inputName:'position', 
+          inputLabel: 'Position', 
+          inputColSize: 'sm:col-span-3'
+        },
+      ]
+    },
+    { 
+      header:'Educational Experience', 
+      inputGroup: [
+        {
+          inputName:'institution-name', 
+          inputLabel: 'Institution Name', 
+          inputColSize: 'sm:col-span-3'
+        },
+        {
+          inputName:'degree', 
+          inputLabel: 'Degree', 
+          inputColSize: 'sm:col-span-3'
+        },
+      ]
+    }
+
+  ]; %>
+
+
+
+<div class="space-y-10 divide-y divide-gray-900/10">
+  <!-- Personal Info -->
+  <%- include('../partials/my-profile/personal-info', {header: 'Personal Information', description: 'Use a permanent address where you can receive mail.', inputInfos}) %>
+
+  <!-- Profile -->
+  <%- include('../partials/my-profile/profile', {header: 'Profile', description: 'This information will be displayed publicly so be careful what you share.', profileInfos}) %>
+
+  <!-- Experiences -->
+  <%- include('../partials/my-profile/experience', {header: 'Experiences', description: 'We\'ll always let you know about important changes, but you pick what else you want to hear about.', experiences}) %>
+</div>

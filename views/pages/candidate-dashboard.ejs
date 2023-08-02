@@ -1,0 +1,78 @@
+<% title = 'Dashboard' %>
+
+<!-- Cards Array -->
+<% const cards = 
+[ 
+  { 
+    cardText: 'Total Visitors', 
+    cardNum: '1,897', 
+    cardIcon: include('../components/atoms/people-icon'), 
+    percentChange: include('../components/atoms/increase-icon'), 
+    percentValue: '122%',
+    percentColor: 'green' 
+  }, 
+  { 
+    cardText: 'Shortlisted', 
+    cardNum: '18', 
+    cardIcon: include('../components/atoms/bookmark-icon'), 
+    percentChange: include('../components/atoms/decrease-icon'), 
+    percentValue: '9.1%',
+    percentColor: 'red' 
+  }, 
+  { 
+    cardText: 'Views', 
+    cardNum: '209', 
+    cardIcon: include('../components/atoms/views-icon'), 
+    percentChange: include('../components/atoms/increase-icon'), 
+    percentValue: '5.6%',
+    percentColor: 'green' 
+  }, 
+  { 
+    cardText: 'Applied', 
+    cardNum: '52', 
+    cardIcon: include('../components/atoms/applied-icon'), 
+    percentChange: include('../components/atoms/decrease-icon'), 
+    percentValue: '15%', 
+    percentColor: 'red' 
+  }  
+]; %>
+
+<!-- Jobs Array -->
+<% const jobs =
+[
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/logo/media_24.png',
+    companyName : 'CodeMNL', 
+    appliedPosition: 'Jr. Bootcamp Instructor',
+    dateApplied: 'July 31, 2023' 
+  },
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/logo/media_26.png',
+    companyName : 'Leaf', 
+    appliedPosition: 'Jr. Software Developer', 
+    dateApplied: 'July 21, 2023' 
+  },
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/logo/media_35.png',
+    companyName : 'Super Lightning', 
+    appliedPosition: 'Jr. Backend Developer',
+    dateApplied: 'July 16, 2023' 
+  },
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/logo/media_36.png',
+    companyName : 'Friends Connect', 
+    appliedPosition: 'Mid Backend Developer',
+    dateApplied: 'July 10, 2023' 
+  },
+]; %>
+
+<!-- Highlights -->
+<%- include('../partials/candidate-dashboard/highlights', {cards}); %>
+
+<div class="grid grid-rows-2 md:grid-cols-2 gap-2">
+  <!-- profile views -->
+  <%- include('../partials/candidate-dashboard/viewsgraph'); %>
+
+  <!-- Recent Activities -->
+  <%- include('../partials/candidate-dashboard/recent-activities', {jobs}); %>
+</div>
