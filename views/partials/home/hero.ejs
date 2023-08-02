@@ -32,7 +32,7 @@
                   placeholder="Search Jobs..."
                   type="search"
                 />
-                <!-- Search Label -->
+                <!-- /Search Label -->
                 <button
                   type="submit"
                   class="flex-none rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
@@ -46,10 +46,10 @@
               </p>
             </form>
           </div>
-          <!-- Search Section -->
+          <!-- /Search Section -->
         </div>
       </div>
-      <!-- Main Hero -->
+      <!-- /Main Hero -->
 
       <!-- Background Style -->
       <div
@@ -80,7 +80,7 @@
           "
         ></div>
       </div>
-      <!-- Background Style -->
+      <!-- /Background Style -->
     </section>
   </div>
 </div>
@@ -105,67 +105,67 @@
       role="list"
       class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 
-    <!-- First Cards -->
-    <% 
-    const cards = [ { 
-        titleText: 'Design & Development.', 
-        descriptionText: '2340 vacancy', 
-        cardIcon: include('../../components/atoms/pen-icon')
-      }, 
-      { 
-        titleText: 'Customer Marketing & Sales.', 
-        descriptionText: '1560 vacancy', 
-        cardIcon: include('../../components/atoms/person-icon')
-      }, 
-      { 
-        titleText: 'Business Marketing.', 
-        descriptionText: '2210 vacancy', 
-        cardIcon: include('../../components/atoms/briefcase-icon')
-      }, 
-      { 
-        titleText: 'Business Development.', 
-        descriptionText: '980 vacancy', 
-        cardIcon: include('../../components/atoms/phone-icon')
-      },
-      { 
-        titleText: 'Programming & Code.', 
-        descriptionText: '1687 vacancy', 
-        cardIcon: include('../../components/atoms/tag-icon')
-      }, 
-      { 
-        titleText: 'Video Edition & 3D work.', 
-        descriptionText: '758 vacancy', 
-        cardIcon: include('../../components/atoms/3d-icon')
-      }, 
-      { 
-        titleText: 'Art & Animation', 
-        descriptionText: '1452 vacancy', 
-        cardIcon: include('../../components/atoms/briefcase-icon')
-      }
-    ]; 
-    %>
+      <!-- First Cards -->
+      <% 
+      const cards = [ { 
+          titleText: 'Design & Development.', 
+          descriptionText: '2340 vacancy', 
+          cardIcon: include('../../components/atoms/pen-icon')
+        }, 
+        { 
+          titleText: 'Customer Marketing & Sales.', 
+          descriptionText: '1560 vacancy', 
+          cardIcon: include('../../components/atoms/person-icon')
+        }, 
+        { 
+          titleText: 'Business Marketing.', 
+          descriptionText: '2210 vacancy', 
+          cardIcon: include('../../components/atoms/briefcase-icon')
+        }, 
+        { 
+          titleText: 'Business Development.', 
+          descriptionText: '980 vacancy', 
+          cardIcon: include('../../components/atoms/phone-icon')
+        },
+        { 
+          titleText: 'Programming & Code.', 
+          descriptionText: '1687 vacancy', 
+          cardIcon: include('../../components/atoms/tag-icon')
+        }, 
+        { 
+          titleText: 'Video Edition & 3D work.', 
+          descriptionText: '758 vacancy', 
+          cardIcon: include('../../components/atoms/3d-icon')
+        }, 
+        { 
+          titleText: 'Art & Animation', 
+          descriptionText: '1452 vacancy', 
+          cardIcon: include('../../components/atoms/briefcase-icon')
+        }
+      ]; 
+      %>
 
-    <!-- /Cards Foreach -->
-    <% cards.forEach((card) => { %> 
-    <%- include('../../components/molecules/jobcategory-card', card) %> 
-    <% }); %>
-    <!-- /First Card -->
+      <!-- /Cards Foreach -->
+      <% cards.forEach((card) => { %> 
+      <%- include('../../components/molecules/jobcategory-card', card) %> 
+      <% }); %>
+      <!-- /First Card -->
 
-    <!-- Last Card --> 
-    <% 
-    const cardsTwo = [ { 
-      titleTextTwo: 'Design & Development.', 
-      descriptionTextTwo: '2340 vacancy', 
-      cardIconTwo: include('../../components/atoms/arrow-one-icon')
-      }
-    ];  
-    %>
+      <!-- Last Card --> 
+      <% 
+      const cardsTwo = [ { 
+        titleTextTwo: 'Design & Development.', 
+        descriptionTextTwo: '2340 vacancy', 
+        cardIconTwo: include('../../components/atoms/arrow-one-icon')
+        }
+      ];  
+      %>
 
-    <!-- Lat Card Foreach -->
-    <% cardsTwo.forEach((card) => { %> 
-    <%- include('../../components/molecules/jobcategory-card-two', card) %> 
-    <% }); %>
-    <!-- /Last Card --> 
+      <!-- Lat Card Foreach -->
+      <% cardsTwo.forEach((card) => { %> 
+      <%- include('../../components/molecules/jobcategory-card-two', card) %> 
+      <% }); %>
+      <!-- /Last Card --> 
 
     <ul>
   <div>
