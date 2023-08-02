@@ -1077,6 +1077,11 @@ video {
   background-color: rgb(190 242 100 / var(--tw-bg-opacity));
 }
 
+.group:hover .group-hover\:bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
 .group:hover .group-hover\:text-green-400 {
   --tw-text-opacity: 1;
   color: rgb(74 222 128 / var(--tw-text-opacity));
