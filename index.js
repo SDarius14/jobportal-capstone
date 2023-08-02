@@ -13,6 +13,26 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+app.get("/job-list", (req, res) => {
+  res.render("pages/job-list");
+});
+
+app.get("/job-details", (req, res) => {
+  res.render("pages/job-details");
+});
+
+app.get("/candidates", (req, res) => {
+  res.render("pages/candidates");
+});
+
+app.get("/candidate-profile", (req, res) => {
+  res.render("pages/candidate-profile");
+});
+
+app.get("/list", (req, res) => {
+  res.render("components/list");
+});
+
 app.get("/candidate-dashboard", (req, res) => {
   res.render("pages/candidate-dashboard", {
     layout: "layouts/dashboard",
