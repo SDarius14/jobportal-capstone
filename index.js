@@ -30,5 +30,9 @@ app.get("/candidate-profile", (req, res) => {
   res.render("pages/candidate-profile");
 });
 
+app.get("/list", (req, res) => {
+  res.render("components/list");
+});
+
 app.listen(3300);
 console.log("listening to port: 3300");
