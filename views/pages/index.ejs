@@ -1,5 +1,4 @@
 <% title = "Home Page" %>
-<!--Hero Section-->
 
 <!-- Cards Array -->
 <% 
@@ -52,9 +51,18 @@
       ];  
       %>
 
+<!--Hero Section-->
+<%- include('../partials/home/hero', {
+  title: "Find & Hire Experts for any Job",
+  subTitle: "Jobs & Job search. Find jobs in global. Executive jobs & work.",
+  description: "Popular:",
+  descriptionTwo: "Design, Art, Business, Video Editing"
+}); %>
 
-<%- include('../partials/home/hero'); %>
-
-<%- include('../partials/home/job-categories', {cards, cardsTwo}); %>
+<%- include('../partials/home/job-categories', {
+  title: "Most Demanding Categories.",
+  cards, 
+  cardsTwo
+}); %>
 
 <%- include('../partials/home/how-its-work'); %>
