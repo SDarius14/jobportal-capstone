@@ -51,6 +51,26 @@
       ];  
       %>
 
+<!-- Workflow Array -->
+<% 
+const workflows = [ { 
+    title: 'Create Account', 
+    description: "It's very easy to open an account and start your journey.",
+    icon: include('../components/atoms/person-white-icon')
+  }, 
+  { 
+    title: 'Complete your profile', 
+    description: 'Complete your profile with all the info to get attention of client.',
+    icon: include('../components/atoms/note-white-icon')
+  }, 
+  { 
+    title: 'Apply job or hire.', 
+    description: 'Apply & get your preferable jobs with all the requirements and get it.',
+    icon: include('../components/atoms/pen-white-icon')
+  }
+]; 
+%>
+
 <!--Hero Section-->
 <%- include('../partials/home/hero', {
   title: "Find & Hire Experts for any Job",
@@ -59,11 +79,12 @@
   descriptionTwo: "Design, Art, Business, Video Editing"
 }); %>
 
-<!-- Most Demanding Categories Section-->
+<!-- Jobcategory Section-->
 <%- include('../partials/home/job-categories', {
   title: "Most Demanding Categories.",
   cards, 
   cardsTwo
 }); %>
 
-<%- include('../partials/home/how-its-work'); %>
+<!-- Workflow Section -->
+<%- include('../partials/home/how-its-work', {workflows}); %>
