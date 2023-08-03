@@ -1,3 +1,48 @@
 <% title = "Home Page" %>
 <!--Hero Section-->
+
+<!-- Cards Array -->
+<% 
+      const cards = [ { 
+          titleText: 'Design & Development.', 
+          descriptionText: '2340 vacancy', 
+          cardIcon: include('../components/atoms/pen-icon')
+        }, 
+        { 
+          titleText: 'Customer Marketing & Sales.', 
+          descriptionText: '1560 vacancy', 
+          cardIcon: include('../components/atoms/person-icon')
+        }, 
+        { 
+          titleText: 'Business Marketing.', 
+          descriptionText: '2210 vacancy', 
+          cardIcon: include('../components/atoms/briefcase-icon')
+        }, 
+        { 
+          titleText: 'Business Development.', 
+          descriptionText: '980 vacancy', 
+          cardIcon: include('../components/atoms/phone-icon')
+        },
+        { 
+          titleText: 'Programming & Code.', 
+          descriptionText: '1687 vacancy', 
+          cardIcon: include('../components/atoms/tag-icon')
+        }, 
+        { 
+          titleText: 'Video Edition & 3D work.', 
+          descriptionText: '758 vacancy', 
+          cardIcon: include('../components/atoms/3d-icon')
+        }, 
+        { 
+          titleText: 'Art & Animation', 
+          descriptionText: '1452 vacancy', 
+          cardIcon: include('../components/atoms/pencil-icon')
+        }
+      ]; 
+      %>
+
 <%- include('../partials/home/hero'); %>
+
+<%- include('../partials/home/most-demanding-categories', {cards}); %>
+
+<%- include('../partials/home/how-its-work'); %>

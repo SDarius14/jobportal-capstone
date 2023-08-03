@@ -1,0 +1,48 @@
+<section>
+  <!-- Title -->
+  <div class="bg-white py-32 sm:py-32">
+    <div class="mx-auto max-w-screen-2xl px-6 lg:px-14">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Most Demanding Categories.
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- /Title -->
+
+  <!-- Cards -->
+  <div class="flex justify-center">
+    <ul
+      role="list"
+      class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 px-20">
+
+      <!-- First Cards -->
+      
+
+      <!-- /Cards Foreach -->
+      <% cards.forEach((card) => { %> 
+      <%- include('../../components/molecules/jobcategory-card', card) %> 
+      <% }); %>
+      <!-- /First Card -->
+
+      <!-- Last Card --> 
+      <% 
+      const cardsTwo = [ { 
+        titleTextTwo: 'Design & Development.', 
+        descriptionTextTwo: '2340 vacancy', 
+        cardIconTwo: include('../../components/atoms/arrow-one-icon')
+        }
+      ];  
+      %>
+
+      <!-- Lat Card Foreach -->
+      <% cardsTwo.forEach((card) => { %> 
+      <%- include('../../components/molecules/jobcategory-card-two', card) %> 
+      <% }); %>
+      <!-- /Last Card --> 
+
+    <ul>
+  <div>
+  <!-- /Cards -->
+</section>
