@@ -1931,6 +1931,13 @@ video {
   .sm\:ring-gray-900\/10 {
     --tw-ring-color: rgb(17 24 39 / 0.1);
   }
+
+  @media (min-width: 768px) {
+
+    .sm\:md\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -2101,5 +2108,12 @@ video {
 
   .xl\:gap-8 {
     gap: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .\32xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
