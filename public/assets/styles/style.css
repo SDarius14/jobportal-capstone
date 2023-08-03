@@ -754,6 +754,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-screen {
+  height: 100vh;
+}
 .w-0 {
   width: 0px;
 }
@@ -1954,6 +1957,10 @@ video {
     display: grid;
   }
 
+  .md\:h-screen {
+    height: 100vh;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2022,6 +2029,10 @@ video {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-screen {
+    height: 100vh;
   }
 
   .lg\:w-72 {
@@ -2102,6 +2113,10 @@ video {
     display: grid;
   }
 
+  .xl\:h-screen {
+    height: 100vh;
+  }
+
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2112,6 +2127,10 @@ video {
 }
 
 @media (min-width: 1536px) {
+
+  .\32xl\:h-screen {
+    height: 100vh;
+  }
 
   .\32xl\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
