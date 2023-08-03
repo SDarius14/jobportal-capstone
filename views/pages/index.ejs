@@ -6,7 +6,8 @@
       const cards = [ { 
           titleText: 'Design & Development.', 
           descriptionText: '2340 vacancy', 
-          cardIcon: include('../components/atoms/pen-icon')
+          cardIcon: include('../components/atoms/pen-icon'),
+          color: 'red'
         }, 
         { 
           titleText: 'Customer Marketing & Sales.', 
@@ -41,8 +42,19 @@
       ]; 
       %>
 
+<!-- Last Card -->
+<% 
+      const cardsTwo = [ { 
+        titleTextTwo: '13k+', 
+        descriptionTextTwo: '2340 vacancy', 
+        cardIconTwo: include('../components/atoms/arrow-one-icon')
+        }
+      ];  
+      %>
+
+
 <%- include('../partials/home/hero'); %>
 
-<%- include('../partials/home/most-demanding-categories', {cards}); %>
+<%- include('../partials/home/most-demanding-categories', {cards, cardsTwo}); %>
 
 <%- include('../partials/home/how-its-work'); %>
