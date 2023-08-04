@@ -36,11 +36,23 @@ app.get("/candidate-dashboard", (req, res) => {
   });
 });
 
+app.get("/employer-dashboard", (req, res) => {
+  res.render("pages/employer-dashboard", {
+    layout: "layouts/dashboard",
+  });
+});
+
 app.get("/my-profile", (req, res) => {
   res.render("pages/my-profile", {
     layout: "layouts/dashboard",
   });
 });
 
+app.get("/account-settings", (req, res) => {
+  res.render("pages/account-settings", {
+    layout: "layouts/dashboard",
+  });
+});
+
 app.listen(3300);
-console.log("listening to port: 3300");
+console.log("Server is live! Click here: http://localhost:3300/");
