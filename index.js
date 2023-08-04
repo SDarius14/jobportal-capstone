@@ -1,6 +1,5 @@
 const express = require("express");
 const expressEjsLayouts = require("express-ejs-layouts");
-const expressLayouts = require("express-ejs-layouts");
 const app = express();
 
 app.use(expressEjsLayouts);
@@ -23,6 +22,33 @@ app.get("/login", (req, res) => {
 app.get("/signup", (req, res) => {
   res.render("pages/signup", {
     layout: "layouts/auth",
+  });
+});
+app.get("/job-list", (req, res) => {
+  res.render("pages/job-list");
+});
+
+app.get("/job-details", (req, res) => {
+  res.render("pages/job-details");
+});
+
+app.get("/candidates", (req, res) => {
+  res.render("pages/candidates");
+});
+
+app.get("/candidate-profile", (req, res) => {
+  res.render("pages/candidate-profile");
+});
+
+app.get("/candidate-dashboard", (req, res) => {
+  res.render("pages/candidate-dashboard", {
+    layout: "layouts/dashboard",
+  });
+});
+
+app.get("/my-profile", (req, res) => {
+  res.render("pages/my-profile", {
+    layout: "layouts/dashboard",
   });
 });
 
