@@ -1,0 +1,78 @@
+<% title = 'Dashboard' %>
+
+<!-- Cards Array -->
+<% const cards = 
+[ 
+  { 
+    cardText: 'Posted Job', 
+    cardNum: '1,897', 
+    cardIcon: include('../components/atoms/people-icon'), 
+    percentChange: include('../components/atoms/increase-icon'), 
+    percentValue: '122%',
+    percentColor: 'green' 
+  }, 
+  { 
+    cardText: 'Shortlisted', 
+    cardNum: '18', 
+    cardIcon: include('../components/atoms/bookmark-icon'), 
+    percentChange: include('../components/atoms/decrease-icon'), 
+    percentValue: '9.1%',
+    percentColor: 'red' 
+  }, 
+  { 
+    cardText: 'For Interview', 
+    cardNum: '209', 
+    cardIcon: include('../components/atoms/views-icon'), 
+    percentChange: include('../components/atoms/increase-icon'), 
+    percentValue: '5.6%',
+    percentColor: 'green' 
+  }, 
+  { 
+    cardText: 'For Job Offer', 
+    cardNum: '52', 
+    cardIcon: include('../components/atoms/applied-icon'), 
+    percentChange: include('../components/atoms/decrease-icon'), 
+    percentValue: '15%', 
+    percentColor: 'red' 
+  }  
+]; %>
+
+<!-- Jobs Array -->
+<% const jobs =
+[
+  {
+    companyImageSource:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+    companyName : 'Lushi', 
+    appliedPosition: 'Jr. Bootcamp Instructor',
+    dateApplied: 'July 31, 2023' 
+  },
+  {
+    companyImageSource:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+    companyName : 'Mark Anthony', 
+    appliedPosition: 'Jr. Software Developer', 
+    dateApplied: 'July 21, 2023' 
+  },
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/logo/media_35.png',
+    companyName : 'Jebson', 
+    appliedPosition: 'Jr. Backend Developer',
+    dateApplied: 'July 16, 2023' 
+  },
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/logo/media_36.png',
+    companyName : 'Dale', 
+    appliedPosition: 'Mid Backend Developer',
+    dateApplied: 'July 10, 2023' 
+  },
+]; %>
+
+<!-- Highlights -->
+<%- include('../partials/candidate-dashboard/highlights', {sectionHeader: 'DASHBOARD', cards}); %>
+
+<div class=" grid md:grid-cols-2 gap-2">
+  <!-- profile views -->
+  <%- include('../partials/candidate-dashboard/viewsgraph', {sectionHeader: 'Profile Views'}); %>
+
+  <!-- Recent Activities -->
+  <%- include('../partials/candidate-dashboard/recent-activities', {sectionHeader: 'Recently Applied Job', jobs}); %>
+</div>
