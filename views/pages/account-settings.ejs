@@ -1,0 +1,34 @@
+<% title = 'Account Settings' %>
+
+<!-- Profile Info Array -->
+<% const accountInfos =
+    [ 
+        { 
+            cardLabel:'Privacy', 
+            cardName: 'Public', 
+            buttonName: 'Change'
+        },
+        { 
+            cardLabel:'Email Address', 
+            cardName: 'example@mail.com', 
+            buttonName: 'Update'
+        },
+        { 
+            cardLabel:'Contact Number', 
+            cardName: '+63-912-345-6789', 
+            buttonName: 'Update'
+        },
+        { 
+            cardLabel:'Password', 
+            cardName: '********', 
+            buttonName: 'Change Password'
+        },
+
+    ]; %>
+
+<div class="space-y-10 divide-y divide-gray-900/10">
+
+    <!-- Account Details -->
+    <%- include('../partials/account-settings/account-privacy', {header: 'Account Settings', description: 'This information will be displayed publicly so be careful what you share.', accountInfos }) %>
+
+</div>
