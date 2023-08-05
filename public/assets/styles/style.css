@@ -720,6 +720,9 @@ video {
 .-ml-0\.5 {
   margin-left: -0.125rem;
 }
+.ml-48 {
+  margin-left: 12rem;
+}
 .block {
   display: block;
 }
@@ -779,6 +782,9 @@ video {
 }
 .h-full {
   height: 100%;
+}
+.h-auto {
+  height: auto;
 }
 .max-h-12 {
   max-height: 3rem;
