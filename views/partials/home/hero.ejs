@@ -1,8 +1,8 @@
 <section>
-  <div class="bg-white ">
+  <div class="bg-white">
     <div class="relative isolate px-6 lg:px-8">
       <!-- Main Hero -->
-      <div class="mx-auto max-w-2xl py-32 ">
+      <div class="mx-auto max-w-2xl py-32">
         <div class="hidden sm:flex sm:justify-center"></div>
         <div class="text-center">
           <h1
@@ -10,7 +10,7 @@
           >
             <%= title %>
           </h1>
-          <p class=" text-lg leading-8 text-gray-600"><%= subTitle %></p>
+          <p class="text-lg leading-8 text-gray-600"><%= subTitle %></p>
 
           <!-- Search Section -->
           <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -82,21 +82,20 @@
     </div>
 
     <!-- Logo Cloud -->
-    <div class="bg-white ">
-      <div class="mx-auto max-w-full px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:max-w-none">
-          <div class="mx-auto mt-10 flex justify-evenly items-start gap-x-8 gap-y-10 sm:gap-x-10 lg:mx-0">
-            <img class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1" src="./assets/images/google-logo-cloud.png" alt="google logo" width="158" height="48">
-            <img class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1" src="./assets/images/shipbob-logo-cloud.png" alt="shipbob logo" width="158" height="48">
-            <img class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1" src="./assets/images/dribbble-logo-cloud.png" alt="dribbble logo" width="158" height="48">
-            <img class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1" src="./assets/images/slack-logo-cloud.png" alt="slack logo" width="158" height="48">
-            <img class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1" src="./assets/images/vine-logo-cloud.png" alt="vine logo" width="158" height="48">
-            <img class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1" src="./assets/images/airbnb-logo-cloud.png" alt="airbnb logo" width="158" height="48">
-          </div>
+    <div class="bg-white">
+      <div class="mx-auto px-6 lg:px-8">
+        <div class="mx-auto">
+          <ul class="mx-auto mt-10 items-start gap-x-8 flex justify-evenly">
+
+            <!-- Logo Cloud Foreach -->
+            <% cloudCards.forEach((cloudCard) => { %> 
+            <%- include('../../components/molecules/logo-cloud-card', cloudCard) 
+            %> <% }); %>
+
+          </ul>
         </div>
       </div>
     </div>
     <!-- /Logo Cloud -->
-
   </div>
 </section>

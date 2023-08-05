@@ -1,5 +1,25 @@
 <% title = "Home Page" %>
 
+<!-- Cloud Card Array -->
+<% 
+const cloudCards = [ { 
+    icon: include('../components/atoms/google-icon')
+  }, 
+  { 
+    icon: include('../components/atoms/shipbob-icon')
+  }, 
+  { 
+    icon: include('../components/atoms/dribbble-icon')
+  },
+  { 
+    icon: include('../components/atoms/slack-icon')
+  }, 
+  { 
+    icon: include('../components/atoms/vine-icon')
+  }
+]; 
+%>
+
 <!-- Cards Array -->
 <% 
       const cards = [ { 
@@ -75,7 +95,8 @@ const workflows = [ {
   title: "Find & Hire Experts for any Job",
   subTitle: "Jobs & Job search. Find jobs in global. Executive jobs & work.",
   description: "Popular:",
-  descriptionTwo: "Design, Art, Business, Video Editing"
+  descriptionTwo: "Design, Art, Business, Video Editing",
+  cloudCards
 }); %>
 
 <!-- Jobcategory Section-->
@@ -95,3 +116,4 @@ const workflows = [ {
 
 <!-- Matched Section -->
 <%- include('../partials/home/matched-jobs'); %>
+
