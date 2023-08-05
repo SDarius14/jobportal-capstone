@@ -2157,6 +2157,11 @@ video {
     height: auto;
   }
 
+  .lg\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
   .lg\:w-72 {
     width: 18rem;
   }
