@@ -1,8 +1,7 @@
 <% title = "Home Page" %>
 
 <!-- Logo Cloud Array -->
-<% 
-const cloudCards = 
+<% const cloudCards = 
 [ 
   { 
     icon: include('../components/atoms/google-icon')
@@ -137,5 +136,8 @@ const cloudCards =
 }); %>
 
 <!-- Matched Section -->
-<%- include('../partials/home/matched-jobs'); %>
+<%- include('../partials/home/matched-jobs', {
+  title: 'Get your Matched Jobs in a few minutes.',
+  description: 'Find your dream job & earn from world leading brands. Upload your CV now.'
+}); %>
 
