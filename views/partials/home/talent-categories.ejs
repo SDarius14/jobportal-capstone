@@ -12,64 +12,20 @@
           />
           <div class="w-full flex-auto">
             <p class="mt-6 text-lg font-semibold leading-8 text-green-600">
-              Why choose us?
+              <%- subTitle %>
             </p>
             <h2
               class="text-4xl font-semibold tracking-tight text-green-900 sm:text-6xl"
             >
-              World of talent at your fingertips
+              <%- title %>
             </h2>
 
-            <div x-data="{ open: !false }">
-              <p
-                @click="open = true"
-                class="mt-6 text-2xl font-semibold leading-8 text-green-900 border-b border-gray-600 border-opacity-20"
-              >
-                Seamless Search
-              </p>
-              <p
-                x-show="open"
-                @click.away="open = false"
-                class="mt-2 text-base leading-8 text-gray-600"
-              >
-                It only takes 5 minutes. Set-up is smooth and simple, with fully
-                customisable page design to reflect your brand.
-              </p>
-            </div>
-
-            <div x-data="{ open: false }">
-              <p
-                @click="open = true"
-                class="mt-6 text-2xl font-semibold leading-8 text-green-900 border-b border-gray-600 border-opacity-20"
-              >
-                Hire top talents
-              </p>
-              <p
-                x-show="open"
-                @click.away="open = false"
-                class="mt-2 text-base leading-8 text-gray-600"
-              >
-                It only takes 5 minutes. Set-up is smooth and simple, with fully
-                customisable page design to reflect your brand.
-              </p>
-            </div>
-
-            <div x-data="{ open: false }">
-              <p
-                @click="open = true"
-                class="mt-6 text-2xl font-semibold leading-8 text-green-900"
-              >
-                Protected payments, every time
-              </p>
-              <p
-                x-show="open"
-                @click.away="open = false"
-                class="mt-2 text-base leading-8 text-gray-600"
-              >
-                It only takes 5 minutes. Set-up is smooth and simple, with fully
-                customisable page design to reflect your brand.
-              </p>
-            </div>
+            <ul>
+              <!-- Talent Foreach -->
+              <% talents.forEach((talent) => { %> 
+              <%- include('../../components/molecules/talent-card', talent) %> 
+              <% }); %>
+            </ul>
 
             <div class="mt-10 flex">
               <a

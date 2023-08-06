@@ -91,6 +91,23 @@ const cloudCards =
   }
 ]; %>
 
+<!-- Talent Array -->
+<% const talents = 
+[ 
+  { 
+    title: 'Seamless Search', 
+    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+  }, 
+  { 
+    title: 'Hire top talents', 
+    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+  }, 
+  { 
+    title: 'Protected payments, every time', 
+    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+  }, 
+]; %>
+
 <!--Hero Section-->
 <%- include('../partials/home/hero', {
   title: "Find & Hire Experts for any Job",
@@ -112,8 +129,12 @@ const cloudCards =
   title: "How it's Work?",
   workflows}); %>
 
-<!-- Talent Section -->
-<%- include('../partials/home/talent-categories'); %>
+<!-- Talent Section-->
+<%- include('../partials/home/talent-categories', {
+  subTitle: 'Why choose us?',
+  title: 'World of talent at your fingertips',
+  talents
+}); %>
 
 <!-- Matched Section -->
 <%- include('../partials/home/matched-jobs'); %>
