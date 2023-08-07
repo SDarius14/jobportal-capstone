@@ -1,18 +1,17 @@
-<div class="bg-white">
-  <div class="relative isolate px-6 lg:px-8">
-    <section>
+<section>
+  <div class="bg-white">
+    <div class="relative isolate px-6 lg:px-8">
+
       <!-- Main Hero -->
-      <div class="mx-auto max-w-2xl py-32 sm:py-48">
-        <div class="hidden sm:mb-8 sm:flex sm:justify-center"></div>
+      <div class="mx-auto max-w-2xl py-32">
+        <div class="hidden sm:flex sm:justify-center"></div>
         <div class="text-center">
           <h1
             class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl"
           >
-            Find & Hire Experts for any Job
+            <%= title %>
           </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Jobs & Job search. Find jobs in global. Executive jobs & work.
-          </p>
+          <p class="text-lg leading-8 text-gray-600"><%= subTitle %></p>
 
           <!-- Search Section -->
           <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -35,14 +34,14 @@
                 <!-- /Search Label -->
                 <button
                   type="submit"
-                  class="flex-none rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                  class="inline-flex items-center gap-x-2 rounded-md bg-green-600 px-5 py-2.5 text-base text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                 >
                   Search
                 </button>
               </div>
               <p class="mt-4 text-sm leading-6 text-gray-900">
-                <span class="font-semibold">Popular:</span> Design, Art,
-                Business, Video Editing
+                <span class="font-semibold"><%= description %></span> <%=
+                descriptionTwo %>
               </p>
             </form>
           </div>
@@ -81,100 +80,24 @@
         ></div>
       </div>
       <!-- /Background Style -->
-    </section>
-  </div>
-</div>
+    </div>
 
-<!-- Second Section -->
-<section>
-  <!-- Title -->
-  <div class="bg-white py-32 sm:py-32">
-    <div class="mx-auto max-w-screen-2xl px-6 lg:px-14">
-      <div class="mx-auto max-w-2xl lg:mx-0">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          Most Demanding Categories.
-        </h2>
+    <!-- Logo Cloud -->
+    <div class="bg-white">
+      <div class="mx-auto px-6 lg:px-8">
+        <div class="mx-auto">
+          <div class="mx-auto mt-10 items-start gap-x-8 flex justify-evenly">
+
+            <!-- Logo Cloud Foreach -->
+            <% cloudCards.forEach((cloudCard) => { %> 
+            <%- include('../../components/molecules/logo-cloud-card', cloudCard) %> 
+            <% }); %>
+
+            </div>
+        </div>
       </div>
     </div>
+    <!-- /Logo Cloud -->
+
   </div>
-  <!-- /Title -->
-
-  <!-- Cards -->
-  <div class="flex justify-center">
-    <ul
-      role="list"
-      class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 px-20">
-
-      <!-- First Cards -->
-      <% 
-      const cards = [ { 
-          titleText: 'Design & Development.', 
-          descriptionText: '2340 vacancy', 
-          cardIcon: include('../../components/atoms/pen-icon')
-        }, 
-        { 
-          titleText: 'Customer Marketing & Sales.', 
-          descriptionText: '1560 vacancy', 
-          cardIcon: include('../../components/atoms/person-icon')
-        }, 
-        { 
-          titleText: 'Business Marketing.', 
-          descriptionText: '2210 vacancy', 
-          cardIcon: include('../../components/atoms/briefcase-icon')
-        }, 
-        { 
-          titleText: 'Business Development.', 
-          descriptionText: '980 vacancy', 
-          cardIcon: include('../../components/atoms/phone-icon')
-        },
-        { 
-          titleText: 'Programming & Code.', 
-          descriptionText: '1687 vacancy', 
-          cardIcon: include('../../components/atoms/tag-icon')
-        }, 
-        { 
-          titleText: 'Video Edition & 3D work.', 
-          descriptionText: '758 vacancy', 
-          cardIcon: include('../../components/atoms/3d-icon')
-        }, 
-        { 
-          titleText: 'Art & Animation', 
-          descriptionText: '1452 vacancy', 
-          cardIcon: include('../../components/atoms/briefcase-icon')
-        }
-      ]; 
-      %>
-
-      <!-- /Cards Foreach -->
-      <% cards.forEach((card) => { %> 
-      <%- include('../../components/molecules/jobcategory-card', card) %> 
-      <% }); %>
-      <!-- /First Card -->
-
-      <!-- Last Card --> 
-      <% 
-      const cardsTwo = [ { 
-        titleTextTwo: 'Design & Development.', 
-        descriptionTextTwo: '2340 vacancy', 
-        cardIconTwo: include('../../components/atoms/arrow-one-icon')
-        }
-      ];  
-      %>
-
-      <!-- Lat Card Foreach -->
-      <% cardsTwo.forEach((card) => { %> 
-      <%- include('../../components/molecules/jobcategory-card-two', card) %> 
-      <% }); %>
-      <!-- /Last Card --> 
-
-    <ul>
-  <div>
-  <!-- /Cards -->
 </section>
-<!-- /Second Section -->
-
-
-
-
-
-
