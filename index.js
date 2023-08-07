@@ -66,6 +66,12 @@ app.get("/employer-account-settings", (req, res) => {
   });
 });
 
+app.get("/submit-job", (req, res) => {
+  res.render("pages/submit-job", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
 
 app.listen(3300);
 console.log("Server is live! Click here: http://localhost:3300/");
