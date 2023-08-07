@@ -24,6 +24,20 @@ app.get("/signup", (req, res) => {
     layout: "layouts/auth",
   });
 });
+
+
+app.get("/employer-dashboard-submit-job", (req, res) => {
+  res.render("pages/employer-dashboard-submit-job", {
+    layout: "layouts/dashboard",
+  });
+});
+
+app.get("/candidate-dashboard-message", (req, res) => {
+  res.render("pages/candidate-dashboard-message", {
+    layout: "layouts/dashboard",
+  });
+});
+
 app.get("/job-list", (req, res) => {
   res.render("pages/job-list");
 });

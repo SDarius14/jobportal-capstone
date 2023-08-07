@@ -1,0 +1,128 @@
+<% title ='Messages' %> <%- include('../components/molecules/page-title', {
+textTitle: 'Messages' }) %>
+
+<div class="bg-white m-2 my-5 p-5  w-full h-full rounded-xl flex">
+
+  <!-- converstations section -->
+  <div class="flex flex-col gap-y-3 basis-1/3 px-5">
+    <h3 class="text-[18px] font-semibold">Inbox</h3>
+
+    <%- include('../components/molecules/search-bar', { placeholder: 'Search contacts' }) %>
+
+    <!-- FILTER SECTION -->
+    <div>
+      <ul
+        class="flex gap-x-5 w-full justify-between px-1 items-center"
+        x-data="{ filterMessages : [
+                {
+                    name : 'All',
+                    color : ''
+                },
+                {
+                    name : 'Read',
+                    color : '#FF4545'
+                },
+                {
+                    name : 'Unread',
+                    color : '#3BDA84'
+                },
+                {
+                    name : 'Primary',
+                    color : '#50C0FF'
+                },
+            ],
+        
+                activeIndex: 0
+        }"
+      >
+        <template x-for="(filter, index) in filterMessages" :key="index">
+        
+          <li  x-on:click="activeIndex = index" class="cursor-pointer px-3 py-0.5 text-[15px] font-semibold flex items-center gap-x-2 justify-center" :class="{'bg-[#31795a] rounded-xl text-white' : activeIndex === index}">
+            <div x-show="index !== 0" class="h-2 w-2 rounded-full" :style="{'background-color': filter.color }"></div>
+            <span x-text="filter.name"></span>
+
+          </li>
+        </template>
+      </ul>
+    </div>
+    <!-- FILTER SECTION -->
+
+
+
+    <!-- DIVIDER -->
+        <div class="relative">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-300"></div>
+            </div>
+        </div>
+    <!-- DIVIDER -->
+
+
+
+    <div class="flex flex-col gap-y-5 w-full">
+
+        <% 
+        const messages = [
+            {
+                contactName : 'Saul Darius',
+                messageSubject: 'Work inquiry from google',
+                messageDate: 'AUG2023',
+                messageContent: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque similique sequi ea totam obcaecati architecto at sapiente sed tempore molestias quasi, rem, explicabo veniam accusamus! Molestias corporis cumque alias!',
+                status: 'Read',
+ 
+            },
+
+            {
+                contactName : 'Jebson Ubaldo',
+                messageSubject: 'Quotation for Jobi Project',
+                messageDate: 'AUG2023',
+                messageContent: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque similique sequi ea totam obcaecati architecto at sapiente sed tempore molestias quasi, rem, explicabo veniam accusamus! Molestias corporis cumque alias!',
+                status: 'Unread',
+     
+
+            },
+
+            {
+                contactName : 'John Thomas Caballero',
+                messageSubject: 'Billing Invoice for August 2023',
+                messageDate: 'JUL2022',
+                messageContent: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque similique sequi ea totam obcaecati architecto at sapiente sed tempore molestias quasi, rem, explicabo veniam accusamus! Molestias corporis cumque alias!',
+                status: 'Read',
+            
+
+            },
+            {
+                contactName : 'Mac Aguirre',
+                messageSubject: 'Lorem Ipsum',
+                messageDate: 'APR2022',
+                messageContent: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque similique sequi ea totam obcaecati architecto at sapiente sed tempore molestias quasi, rem, explicabo veniam accusamus! Molestias corporis cumque alias!',
+                status: 'Primary',
+           
+
+            },
+
+
+        ]
+        
+        %>
+        <% messages.forEach((message,index) => { %>
+           
+       <%-include('../components/molecules/message-preview', message) %>
+
+       <% }); %>
+       
+
+    </div>
+
+    
+
+
+
+
+
+  </div>
+
+
+
+
+</div>
