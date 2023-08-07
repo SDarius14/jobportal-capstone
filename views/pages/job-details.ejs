@@ -2,6 +2,33 @@
 <% text = "Senior Product Design" %> 
 <% subtext = "Here will be your company job details & requirements" %> 
 
+<% const detailsCard = [
+  {
+    detailsIcon: './assets/images/icon_1.svg',
+    detailsHeader: 'Salary',
+    detailsDesc: '50k/year'
+  },
+  {
+    detailsIcon: './assets/images/icon_2.svg',
+    detailsHeader: 'Expertise',
+    detailsDesc: 'Advanced'
+  },
+  {
+    detailsIcon: './assets/images/icon_3.svg',
+    detailsHeader: 'Location',
+    detailsDesc: 'Manila'
+  },
+  {
+    detailsIcon: './assets/images/icon_4.svg',
+    detailsHeader: 'Job Type',
+    detailsDesc: 'Fulltime'
+  },
+  {
+    detailsIcon: './assets/images/icon_5.svg',
+    detailsHeader: 'Experience',
+    detailsDesc: '2 years'
+  },
+]; %>
 
 <% const detailsLabel = [
   {
@@ -14,254 +41,99 @@
   }
 ]; %>
 
-<% const detailsList = [
-  {
-    header: 'Responsibilities'
+<% const qualificationGroup = [{
+  header: 'Responsibilities',
+  detailsList: [{
+    listDesc: 'Collaborate daily with a multidisciplinary team of Software Engineers, Researchers, Strategists, and Project Managers.'
   },
   {
-    header: 'Required Skills'
+    listDesc: 'Co-lead ideation sessions, workshops, demos, and presentations with clients on-site'
   },
   {
-    header: 'Benefits'
-  }
-]; %>
+    listDesc: 'Push for and create inclusive, accessible design for all'
+  },
+  {
+    listDesc: 'Maintain quality of the design process and ensure that when designs are translated into code they accurately reflect the design specifications.'
+  },
+  {
+    listDesc: 'Sketch, wireframe, build IA, motion design, and run usability tests'
+  },
+  {
+    listDesc: 'Design pixel perfect responsive UI’s and understand that adopting common interface pattern is better for UX than reinventing the wheel'
+  },
+  {
+    listDesc: 'Ensure content strategy and design are perfectly in-sync'
+  },
+  {
+    listDesc: 'Give and receive design critique to help constantly refine and push our work'
+  }]
+},
+{
+  header: 'Required Skills',
+  detailsList: [{
+    listDesc: 'You’ve been designing digital products for 2+ years.'
+  },
+  {
+    listDesc: 'A portfolio that exemplifies strong visual design and a focus on defining the user experience.'
+  },
+  {
+    listDesc: 'You’ve proudly shipped and launched several products.'
+  },
+  {
+    listDesc: 'You have some past experience working in an agile environment – Think two-week sprints.'
+  },
+  {
+    listDesc: 'Experience effectively presenting and communicating your design decisions to clients and team members'
+  },
+  {
+    listDesc: 'Up-to-date knowledge of design software like Figma, Sketch etc.'
+  }]
+},
+{
+  header: 'Benefits',
+  detailsList: [{
+    listDesc: 'We are a remote-first company.'
+  },
+  {
+    listDesc: '100% company-paid health insurance premiums for you & your dependents'
+  },
+  {
+    listDesc: 'Vacation stipend'
+  },
+  {
+    listDesc: 'Unlimited paid vacation and paid company holidays'
+  },
+  {
+    listDesc: 'Monthly wellness/gym stipend'
+  }]
+}]; %>
 
+<!-- Header -->
 <%- include('../components/molecules/page-header') %>
 
-
-
+<!-- Details -->
 <div class="bg-[#f0f6f4] px-6 py-32 lg:px-8">
+  <!-- job details -->
   <div class="mx-auto max-w-2xl">
-    <div class="grid grid-cols-5 gap-6">
-      <div class="bg-white rounded-3xl p-4">
-        <div class="flex justify-center items-center h-16">
-          <img src="./assets/images/icon_1.svg" alt="salary" />
-        </div>
-        <div class="mt-4">
-          <h6 class="text-center text-gray-500">
-            Salary
-          </>
-        </div>
-        <div class="mt-1 mb-8">
-          <p class="text-center font-bold">
-            50k/year
-          </>
-        </div>
-      </div>
-      <div class="bg-white rounded-3xl p-4">
-        <div class="flex justify-center items-center h-16">
-          <img src="./assets/images/icon_2.svg" alt="salary" />
-        </div>
-        <div class="mt-4">
-          <h6 class="text-center text-gray-500">
-            Expertise
-          </>
-        </div>
-        <div class="mt-1 mb-8">
-          <p class="text-center font-bold">
-            Advanced
-          </>
-        </div>
-      </div>
-      <div class="bg-white rounded-3xl p-4">
-        <div class="flex justify-center items-center h-16">
-          <img src="./assets/images/icon_3.svg" alt="salary" />
-        </div>
-        <div class="mt-4">
-          <h6 class="text-center text-gray-500">
-            Location
-          </>
-        </div>
-        <div class="mt-1 mb-8">
-          <p class="text-center font-bold">
-            Manila
-          </>
-        </div>
-      </div>
-      <div class="bg-white rounded-3xl p-4">
-        <div class="flex justify-center items-center h-16">
-          <img src="./assets/images/icon_4.svg" alt="salary" />
-        </div>
-        <div class="mt-4">
-          <h6 class="text-center text-gray-500">
-            Job Type
-          </>
-        </div>
-        <div class="mt-1 mb-8">
-          <p class="text-center font-bold">
-            Fulltime
-          </>
-        </div>
-      </div>
-      <div class="bg-white rounded-3xl p-4">
-        <div class="flex justify-center items-center h-16">
-          <img src="./assets/images/icon_5.svg" alt="salary" />
-        </div>
-        <div class="mt-4">
-          <h6 class="text-center text-gray-500">
-            Experience
-          </>
-        </div>
-        <div class="mt-1 mb-8">
-          <p class="text-center font-bold">
-            2 years
-          </>
-        </div>
-      </div
+    <div class="grid xl:grid-cols-5 grid-cols-2 gap-6">
+      <% detailsCard.forEach(element => { %>
+        <%- include('../components/molecules/details-card', element ) %>
+      <% }) %>
     </div>
   </div>
 
+  <!-- more job details -->
   <div class="mx-auto max-w-2xl text-base leading-7 text-gray-700 mt-16">
     <% detailsLabel.forEach(element => { %>
       <%- include('../components/molecules/details-text', element ) %>
     <% }) %>
-
-    <!-- <% detailsList.forEach(element => { %>
-      <%- include('../components/molecules/details-list', element ) %>
-    <% }) %> -->
-
-    <div class="max-w-2xl">
-      <h2 class="mt-20 text-2xl font-bold tracking-tight text-gray-900">Responsibilities</h2>
-      <div class="mt-6 max-w-2xl">
-          <ul role="list" class="mt-2 max-w-2xl space-y-8 text-gray-600">
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Collaborate daily with a multidisciplinary team of Software Engineers, Researchers, Strategists, and Project Managers.</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Co-lead ideation sessions, workshops, demos, and presentations with clients on-site</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Push for and create inclusive, accessible design for all</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Maintain quality of the design process and ensure that when designs are translated into code they accurately reflect the design specifications.</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Sketch, wireframe, build IA, motion design, and run usability tests</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Design pixel perfect responsive UI’s and understand that adopting common interface pattern is better for UX than reinventing the wheel</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Ensure content strategy and design are perfectly in-sync</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Give and receive design critique to help constantly refine and push our work</span>
-            </li>
-          </ul>
-      </div>
-  </div
-
-<div class="max-w-2xl">
-      <h2 class="mt-20 text-2xl font-bold tracking-tight text-gray-900">Required Skills</h2>
-      <div class="mt-6 max-w-2xl">
-          <ul role="list" class="mt-2 max-w-2xl space-y-8 text-gray-600">
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>You’ve been designing digital products for 2+ years.</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>A portfolio that exemplifies strong visual design and a focus on defining the user experience.</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>You’ve proudly shipped and launched several products.</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>You have some past experience working in an agile environment – Think two-week sprints.</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Experience effectively presenting and communicating your design decisions to clients and team members</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Up-to-date knowledge of design software like Figma, Sketch etc.</span>
-            </li>
-          </ul>
-      </div>
-  </div>
-
-  <div class="max-w-2xl">
-      <h2 class="mt-20 text-2xl font-bold tracking-tight text-gray-900">Benefits</h2>
-      <div class="mt-6 max-w-2xl">
-          <ul role="list" class="mt-2 max-w-2xl space-y-8 text-gray-600">
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>We are a remote-first company.</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>100% company-paid health insurance premiums for you & your dependents</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Vacation stipend</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Unlimited paid vacation and paid company holidays</span>
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="mt-1 h-5 w-5 flex-none text-[#35785b]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              <span>Monthly wellness/gym stipend</span>
-            </li>
-          </ul>
-      </div>
-  </div>
-
     
+    <% qualificationGroup.forEach(({header, detailsList}) => { %>
+      <%- include('../components/molecules/details-list', { header, detailsList }) %>
+    <% }) %>
+
     <div class="max-w-2xl mt-16">
-        <button type="submit" class="flex-none rounded-md bg-[#35785b] px-3.5 py-2.5 text-sm tracking-wider font-semibold text-white shadow-sm hover:bg-[#00bf58] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Apply for this position</button>
+      <button type="submit" class="flex-none rounded-md bg-[#35785b] px-3.5 py-2.5 text-sm tracking-wider font-semibold text-white shadow-sm hover:bg-[#00bf58] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Apply for this position</button>
     </div>
   </div>
-</div>
 </div>

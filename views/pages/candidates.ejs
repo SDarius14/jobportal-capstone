@@ -2,5 +2,68 @@
 <% text="Candidates" %>
 <% subtext="Find you desire talents & make your work done" %>
 
+<% const candidates = [
+    {
+        candidateImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
+        candidateName: 'Julia Ark',
+        candidateRole: 'Graphic Designer'
+    },
+    {
+        candidateImage: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        candidateName: 'Juan Marko',
+        candidateRole: 'Javascript Developer'
+    },
+    {
+        candidateImage: 'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        candidateName: 'Rashed Ka',
+        candidateRole: 'UI/UX Designer'
+    },
+    {
+        candidateImage: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        candidateName: 'Shani Millar',
+        candidateRole: 'Telemarketing'
+    },
+    {
+        candidateImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        candidateName: 'Juliana Shofie',
+        candidateRole: 'Data Entry'
+    },
+    {
+        candidateImage: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        candidateName: 'Mark Cena',
+        candidateRole: 'Graphic Designer'
+    }
+]; %>
+
 <%- include('../components/molecules/page-header') %>
 
+<div class="bg-[#f0f6f4]">
+    <div>
+      <!-- filter mobile -->
+      <%- include('../components/molecules/filter-mobile') %>
+  
+      <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- sort -->
+        <%- include('../components/molecules/sort') %>
+  
+        <section aria-labelledby="products-heading" class="pb-24 pt-6">
+          <h2 id="products-heading" class="sr-only">Products</h2>
+          <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+            <!-- filter-desktop -->
+            <%- include('../components/molecules/filter-desktop') %>
+  
+            <!-- candidates List-->
+            <div class="lg:col-span-3">
+              <ul role="list" class="grid grid-cols-1 gap-6 xl:grid-cols-3 sm:grid-cols-6">
+                <!-- candidate card -->
+                <% candidates.forEach(element => { %>
+                  <%- include('../components/molecules/candidate-card', element) %>
+                <% }) %>
+              </ul>
+              <%- include('../components/molecules/pagination-numbered') %>
+            </div>           
+          </div>
+        </section>
+      </main>
+    </div>
+</div>
