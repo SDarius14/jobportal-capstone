@@ -1,0 +1,23 @@
+<section>
+  <div class="bg-white py-14 sm:py-22">
+    <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+      <div class="rounded-2xl bg-gray-50 px-6 py-16 sm:p-16">
+        <div class="mx-auto max-w-xl lg:max-w-none">
+          <div class="text-center">
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+              <%- title %>
+            </h2>
+          </div>
+          <ul
+            class="mx-auto mt-12 grid max-w-sm grid-cols-1 gap-x-8 gap-y-10 sm:max-w-none lg:grid-cols-3"
+          >
+            <!-- Workflow Foreach -->
+            <% workflows.forEach((workflow) => { %> 
+            <%- include('../../components/molecules/workflow-card', workflow) %> 
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
