@@ -42,5 +42,30 @@ app.get("/my-profile", (req, res) => {
   });
 });
 
+app.get("/account-settings", (req, res) => {
+  res.render("pages/account-settings", {
+    layout: "layouts/dashboard",
+  });
+});
+
+app.get("/employer-dashboard", (req, res) => {
+  res.render("pages/employer-dashboard", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+app.get("/employer-profile", (req, res) => {
+  res.render("pages/employer-profile", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+app.get("/employer-account-settings", (req, res) => {
+  res.render("pages/employer-accountSettings", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+
 app.listen(3300);
-console.log("listening to port: 3300");
+console.log("Server is live! Click here: http://localhost:3300/");

@@ -63,7 +63,7 @@
                       <li>
                         <!-- Current: "bg-gray-50 text-green-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
                         <a
-                          href="/candidate-dashboard"
+                          href="/employer-dashboard"
                           class="<%= title === 'Dashboard' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                         >
                           <svg
@@ -86,7 +86,7 @@
 
                       <li>
                         <a
-                          href="/my-profile"
+                          href="/employer-profile"
                           class="<%= title === 'My Profile' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                         >
                           <svg
@@ -157,7 +157,7 @@
 
                       <li>
                         <a
-                          href="/account-settings"
+                          href="/employer-account-settings"
                           class="<%= title === 'Account Settings' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                         >
                           <svg
@@ -188,7 +188,7 @@
                   <li class="mt-auto">
                     <a
                       href="/"
-                      class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-red-600"
+                      class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-green-600"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +234,7 @@
                   <li>
                     <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
                     <a
-                      href="/candidate-dashboard"
+                      href="/employer-dashboard"
                       class="<%= title === 'Dashboard' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                     >
                       <svg
@@ -257,7 +257,7 @@
 
                   <li>
                     <a
-                      href="/my-profile"
+                      href="/employer-profile"
                       class="<%= title === 'My Profile' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                     >
                       <svg
@@ -328,7 +328,7 @@
                   </li>
                   <li>
                     <a
-                      href="/account-settings"
+                      href="/employer-account-settings"
                       class="<%= title === 'Account Settings' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                     >
                       <svg
@@ -359,7 +359,7 @@
               <li class="mt-auto">
                 <a
                   href="/"
-                  class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-red-600"
+                  class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-green-600"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -411,7 +411,7 @@
           <div class="h-6 w-px bg-gray-200 lg:hidden" aria-hidden="true"></div>
         </div>
 
-        <main class=" py-10 bg-green-50 min-h-screen">
+        <main class="h-full py-10 bg-green-50 min-h-screen">
           <div class="px-4 sm:px-6 lg:px-8">
             <!-- Content Here -->
             <%- body %>
