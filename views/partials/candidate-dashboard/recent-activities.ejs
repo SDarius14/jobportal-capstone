@@ -1,7 +1,7 @@
 <section class="">
   <h3 class="my-5 text-xl md:text-2xl font-semibold leading-6 text-gray-900"><%= sectionHeader %> </h3>
   <!-- content -->
-  <div class="shadow rounded-lg">
+  <div class="shadow bg-white p-2 rounded-lg">
     <div class="mt-2 divide-y divide-gray-200 overflow-hidden shadow">
       <!-- Jobs Applied Foreach -->
       <% jobs.forEach((job) => { %> <%- include('../../components/molecules/recently-applied', job) %> <% }); %>

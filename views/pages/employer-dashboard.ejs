@@ -5,7 +5,7 @@
 [ 
   { 
     cardText: 'Posted Job', 
-    cardNum: '1,897', 
+    cardNum: '297', 
     cardIcon: include('../components/atoms/people-icon'), 
     percentChange: include('../components/atoms/increase-icon'), 
     percentValue: '122%',
@@ -21,15 +21,15 @@
   }, 
   { 
     cardText: 'For Interview', 
-    cardNum: '209', 
+    cardNum: '109', 
     cardIcon: include('../components/atoms/views-icon'), 
     percentChange: include('../components/atoms/increase-icon'), 
     percentValue: '5.6%',
     percentColor: 'green' 
   }, 
   { 
-    cardText: 'For Job Offer', 
-    cardNum: '52', 
+    cardText: 'Job Offer', 
+    cardNum: '12', 
     cardIcon: include('../components/atoms/applied-icon'), 
     percentChange: include('../components/atoms/decrease-icon'), 
     percentValue: '15%', 
@@ -41,26 +41,26 @@
 <% const jobs =
 [
   {
-    companyImageSource:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-    companyName : 'Lushi', 
-    appliedPosition: 'Jr. Bootcamp Instructor',
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/candidates/img_04.jpg',
+    companyName : 'Lushi Feelings', 
+    appliedPosition: 'Jr. UI/UX Designer',
     dateApplied: 'July 31, 2023' 
   },
   {
-    companyImageSource:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
-    companyName : 'Mark Anthony', 
-    appliedPosition: 'Jr. Software Developer', 
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/candidates/img_02.jpg',
+    companyName : 'Mark Anthony Mamaya', 
+    appliedPosition: 'Jr. Software Engineer', 
     dateApplied: 'July 21, 2023' 
   },
   {
-    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/logo/media_35.png',
-    companyName : 'Jebson', 
-    appliedPosition: 'Jr. Backend Developer',
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/dashboard/images/avatar_01.jpg',
+    companyName : 'Jebson Aparador', 
+    appliedPosition: 'Cloud Engineer',
     dateApplied: 'July 16, 2023' 
   },
   {
-    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/logo/media_36.png',
-    companyName : 'Dale', 
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/candidates/img_05.jpg',
+    companyName : 'Dina Siningil', 
     appliedPosition: 'Mid Backend Developer',
     dateApplied: 'July 10, 2023' 
   },
@@ -71,8 +71,8 @@
 
 <div class=" grid md:grid-cols-2 gap-2">
   <!-- profile views -->
-  <%- include('../partials/candidate-dashboard/viewsgraph', {sectionHeader: 'Profile Views'}); %>
+  <%- include('../partials/candidate-dashboard/viewsgraph', {sectionHeader: 'Job Views'}); %>
 
   <!-- Recent Activities -->
-  <%- include('../partials/candidate-dashboard/recent-activities', {sectionHeader: 'Recently Applied Job', jobs}); %>
+  <%- include('../partials/candidate-dashboard/recent-activities', {sectionHeader: 'Recent Applicants', jobs}); %>
 </div>
