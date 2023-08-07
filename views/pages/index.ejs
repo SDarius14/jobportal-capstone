@@ -1,3 +1,143 @@
 <% title = "Home Page" %>
+
+<!-- Logo Cloud Array -->
+<% const cloudCards = 
+[ 
+  { 
+    icon: include('../components/atoms/google-icon')
+  }, 
+  { 
+    icon: include('../components/atoms/shipbob-icon')
+  }, 
+  { 
+    icon: include('../components/atoms/dribbble-icon')
+  },
+  { 
+    icon: include('../components/atoms/slack-icon')
+  }, 
+  { 
+    icon: include('../components/atoms/vine-icon')
+  }
+]; %>
+
+<!-- Cards Array -->
+<% const cards = 
+[ 
+  { 
+    titleText: 'Design & Development.', 
+    descriptionText: '2340 vacancy', 
+    cardIcon: include('../components/atoms/pen-icon')
+  }, 
+  { 
+    titleText: 'Customer Marketing & Sales.', 
+    descriptionText: '1560 vacancy', 
+    cardIcon: include('../components/atoms/person-icon')
+  }, 
+  { 
+    titleText: 'Business Marketing.', 
+    descriptionText: '2210 vacancy', 
+    cardIcon: include('../components/atoms/briefcase-icon')
+  }, 
+  { 
+    titleText: 'Business Development.', 
+    descriptionText: '980 vacancy', 
+    cardIcon: include('../components/atoms/phone-icon')
+  },
+  { 
+    titleText: 'Programming & Code.', 
+    descriptionText: '1687 vacancy', 
+    cardIcon: include('../components/atoms/tag-icon')
+  }, 
+  { 
+    titleText: 'Video Edition & 3D work.', 
+    descriptionText: '758 vacancy', 
+    cardIcon: include('../components/atoms/3d-icon')
+  }, 
+  { 
+    titleText: 'Art & Animation', 
+    descriptionText: '1452 vacancy', 
+    cardIcon: include('../components/atoms/pencil-icon')
+  }
+]; %>
+
+<!-- Last Card -->
+<% const cardsTwo = 
+[ 
+  { 
+    titleTextTwo: '13k+', 
+    descriptionTextTwo: '2340 vacancy', 
+    cardIconTwo: include('../components/atoms/arrow-one-icon')
+  }
+]; %>
+
+<!-- Workflow Array -->
+<% const workflows = 
+[ 
+  { 
+    title: 'Create Account', 
+    description: "It's very easy to open an account and start your journey.",
+    icon: include('../components/atoms/person-white-icon')
+  }, 
+  { 
+    title: 'Complete your profile', 
+    description: 'Complete your profile with all the info to get attention of client.',
+    icon: include('../components/atoms/note-white-icon')
+  }, 
+  { 
+    title: 'Apply job or hire.', 
+    description: 'Apply & get your preferable jobs with all the requirements and get it.',
+    icon: include('../components/atoms/pen-white-icon')
+  }
+]; %>
+
+<!-- Talent Array -->
+<% const talents = 
+[ 
+  { 
+    title: 'Seamless Search', 
+    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+  }, 
+  { 
+    title: 'Hire top talents', 
+    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+  }, 
+  { 
+    title: 'Protected payments, every time', 
+    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+  }, 
+]; %>
+
 <!--Hero Section-->
-<%- include('../partials/home/hero'); %>
+<%- include('../partials/home/hero', {
+  title: "Find & Hire Experts for any Job",
+  subTitle: "Jobs & Job search. Find jobs in global. Executive jobs & work.",
+  description: "Popular:",
+  descriptionTwo: "Design, Art, Business, Video Editing",
+  cloudCards
+}); %>
+
+<!-- Jobcategory Section-->
+<%- include('../partials/home/job-categories', {
+  title: "Most Demanding Categories.",
+  cards, 
+  cardsTwo
+}); %>
+
+<!-- Workflow Section -->
+<%- include('../partials/home/workflow-categories', {
+  title: "How it's Work?",
+  workflows}); %>
+
+<!-- Talent Section-->
+<%- include('../partials/home/talent-categories', {
+  subTitle: 'Why choose us?',
+  title: 'World of talent at your fingertips',
+  talents
+}); %>
+
+<!-- Matched Jobs Section -->
+<%- include('../partials/home/matched-jobs', {
+  title: 'Get your Matched Jobs in a few minutes.',
+  description: 'Find your dream job & earn from world leading brands. Upload your CV now.'
+}); %>
+

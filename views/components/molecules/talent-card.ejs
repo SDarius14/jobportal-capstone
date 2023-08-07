@@ -1,0 +1,15 @@
+<li x-data="{ open: false }">
+  <p
+    @click="open = true"
+    class="mt-6 text-2xl font-semibold leading-8 text-green-900 border-b border-gray-600 border-opacity-20"
+  >
+    <%- title %>
+  </p>
+  <p
+    x-show="open"
+    @click.away="open = false"
+    class="mt-2 text-base leading-8 text-gray-600"
+  >
+    <%- description %>
+  </p>
+</li>

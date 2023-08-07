@@ -1,0 +1,24 @@
+<div
+  class="rounded-2xl bg-green-50 mx-auto flex max-w-2xl flex-col gap-16 px-6 py-16 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20"
+>
+  <img
+    class="h-auto w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
+    src="./assets/images/jobs-img.png"
+    alt=""
+  />
+  <div class="w-full flex-auto">
+    <h2
+      class="text-4xl font-semibold tracking-tight text-green-950 sm:text-6xl"
+    >
+      <%- title %>
+    </h2>
+
+    <p class="mt-4 text-xl leading-8 text-gray-800">
+      <%- description %>
+    </p>
+
+    <div class="mt-10 flex">
+      <%- include('../atoms/upload-button'); %>
+    </div>
+  </div>
+</div>
