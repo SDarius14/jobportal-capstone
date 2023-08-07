@@ -1,6 +1,7 @@
 <section>
   <div class="bg-white">
     <div class="relative isolate px-6 lg:px-8">
+
       <!-- Main Hero -->
       <div class="mx-auto max-w-2xl py-32">
         <div class="hidden sm:flex sm:justify-center"></div>
@@ -85,17 +86,18 @@
     <div class="bg-white">
       <div class="mx-auto px-6 lg:px-8">
         <div class="mx-auto">
-          <ul class="mx-auto mt-10 items-start gap-x-8 flex justify-evenly">
+          <div class="mx-auto mt-10 items-start gap-x-8 flex justify-evenly">
 
             <!-- Logo Cloud Foreach -->
             <% cloudCards.forEach((cloudCard) => { %> 
-            <%- include('../../components/molecules/logo-cloud-card', cloudCard) 
-            %> <% }); %>
+            <%- include('../../components/molecules/logo-cloud-card', cloudCard) %> 
+            <% }); %>
 
-          </ul>
+            </div>
         </div>
       </div>
     </div>
     <!-- /Logo Cloud -->
+
   </div>
 </section>
