@@ -26,14 +26,8 @@ app.get("/signup", (req, res) => {
 });
 
 
-app.get("/employer-dashboard-submit-job", (req, res) => {
-  res.render("pages/employer-dashboard-submit-job", {
-    layout: "layouts/dashboard",
-  });
-});
-
-app.get("/candidate-dashboard-message", (req, res) => {
-  res.render("pages/candidate-dashboard-message", {
+app.get("/messages", (req, res) => {
+  res.render("pages/messages", {
     layout: "layouts/dashboard",
   });
 });

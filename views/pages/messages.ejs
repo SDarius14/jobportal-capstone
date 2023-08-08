@@ -1,0 +1,51 @@
+<% title ='Messages' %> 
+
+<!-- Page Title -->
+<%- include('../components/molecules/page-title', {textTitle: 'Messages' }) %>
+
+<div class="bg-white border border-gray-300 m-2 my-5 w-full h-full rounded-xl flex">
+
+    <!-- Main area -->
+    <main class="min-w-0 flex-1  xl:flex">
+      <section aria-labelledby="message-heading" class="flex h-full min-w-0 flex-1 flex-col overflow-hidden xl:order-last">
+        <!-- Top section -->
+        <%- include('../partials/messages/top-section') %>
+
+        <!-- Message View Section -->
+        <div class="min-h-0 flex-1 overflow-y-auto">
+          <!-- Message Thread Header -->
+          <%- include('../partials/messages/thread-header', {emailSubject: 'Re: New pricing for existing customers', emailAddress: 'joearmstrong@example.com'}) %>
+
+          <!-- Thread section-->
+          <% const messageThread = 
+          [
+            { 
+              senderName: 'Lana Feelings', 
+              dateSent: 'Wednesday at 4:35pm',
+              emailContent1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada at ultricies tincidunt elit et, enim. Habitant nunc, adipiscing non fermentum, sed est a, aliquet. Lorem in vel libero vel augue aliquet dui commodo.',
+              emailContent2: '',
+              senderPosition: ''
+            },
+
+          ]; %>
+          <%- include('../partials/messages/thread-section', {messageThread}) %>
+
+        </div>
+      </section>
+
+      <!-- Message list-->
+
+      <% const messageList = 
+      [
+        { 
+          senderName: 'CodeMNL', 
+          emailSubject: 'Invitation for Interview', 
+          emailContentPreview: 'Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.'
+        },
+
+      ]; %>
+      <%- include('../partials/messages/message-list', {messageList} ) %>
+
+    </main>
+
+</div>
