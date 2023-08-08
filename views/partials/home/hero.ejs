@@ -1,7 +1,6 @@
 <section class="h-screen">
   <div class="bg-white">
-    <div class="relative isolate px-6 lg:px-8">
-
+    <div class="relative">
       <!-- Main Hero -->
       <div class="mx-auto max-w-2xl py-32">
         <div class="hidden sm:flex sm:justify-center"></div>
@@ -49,25 +48,95 @@
         </div>
       </div>
       <!-- /Main Hero -->
-
     </div>
 
-    <!-- Logo Cloud -->
-    <div class="bg-white">
-      <div class="mx-auto px-6 lg:px-8">
-        <div class="mx-auto">
-          <div class="mx-auto mt-10 items-start gap-x-8 flex justify-evenly">
-
-            <!-- Logo Cloud Foreach -->
-            <% cloudCards.forEach((cloudCard) => { %> 
-            <%- include('../../components/molecules/logo-cloud-card', cloudCard) %> 
-            <% }); %>
-
-            </div>
+    <!-- Slider main container -->
+    <div class="swiper max-w-full lg:px-8">
+      <!-- Additional required wrapper -->
+      <div
+        class="swiper-wrapper mx-auto mt-10 items-start gap-x-8 flex justify-evenly"
+      >
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
+            src="./assets/images/slack-logo-cloud.png"
+            alt="Slack Icon"
+            width="158"
+            height="48"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
+            src="./assets/images/slack-logo-cloud.png"
+            alt="Slack Icon"
+            width="158"
+            height="48"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
+            src="./assets/images/slack-logo-cloud.png"
+            alt="Slack Icon"
+            width="158"
+            height="48"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
+            src="./assets/images/slack-logo-cloud.png"
+            alt="Slack Icon"
+            width="158"
+            height="48"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
+            src="./assets/images/slack-logo-cloud.png"
+            alt="Slack Icon"
+            width="158"
+            height="48"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
+            src="./assets/images/slack-logo-cloud.png"
+            alt="Slack Icon"
+            width="158"
+            height="48"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
+            src="./assets/images/slack-logo-cloud.png"
+            alt="Slack Icon"
+            width="158"
+            height="48"
+          />
         </div>
       </div>
     </div>
-    <!-- /Logo Cloud -->
-
   </div>
 </section>
+
+<!-- sample -->
+
+<script>
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    slidesPerView: 6,
+
+    autoplay: {
+      delay: 2000, // Set the time between slides (in milliseconds)
+      disableOnInteraction: false, // Continue autoplay even if user interacts
+    },
+  });
+</script>
