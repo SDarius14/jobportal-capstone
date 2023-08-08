@@ -2,11 +2,15 @@
   class="group col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-green-500 text-center shadow group-hover:bg-lime-300"
 >
   <div class="flex flex-1 flex-col p-8 text-left">
-    <h3 class="text-7xl font-medium text-white font-serif"><%- titleTextTwo %></h3>
+    <h3 class="text-7xl font-medium text-white font-serif">
+      <%- titleTextTwo %>
+    </h3>
     <dl class="mt-4 flex flex-grow flex-col justify-between">
       <dt class="sr-only">Title</dt>
       <dd class="text-lg text-white"><%- descriptionTextTwo %></dd>
     </dl>
-    <%- cardIconTwo %>
+    <div class="h-25 w-25 border rounded-full overflow-hidden mr-auto">
+      <%- cardIconTwo %>
+    </div>
   </div>
 </li>
