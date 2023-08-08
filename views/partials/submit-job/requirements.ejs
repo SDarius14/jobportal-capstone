@@ -35,24 +35,14 @@
               </span>
             </div>
           </div>
-
+          <% const skills = [ 'HTML', 'CSS', 'JavaScript'] %>
           <div class="mt-2">
             <ul class="flex gap-1">
-              <li
-                class="rounded-lg bg-green-50 px-3 py-2 text-xs font-normal text-green-950 shadow-md hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                HTML
-              </li>
-              <li
-                class="rounded-lg bg-green-50 px-3 py-2 text-xs font-normal text-green-950 shadow-md hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                CSS
-              </li>
-              <li
-                class="rounded-lg bg-green-50 px-3 py-2 text-xs font-normal text-green-950 shadow-md hover:bg-green-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                JavaScript
-              </li>
+              <% skills.forEach(element => { %>
+               <li
+                class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800"><%= element %></li>
+              <% }) %>
+              
             </ul>
           </div>
         </div>
