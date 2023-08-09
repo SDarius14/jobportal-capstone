@@ -54,73 +54,34 @@
     <div class="swiper max-w-full lg:px-8">
       <!-- Additional required wrapper -->
       <div
-        class="swiper-wrapper mx-auto mt-10 items-start gap-x-8 flex justify-evenly"
+        class="swiper-wrapper mx-auto mt-10 items-center gap-x-8 flex justify-center"
       >
         <!-- Slides -->
         <div class="swiper-slide">
-          <img
-            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
-            src="./assets/images/slack-logo-cloud.png"
-            alt="Slack Icon"
-            width="158"
-            height="48"
-          />
+          <%- include('../../components/atoms/google-icon'); %>
         </div>
         <div class="swiper-slide">
-          <img
-            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
-            src="./assets/images/slack-logo-cloud.png"
-            alt="Slack Icon"
-            width="158"
-            height="48"
-          />
+          <%- include('../../components/atoms/shipbob-icon'); %>
         </div>
         <div class="swiper-slide">
-          <img
-            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
-            src="./assets/images/slack-logo-cloud.png"
-            alt="Slack Icon"
-            width="158"
-            height="48"
-          />
+          <%- include('../../components/atoms/dribbble-icon'); %>
         </div>
         <div class="swiper-slide">
-          <img
-            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
-            src="./assets/images/slack-logo-cloud.png"
-            alt="Slack Icon"
-            width="158"
-            height="48"
-          />
+          <%- include('../../components/atoms/slack-icon'); %>
         </div>
         <div class="swiper-slide">
-          <img
-            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
-            src="./assets/images/slack-logo-cloud.png"
-            alt="Slack Icon"
-            width="158"
-            height="48"
-          />
+          <%- include('../../components/atoms/vine-icon'); %>
         </div>
         <div class="swiper-slide">
-          <img
-            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
-            src="./assets/images/slack-logo-cloud.png"
-            alt="Slack Icon"
-            width="158"
-            height="48"
-          />
+          <%- include('../../components/atoms/airbnb-icon'); %>
         </div>
         <div class="swiper-slide">
-          <img
-            class="col-span-2 max-h-12 w-full object-contain object-center lg:col-span-1"
-            src="./assets/images/slack-logo-cloud.png"
-            alt="Slack Icon"
-            width="158"
-            height="48"
-          />
+          <%- include('../../components/atoms/google-icon'); %>
         </div>
-      </div>
+        <div class="swiper-slide">
+          <%- include('../../components/atoms/shipbob-icon'); %>
+        </div>
+    </div>
     </div>
   </div>
 </section>
@@ -135,8 +96,13 @@
     slidesPerView: 6,
 
     autoplay: {
-      delay: 2000, // Set the time between slides (in milliseconds)
+      delay: 3000, // Set the time between slides (in milliseconds)
       disableOnInteraction: false, // Continue autoplay even if user interacts
+      reverseDirection: true
     },
+
+     // Additional code to handle manual swiping smoothly
+    touchStartPreventDefault: false,
+    speed: 1000, // Set the speed of the swipe animation
   });
 </script>
