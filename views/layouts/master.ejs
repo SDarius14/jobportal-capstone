@@ -31,6 +31,9 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -41,5 +44,22 @@
 
     <!-- footer -->
     <%- include('../partials/footer') %>
+
+    <script>
+
+      ScrollReveal().reveal("#scale-left", { 
+        origin: 'right',
+        distance: '30px',
+        duration: 1000, // Animation duration in milliseconds
+        easing: "ease-in-out" // Smooth animation
+      });
+
+      ScrollReveal().reveal("#scale-up", { 
+        origin: 'bottom', //specifies what direction elements come from when revealed
+        distance: '30px',
+        duration: 1000, // Animation duration in milliseconds
+        easing: "ease-in-out" // Smooth animation
+      });
+    </script>
   </body>
 </html>
