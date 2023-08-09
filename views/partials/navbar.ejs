@@ -3,12 +3,14 @@
     class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
     aria-label="Global"
   >
+    <!-- Logo -->
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only">Your Company</span>
         <img class="h-8 w-auto" src="./assets/images/logo.png" alt="" />
       </a>
     </div>
+
     <div class="flex lg:hidden">
       <button
         @click="open = true"
@@ -69,53 +71,46 @@
           x-show="open"
           @click.away="open = false"
           class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-[14rem] overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+          x-transition:enter="transition ease-out duration-300 transform opacity-0"
+          x-transition:enter-start="translate-y-[-10%] opacity-0"
+          x-transition:enter-end="translate-y-0 opacity-100"
+          x-transition:leave="transition ease-in duration-300 transform opacity-100"
+          x-transition:leave-start="translate-y-0 opacity-100"
+          x-transition:leave-end="translate-y-[-10%] opacity-0"
         >
           <div class="p-4">
             <div
               class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
             >
-              
               <div class="flex-auto">
                 <a href="#" class="block font-semibold text-gray-900">
                   Candidate Dashboard
                   <span class="absolute inset-0"></span>
                 </a>
-                
               </div>
             </div>
 
             <div
               class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
             >
-              
               <div class="flex-auto">
                 <a href="#" class="block font-semibold text-gray-900">
                   Employer Dashboard
                   <span class="absolute inset-0"></span>
                 </a>
-               
               </div>
             </div>
-
-            
           </div>
-          
         </div>
       </div>
 
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-        >Home</a
-      >
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-        >Job</a
-      >
+      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Job</a>
       <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
         >Explore</a
       >
 
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-        >Blog</a
-      >
+      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
 
       <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
         >Contact</a
@@ -130,8 +125,16 @@
       >
     </div>
   </nav>
+
   <!-- Mobile menu, show/hide based on menu open state. -->
-  <div x-show="open" class="lg:hidden" role="dialog" aria-modal="true">
+  <div x-show="open" class="lg:hidden" role="dialog" aria-modal="true" 
+      x-transition:enter="transition ease-out duration-300 transform translate-x-full"
+      x-transition:enter-start="translate-x-full"
+      x-transition:enter-end="translate-x-0"
+      x-transition:leave="transition ease-in duration-300 transform translate-x-full"
+      x-transition:leave-start="translate-x-0"
+      x-transition:leave-end="translate-x-full"
+      class="lg:hidden fixed inset-0 z-50 bg-white">
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
     <div
@@ -140,11 +143,7 @@
       <div class="flex items-center justify-between">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
-          <img
-            class="h-8 w-auto"
-            src="./assets/images/logo.png"
-            alt=""
-          />
+          <img class="h-8 w-auto" src="./assets/images/logo.png" alt="" />
         </a>
         <button
           @click="open = !true"
@@ -172,7 +171,8 @@
         <div class="-my-6 divide-y divide-gray-500/10">
           <div class="space-y-2 py-6">
             <div x-data="{ open: false }" class="-mx-3">
-              <button @click="open = true"
+              <button
+                @click="open = true"
                 type="button"
                 class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50"
                 aria-controls="disclosure-1"
@@ -198,7 +198,18 @@
                 </svg>
               </button>
               <!-- 'Product' sub-menu, show/hide based on menu state. -->
-              <div x-show="open" @click.away="open = false" class="mt-2 space-y-2" id="disclosure-1">
+              <div
+                x-show="open"
+                @click.away="open = false"
+                class="mt-2 space-y-2"
+                id="disclosure-1"
+                x-transition:enter="transition ease-out duration-300 transform opacity-0"
+                x-transition:enter-start="translate-y-[-10%] opacity-0"
+                x-transition:enter-end="translate-y-0 opacity-100"
+                x-transition:leave="transition ease-in duration-300 transform opacity-100"
+                x-transition:leave-start="translate-y-0 opacity-100"
+                x-transition:leave-end="translate-y-[-10%] opacity-0"
+              >
                 <a
                   href="#"
                   class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -210,8 +221,6 @@
                   class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Employer Dashboard</a
                 >
-
-                
               </div>
             </div>
             <a
