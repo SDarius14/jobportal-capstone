@@ -4,48 +4,47 @@
       <!-- Main Hero -->
       <div class="mx-auto max-w-2xl py-32">
         <div class="hidden sm:flex sm:justify-center"></div>
-        <div class="text-center">
+        <div class="text-center flex flex-col justify-center items-center">
           <h1
-            class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl"
+            class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl max-w-xs sm:max-w-md md:max-w-2xl"
           >
             <%= title %>
           </h1>
-          <p class="text-lg leading-8 text-gray-600"><%= subTitle %></p>
-
-          <!-- Search Section -->
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <form class="w-full max-w-xl lg:col-span-5 lg:pt-2">
-              <div
-                class="sm:border sm:border-black p-4 rounded-xl flex gap-x-4"
-              >
-                <!-- Search Label -->
-                <label for="search" class="sr-only">Search</label>
-                <div
-                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
-                ></div>
-                <input
-                  id="search"
-                  name="search"
-                  class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  placeholder="Search Jobs..."
-                  type="search"
-                />
-                <!-- /Search Label -->
-                <button
-                  type="submit"
-                  class="inline-flex items-center gap-x-2 rounded-md bg-green-600 px-5 py-2.5 text-base text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
-                >
-                  Search
-                </button>
-              </div>
-              <p class="mt-4 text-sm leading-6 text-gray-900">
-                <span class="font-semibold"><%= description %></span> <%=
-                descriptionTwo %>
-              </p>
-            </form>
-          </div>
-          <!-- /Search Section -->
+          <p class="text-lg leading-8 text-gray-600"><%= subTitle %></p> 
         </div>
+        <!-- Search Section -->
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <form class="w-full max-w-xl lg:col-span-5 lg:pt-2">
+            <div
+              class="sm:border sm:border-black p-4 rounded-xl flex gap-x-4"
+            >
+              <!-- Search Label -->
+              <label for="search" class="sr-only">Search</label>
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+              ></div>
+              <input
+                id="search"
+                name="search"
+                class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-green-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6"
+                placeholder="Search Jobs..."
+                type="search"
+              />
+              <!-- /Search Label -->
+              <button
+                type="submit"
+                class="inline-flex items-center gap-x-2 rounded-md bg-green-600 px-5 py-2.5 text-base text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+              >
+                Search
+              </button>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-gray-900 text-center">
+              <span class="font-semibold"><%= description %></span> <%=
+              descriptionTwo %>
+            </p>
+          </form>
+        </div>
+        <!-- /Search Section -->
       </div>
       <!-- /Main Hero -->
     </div>
@@ -81,28 +80,9 @@
         <div class="swiper-slide">
           <%- include('../../components/atoms/shipbob-icon'); %>
         </div>
-    </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- sample -->
-
-<script>
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    slidesPerView: 6,
-
-    autoplay: {
-      delay: 3000, // Set the time between slides (in milliseconds)
-      disableOnInteraction: false, // Continue autoplay even if user interacts
-      reverseDirection: true
-    },
-
-     // Additional code to handle manual swiping smoothly
-    touchStartPreventDefault: false,
-    speed: 1000, // Set the speed of the swipe animation
-  });
-</script>

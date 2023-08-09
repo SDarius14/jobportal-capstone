@@ -45,20 +45,42 @@
     <!-- footer -->
     <%- include('../partials/footer') %>
 
+    <!-- Scroll Reveal -->
     <script>
-
-      ScrollReveal().reveal("#scale-left", { 
-        origin: 'right',
-        distance: '30px',
+      ScrollReveal().reveal("#scale-left", {
+        origin: "right",
+        distance: "30px",
         duration: 1000, // Animation duration in milliseconds
-        easing: "ease-in-out" // Smooth animation
+        easing: "ease-in-out", // Smooth animation
+        reset: true, // Resets the reveal state when elements exit the viewport
       });
 
-      ScrollReveal().reveal("#scale-up", { 
-        origin: 'bottom', //specifies what direction elements come from when revealed
-        distance: '30px',
+      ScrollReveal().reveal("#scale-up", {
+        origin: "bottom", //specifies what direction elements come from when revealed
+        distance: "30px",
         duration: 1000, // Animation duration in milliseconds
-        easing: "ease-in-out" // Smooth animation
+        easing: "ease-in-out", // Smooth animation
+        reset: true, // Resets the reveal state when elements exit the viewport
+      });
+    </script>
+
+    <!-- Swiper -->
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 6,
+
+        autoplay: {
+          delay: 3000, // Set the time between slides (in milliseconds)
+          disableOnInteraction: false, // Continue autoplay even if user interacts
+          reverseDirection: true,
+        },
+
+        // Additional code to handle manual swiping smoothly
+        touchStartPreventDefault: false,
+        speed: 1000, // Set the speed of the swipe animation
       });
     </script>
   </body>
