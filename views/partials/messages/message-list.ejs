@@ -9,8 +9,9 @@
             </div>
             <div class="border-b"></div>
           </div>
-          <nav aria-label="Message list" class="min-h-0 flex-1 overflow-y-auto">
-            <ul role="list" class="divide-y divide-gray-200 border-b border-gray-200">
+          <nav aria-label="Message list" class="min-h-0 flex-1 overflow-y-auto p-2">
+            <ul role="list" class="divide-y divide-gray-200 border border-gray-200 ">
+              <%- include('../../components/molecules/message-item', {senderName: 'Friends Connect', emailSubject: 'Jr. Backend Developer Role - Invitation for Interview', emailContentPreview: 'Hi Dani Martinez, I\'m excited to invite you for an interview at our company for the Jr. Backend Developer role.'}) %>
               <% messageList.forEach((item) => { %>
                 <%- include('../../components/molecules/message-item', item) %>
               <% }); %>

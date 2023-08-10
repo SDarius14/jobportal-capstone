@@ -14,17 +14,38 @@
         <!-- Message View Section -->
         <div class="min-h-0 flex-1 overflow-y-auto">
           <!-- Message Thread Header -->
-          <%- include('../partials/messages/thread-header', {emailSubject: 'Re: New pricing for existing customers', emailAddress: 'joearmstrong@example.com'}) %>
+          <%- include('../partials/messages/thread-header', {emailSubject: 'Re: Jr. Backend Developer Role - Invitation for Interview', emailAddress: 'hr@friendsconnect.com'}) %>
 
           <!-- Thread section-->
           <% const messageThread = 
           [
             { 
-              senderName: 'Lana Feelings', 
-              dateSent: 'Wednesday at 4:35pm',
-              emailContent1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada at ultricies tincidunt elit et, enim. Habitant nunc, adipiscing non fermentum, sed est a, aliquet. Lorem in vel libero vel augue aliquet dui commodo.',
+              senderName: 'Friends Connect', 
+              dateSent: 'Wednesday at 1:37pm',
+              emailContent1: 'Hi Dani Martinez, I\'m excited to invite you for an interview at our company for the Jr. Backend Developer role. Are you available next Wednesday at 10 AM?',
               emailContent2: '',
-              senderPosition: ''
+              senderPosition: 'HR Representative'
+            },
+            { 
+              senderName: 'Dani Martinez', 
+              dateSent: 'Wednesday at 2:05pm',
+              emailContent1: 'Hello! Thank you for the invitation. I\'m thrilled about the opportunity. Wednesday at 10 AM works perfectly for me.',
+              emailContent2: '',
+              senderPosition: 'Applicant'
+            },
+            { 
+              senderName: 'Friends Connect', 
+              dateSent: 'Wednesday at 2:12pm',
+              emailContent1: 'That\'s great to hear, Dani! We look forward to meeting you. We\'ll be sending you a confirmation email shortly with all the details. Feel free to reach out if you have any questions before the interview.',
+              emailContent2: '',
+              senderPosition: 'HR Representative'
+            },
+            { 
+              senderName: 'Dani Martinez', 
+              dateSent: 'Wednesday at 2:40pm',
+              emailContent1: 'Thank you so much. I appreciate it. I\'m looking forward to learning more about the role and the company. Will keep an eye on my inbox for the confirmation email.',
+              emailContent2: '',
+              senderPosition: 'Applicant'
             },
 
           ]; %>
@@ -37,6 +58,26 @@
 
       <% const messageList = 
       [
+        { 
+          senderName: 'CodeMNL', 
+          emailSubject: 'Invitation for Interview', 
+          emailContentPreview: 'Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.'
+        },
+        { 
+          senderName: 'Leaf', 
+          emailSubject: 'Application Received', 
+          emailContentPreview: 'Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.'
+        },
+        { 
+          senderName: 'Super Lightning', 
+          emailSubject: 'Technical Interview', 
+          emailContentPreview: 'Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.'
+        },
+        { 
+          senderName: 'CodeMNL', 
+          emailSubject: 'Invitation for Interview', 
+          emailContentPreview: 'Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.'
+        },
         { 
           senderName: 'CodeMNL', 
           emailSubject: 'Invitation for Interview', 
