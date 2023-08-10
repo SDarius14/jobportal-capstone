@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title><%= typeof title !== 'undefined' ? title : 'Job Portal' %></title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.svg">
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap"
+      rel="stylesheet" />
+
+    <!-- Alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Sidebar/Body -->
+    <%- include('../partials/sidebar-emp', body) %>
+
+    
+    
+    <!-- Include your custom script file -->
+    <script src="/assets/js/graph.js"></script>
+  </body>
+</html>

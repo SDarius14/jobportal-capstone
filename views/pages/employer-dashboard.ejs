@@ -1,0 +1,78 @@
+<% title = 'Dashboard' %>
+
+<!-- Cards Array -->
+<% const cards = 
+[ 
+  { 
+    cardText: 'Posted Job', 
+    cardNum: '297', 
+    cardIcon: include('../components/atoms/people-icon'), 
+    percentChange: include('../components/atoms/increase-icon'), 
+    percentValue: '122%',
+    percentColor: 'green' 
+  }, 
+  { 
+    cardText: 'Shortlisted', 
+    cardNum: '18', 
+    cardIcon: include('../components/atoms/bookmark-icon'), 
+    percentChange: include('../components/atoms/decrease-icon'), 
+    percentValue: '9.1%',
+    percentColor: 'red' 
+  }, 
+  { 
+    cardText: 'For Interview', 
+    cardNum: '109', 
+    cardIcon: include('../components/atoms/views-icon'), 
+    percentChange: include('../components/atoms/increase-icon'), 
+    percentValue: '5.6%',
+    percentColor: 'green' 
+  }, 
+  { 
+    cardText: 'Job Offer', 
+    cardNum: '12', 
+    cardIcon: include('../components/atoms/applied-icon'), 
+    percentChange: include('../components/atoms/decrease-icon'), 
+    percentValue: '15%', 
+    percentColor: 'red' 
+  }  
+]; %>
+
+<!-- Jobs Array -->
+<% const jobs =
+[
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/candidates/img_04.jpg',
+    companyName : 'Lana Feelings', 
+    appliedPosition: 'Jr. UI/UX Designer',
+    dateApplied: 'July 31, 2023' 
+  },
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/candidates/img_02.jpg',
+    companyName : 'Mark Anthony Mamaya', 
+    appliedPosition: 'Jr. Software Engineer', 
+    dateApplied: 'July 21, 2023' 
+  },
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/dashboard/images/avatar_01.jpg',
+    companyName : 'Jebson Aparador', 
+    appliedPosition: 'Cloud Engineer',
+    dateApplied: 'July 16, 2023' 
+  },
+  {
+    companyImageSource:'https://html.creativegigstf.com/jobi/jobi/images/candidates/img_05.jpg',
+    companyName : 'Dina Siningil', 
+    appliedPosition: 'Mid Backend Developer',
+    dateApplied: 'July 10, 2023' 
+  },
+]; %>
+
+<!-- Highlights -->
+<%- include('../partials/candidate-dashboard/highlights', {sectionHeader: 'DASHBOARD', cards}); %>
+
+<div class=" grid md:grid-cols-2 gap-2">
+  <!-- profile views -->
+  <%- include('../partials/candidate-dashboard/viewsgraph', {sectionHeader: 'Job Views'}); %>
+
+  <!-- Recent Activities -->
+  <%- include('../partials/candidate-dashboard/recent-activities', {sectionHeader: 'Recent Applicants', jobs}); %>
+</div>

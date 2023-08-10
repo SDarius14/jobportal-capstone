@@ -1,0 +1,56 @@
+<% title = 'My Profile' %>
+
+
+  <!-- Profile Info Array -->
+<% const profileInfos =
+  [ 
+    { 
+      inputName:'company-name', 
+      inputLabel: 'Company Name', 
+      inputColSize: 'sm:col-span-4'
+    },
+    { 
+      inputName: 'email-address', 
+      inputLabel: 'Email Address', 
+      inputColSize: 'sm:col-span-4'
+    },
+    { 
+      inputName: 'country', 
+      inputLabel: 'Country', 
+      inputColSize: 'sm:col-span-4'
+    },
+    { 
+      inputName:'street-adress', 
+      inputLabel: 'Street Address', 
+      inputColSize: 'col-span-full'
+    },
+    { 
+      inputName: 'city', 
+      inputLabel: 'City', 
+      inputColSize: 'sm:col-span-2 sm:col-start-1'
+    },
+    ,
+    { 
+      inputName: 'state-rovince', 
+      inputLabel: 'State/Province', 
+      inputColSize: 'sm:col-span-2'
+    },
+    { 
+      inputName: 'zip-code', 
+      inputLabel: 'ZIP/Postal Code', 
+      inputColSize: 'sm:col-span-2'
+    },
+
+  ]; %>
+
+    <!-- Experience Info Array -->
+
+
+
+
+<div class="space-y-10 divide-y divide-gray-900/10">
+
+  <!-- Profile -->
+  <%- include('../partials/employer-profile/employer-profile', {header: 'Profile', description: 'Manage your profile details and preferences in one convenient place for a personalized experience.', profileInfos}) %>
+
+</div>

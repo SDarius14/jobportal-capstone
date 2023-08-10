@@ -1,7 +1,7 @@
 <li x-data="{ open: false }">
   <p
     @click="open = true"
-    class="mt-6 text-2xl font-semibold leading-8 text-green-900 border-b border-gray-600 border-opacity-20"
+    class="mt-6 hover:cursor-pointer text-2xl font-semibold leading-8 text-green-900 border-b border-gray-600 border-opacity-20"
   >
     <%- title %>
   </p>
@@ -9,6 +9,12 @@
     x-show="open"
     @click.away="open = false"
     class="mt-2 text-base leading-8 text-gray-600"
+    x-transition:enter="transition ease-out duration-300 transform opacity-0"
+    x-transition:enter-start="translate-y-[-10%] opacity-0"
+    x-transition:enter-end="translate-y-0 opacity-100"
+    x-transition:leave="transition ease-in duration-300 transform opacity-100"
+    x-transition:leave-start="translate-y-0 opacity-100"
+    x-transition:leave-end="translate-y-[-10%] opacity-0"
   >
     <%- description %>
   </p>

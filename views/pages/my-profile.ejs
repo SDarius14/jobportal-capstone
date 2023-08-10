@@ -69,7 +69,7 @@
 
   ]; %>
 
-    <!-- Profile Info Array -->
+    <!-- Experience Info Array -->
 <% const experiences =
   [ 
     { 
@@ -84,8 +84,9 @@
           inputName:'position', 
           inputLabel: 'Position', 
           inputColSize: 'sm:col-span-3'
-        },
-      ]
+        }
+      ],
+        textareaLabel: 'Job Description',
     },
     { 
       header:'Educational Experience', 
@@ -99,8 +100,9 @@
           inputName:'degree', 
           inputLabel: 'Degree', 
           inputColSize: 'sm:col-span-3'
-        },
-      ]
+        }
+      ],
+        textareaLabel: 'Extra Curricular Activities',
     }
 
   ]; %>
@@ -109,11 +111,11 @@
 
 <div class="space-y-10 divide-y divide-gray-900/10">
   <!-- Personal Info -->
-  <%- include('../partials/my-profile/personal-info', {header: 'Personal Information', description: 'Use a permanent address where you can receive mail.', inputInfos}) %>
+  <%- include('../partials/my-profile/personal-info', {header: 'Personal Information', description: 'Safely store and manage sensitive personal info, ensuring privacy and customization. Your data, your control.', inputInfos}) %>
 
   <!-- Profile -->
-  <%- include('../partials/my-profile/profile', {header: 'Profile', description: 'This information will be displayed publicly so be careful what you share.', profileInfos}) %>
+  <%- include('../partials/my-profile/profile', {header: 'Profile', description: 'Manage your profile details and preferences in one convenient place for a personalized experience.', profileInfos}) %>
 
   <!-- Experiences -->
-  <%- include('../partials/my-profile/experience', {header: 'Experiences', description: 'We\'ll always let you know about important changes, but you pick what else you want to hear about.', experiences}) %>
+  <%- include('../partials/my-profile/experience', {header: 'Experiences', description: 'Chronicle work and education history to showcase your journey. Centralize experiences for a comprehensive overview. Shape your story. ', experiences}) %>
 </div>

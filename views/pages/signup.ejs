@@ -1,0 +1,156 @@
+<%- include('../components/listing-header.ejs', { text: 'Register', subtext:
+'Create an account & Start posting or hiring talents' }) %>
+
+<div class="px-5 mx-auto flex justify-center items-center">
+  <div class="bg-white rounded-xl my-10 md:mx-10 w-full md:w-[50dvw] mx">
+    <div class="p-5 md:p-10 w-full flex flex-col items-center justify-center">
+
+
+     
+
+      <h1 class="text-eb text-[#244034] text-4xl mb-2 font-semibold">Create Account</h1>
+      <!-- <h4 class="text-center text-xl mt-2 font-light">
+        Still don't have an account?
+        <span><a href="/signup" class="text-blue-400">Signup</a></span>
+      </h4> -->
+
+      <form class="flex flex-col gap-y-5 w-full px-5 md:px-10  mt-10">
+
+        <div class="h-12 w-full rounded-xl border bg-[#e7efe0] flex text-[18px] text-gray-400 ">
+          <h3  id="candidates-button" class="tab selected-tab h-full w-1/2 justify-center flex items-center rounded-xl cursor-pointer">Candidates</h3>
+          <h3 id="employer-button" class="tab  h-full w-1/2 justify-center flex items-center rounded-xl cursor-pointer">Employer</h3>
+
+
+        </div>
+        <div class="w-full">
+          <label for="name" class="">Name</label>
+          <input
+            type="name"
+            name="name"
+            id="name"
+            class="block px-5 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="w-full">
+          <label for="email" class="">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="block px-5 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="you@example.com"
+          />
+        </div>
+        <div class="w-full">
+          <label for="email" class="">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="block px-5 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="Enter Password"
+          />
+        </div>
+
+        <!-- checkbox -->
+        <div class="relative flex items-start">
+          <div class="flex h-6 items-center">
+            <input
+              id="comments"
+              aria-describedby="comments-description"
+              name="comments"
+              type="checkbox"
+              class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+          </div>
+          <div class="ml-3 text-sm leading-6">
+            <label for="comments" class="font-medium text-gray-900"
+              >By hitting the "Register" button, you agree to the <a href="#" class="text-[#31795a] underline">Terms conditions</a> & <a href="#" class="text-[#31795a] underline">Privacy Policy</a>.</label
+            >
+          </div>
+        </div>
+        <!-- checkbox -->
+
+        <%- include('../components/molecules/wide-button.ejs', {
+          buttonText: 'Register'
+        })%>
+
+        <%- include('../components/molecules/auth-divider', {
+          label: 'OR'
+        }) %>
+
+      <div class="flex justify-between gap-x-5">
+        <%  const buttons = [
+        {
+          buttonText: 'Login with Google',
+          iconSrc: 'https://html.creativegigstf.com/jobi/jobi/images/icon/google.png'
+        },
+        {
+          buttonText: 'Login with Facebook',
+          iconSrc: 'https://html.creativegigstf.com/jobi/jobi/images/icon/facebook.png'
+        }
+        ]
+        %>
+
+        <% buttons.forEach(item => { %>
+          <%- include('../components/molecules/oAuth-button', item) %>
+      <% }); %>
+          
+      </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+
+// let activeIndex = 'candidates'
+
+// const candidatesTab = document.querySelector('#candidates-button')
+// const employerTab = document.querySelector('#employer-button')
+
+// candidatesTab.addEventListener('click', ()=>{
+//   candidatesTab.classList.add('selected-tab')
+//   employerTab.classList.remove('selected-tab')
+// })
+// employerTab.addEventListener('click', ()=>{
+//   employerTab.classList.add('selected-tab')
+//   candidatesTab.classList.remove('selected-tab')
+
+// })
+
+const tabs = document.querySelectorAll('.tab')
+
+tabs.forEach((tab, index)=> {
+  tab.addEventListener('click', ()=> {
+    selectedTab(index)
+  })
+})
+
+const selectedTab = ( index ) => {
+  tabs.forEach((tab, i) => {
+    if(i === index){
+      tab.classList.add('selected-tab')
+    } else {
+      tab.classList.remove('selected-tab')
+    }
+  })
+}
+
+
+</script>
+
+<style>
+  .text-eb {
+    font-family: EB Garamond, serif;
+  }
+
+.selected-tab {
+color: #31795a;
+border: 1px solid #31795a;
+background-color: white;
+}
+
+</style>

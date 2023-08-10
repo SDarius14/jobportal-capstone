@@ -1,25 +1,5 @@
 <% title = "Home Page" %>
 
-<!-- Logo Cloud Array -->
-<% const cloudCards = 
-[ 
-  { 
-    icon: include('../components/atoms/google-icon')
-  }, 
-  { 
-    icon: include('../components/atoms/shipbob-icon')
-  }, 
-  { 
-    icon: include('../components/atoms/dribbble-icon')
-  },
-  { 
-    icon: include('../components/atoms/slack-icon')
-  }, 
-  { 
-    icon: include('../components/atoms/vine-icon')
-  }
-]; %>
-
 <!-- Cards Array -->
 <% const cards = 
 [ 
@@ -109,11 +89,10 @@
 
 <!--Hero Section-->
 <%- include('../partials/home/hero', {
-  title: "Find & Hire Experts for any Job",
-  subTitle: "Jobs & Job search. Find jobs in global. Executive jobs & work.",
+  title: "Connect with Top Talent for Every Role",
+  subTitle: "Discover Global Opportunities. Executive Positions and Employment Search.",
   description: "Popular:",
-  descriptionTwo: "Design, Art, Business, Video Editing",
-  cloudCards
+  descriptionTwo: "Design, Art, Business, Video Editing"
 }); %>
 
 <!-- Jobcategory Section-->
@@ -125,7 +104,7 @@
 
 <!-- Workflow Section -->
 <%- include('../partials/home/workflow-categories', {
-  title: "How it's Work?",
+  title: "How it Works?",
   workflows}); %>
 
 <!-- Talent Section-->
