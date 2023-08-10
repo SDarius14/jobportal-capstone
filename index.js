@@ -14,15 +14,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.render("pages/login", {
-    layout: "layouts/auth",
-  });
+  res.render("pages/login");
 });
 
 app.get("/signup", (req, res) => {
-  res.render("pages/signup", {
-    layout: "layouts/auth",
-  });
+  res.render("pages/signup");
 });
 
 
