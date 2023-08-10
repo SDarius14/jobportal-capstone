@@ -2,194 +2,92 @@
 <% text="Candidate Profile" %>
 <% subtext="Home > Candidate Profile" %>
 
-<!-- Header -->
+<% const educationList = [
+    {
+        profileNumber: '1',
+        profileTitle: 'Bachelor of Science in Information Technology',
+        profileDesc: 'Pangasinan State University',
+        profileDate: 'August 2019 - August 2023'
+    },
+    {
+        profileNumber: '2',
+        profileTitle: 'Pre-Course: Web Development Fundamentals 101',
+        profileDesc: 'CodeMNL',
+        profileDate: 'April 2023 - May 2023'
+    }
+]; %>
+
+<% const skillList = [
+    {
+        skillDesc: 'Figma'
+    },
+    {
+        skillDesc: 'HTML'
+    },
+    {
+        skillDesc: 'CSS'
+    },
+    {
+        skillDesc: 'Javascript'
+    },
+    {
+        skillDesc: 'Web Development'
+    },
+    {
+        skillDesc: 'Adobe Photoshop'
+    },
+    {
+        skillDesc: 'Web Design'
+    },
+    {
+        skillDesc: 'eCommerce Development'
+    }
+]; %>
+
+<% const workList = [
+    {
+        profileNumber: '1',
+        profileTitle: 'Product Designer (Google)',
+        profileDesc: 'I played an integral role in shaping innovative digital solutions. I collaborated closely with cross-functional teams to translate complex ideas into intuitive user experiences.',
+        profileDate: 'January 2022 - December 2022'
+    },
+    {
+        profileNumber: '2',
+        profileTitle: 'UI/UX Engineer (Adobe)',
+        profileDesc: 'I had the privilege of crafting impactful digital experiences that resonate with users on a global scale.',
+        profileDate: 'August 2022 - November 2022'
+    }
+]; %>
+
+<% const candidateDetails = [
+    {
+        detailsHeader: 'Location:',
+        detailsDesc: 'Manila, Philippines'
+    },
+    {
+        detailsHeader: 'Age:',
+        detailsDesc: '21 years old'
+    },
+    {
+        detailsHeader: 'Email Address:',
+        detailsDesc: 'danimartinez@gmail.com'
+    },
+    {
+        detailsHeader: 'Qualification:',
+        detailsDesc: 'Bachelor Degree'
+    },
+    {
+        detailsHeader: 'Gender:',
+        detailsDesc: 'Male'
+    },
+    {
+        detailsHeader: 'Expected Salary:',
+        detailsDesc: 'Php 25,000 - Php 30,000 per month'
+    }
+]; %>
+
+<!-- page header -->
 <%- include('../components/molecules/page-header') %>
 
-<!-- Profile -->
-<div class="bg-[#f0f6f4] min-h-full px-6 py-8 lg:px-8">
-    <main class="py-10">  
-      <div class="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
-        <div class="space-y-6 lg:col-span-2 lg:col-start-1">
-          <!-- Description list-->
-          <section aria-labelledby="applicant-information-title">
-            <div class="bg-white shadow sm:rounded-lg">
-              <div class="px-4 py-5 sm:px-6">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-900">Overview</h1>
-              </div>
-              <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
-                <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-                 
-                  <div class="sm:col-span-2">
-                    <dd class="mt-1 text-sm text-gray-900">Hello my name is Dani Martinez and I’m a Financial Supervisor from Netherlands, Rotterdam. In pharetra orci dignissim, blandit mi semper, ultricies diam. Suspendisse malesuada suscipit nunc non volutpat. Sed porta nulla id orci laoreet tempor non consequat enim. Sed vitae aliquam velit. Aliquam Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam.</dd>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <dd class="mt-1 text-sm text-gray-900">Mauris nec erat ut libero vulputate pulvinar. Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. Mauris nec.</dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-          </section>
-
-          <section aria-labelledby="applicant-information-title">
-            <div class="bg-white shadow sm:rounded-lg">
-              <div class="px-4 py-5 sm:px-6">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-900">Education</h1>
-              </div>
-              <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
-                <ul role="list" class="-mb-8">   
-                    <li>
-                      <div class="relative pb-8">
-                        <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                        <div class="relative flex space-x-3">
-                          <div>
-                            <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                                <div class="text-white">1</div>
-                              </span>
-                          </div>
-                          <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                            <div>
-                              <p class="text-sm text-gray-500">Pangasinan State University</p>
-                              <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">Bachelor of Science in Information Technology</a></p>
-                            </div>
-                            <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                              <time datetime="2020-09-30">August 2019 - August 2023</time>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-      
-                    <li>
-                      <div class="relative pb-8">
-                        <div class="relative flex space-x-3">
-                          <div>
-                            <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                              <div class="text-white">2</div>
-                            </span>
-                          </div>
-                          <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                            <div>
-                              <p class="text-sm text-gray-500">Design Collage</p>
-                              <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">Web Development Fundamenatals 101</a></p>
-                            </div>
-                            <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                              <time datetime="2020-09-30">August 2022 - November 2022</time>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-              </div>
-            </div>
-          </section>
-
-          <section aria-labelledby="applicant-information-title">
-            <div class="bg-white shadow sm:rounded-lg">
-              <div class="px-4 py-5 sm:px-6">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-900">Skills</h1>
-              </div>
-              <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
-                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">Figma</span>
-                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">HTML</span>
-                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">CSS</span>
-                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">Javascript</span>
-                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">Web Development</span>
-                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">Adobe Photoshop</span>
-                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">Web Design</span>
-                <span class="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">eCommerce Development</span>
-                <span class="rounded-full bg-[#d2f34c] px-2 py-1 text-xs font-medium text-black-800">2+</span>
-              </div>
-            </div>
-          </section>
-
-          <section aria-labelledby="applicant-information-title">
-            <div class="bg-white shadow sm:rounded-lg">
-              <div class="px-4 py-5 sm:px-6">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-900">Work Experience</h1>
-              </div>
-              <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
-                <ul role="list" class="-mb-8">   
-                    <li>
-                      <div class="relative pb-8">
-                        <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                        <div class="relative flex space-x-3">
-                          <div>
-                            <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                                <div class="text-white">1</div>
-                              </span>
-                          </div>
-                          <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                            <div>
-                              <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">Product Designer (Google)</a></p>
-                              <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                            </div>
-                            <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                              <time datetime="2020-09-30">January 2022 - December 2022</time>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-      
-                    <li>
-                      <div class="relative pb-8">
-                        <div class="relative flex space-x-3">
-                          <div>
-                            <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                              <div class="text-white">2</div>
-                            </span>
-                          </div>
-                          <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                            <div>
-                              <p class="text-sm text-gray-500"><a href="#" class="font-medium text-gray-900">UI/UX Engineer (Adobe)</a></p>
-                              <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum primis</p>
-                            </div>
-                            <div class="whitespace-nowrap text-right text-sm text-gray-500">
-                              <time datetime="2020-09-30">August 2022 - November 2022</time>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-              </div>
-            </div>
-          </section>
-        </div>
-  
-        <section aria-labelledby="timeline-title" class="lg:col-span-1 lg:col-start-3">
-          <div class="bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
-            <div class="py-4">
-              <p class="text-sm text-gray-500">Location</p>
-              <p class="text-sm text-gray-500 my-2"><a href="#" class="font-medium text-gray-900">Manila, Philippines</a></p>
-            </div>
-            <!-- <div class="border-t border-gray-200"></div> -->
-            <div class="py-4 border-t border-gray-200">
-              <p class="text-sm text-gray-500">Age</p>
-              <p class="text-sm text-gray-500 my-2"><a href="#" class="font-medium text-gray-900">21 years old</a></p>
-            </div>
-            <div class="py-4 border-t border-gray-200">
-              <p class="text-sm text-gray-500">Email Address</p>
-              <p class="text-sm text-gray-500 my-2"><a href="#" class="font-medium text-gray-900">danimartinez@gmail.com</a></p>
-            </div>
-            <div class="py-4 border-t border-gray-200">
-              <p class="text-sm text-gray-500">Qualification</p>
-              <p class="text-sm text-gray-500 my-2"><a href="#" class="font-medium text-gray-900">Master Degree</a></p>
-            </div>
-            <div class="py-4 border-t border-gray-200">
-              <p class="text-sm text-gray-500">Gender</p>
-              <p class="text-sm text-gray-500 my-2"><a href="#" class="font-medium text-gray-900">Male</a></p>
-            </div>
-            <div class="py-4 border-t border-gray-200">
-              <p class="text-sm text-gray-500">Expected Salary</p>
-              <p class="text-sm text-gray-500 my-2"><a href="#" class="font-medium text-gray-900">$3k-$4k/month</a></p>
-            </div>
-            <div class="mt-6 flex flex-col justify-stretch">
-              <button type="button" class="inline-flex items-center justify-center rounded-md bg-[#35785b] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#00bf58] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" href="/assets/Dani_Martinez_CV.pdf" download>Download CV</button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-  </div>
+<!-- candidate profile -->
+<%- include('../partials/job-listing/profile', {educationList, skillList, workList, candidateDetails}) %>

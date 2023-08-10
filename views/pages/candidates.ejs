@@ -2,68 +2,183 @@
 <% text="Candidates" %>
 <% subtext="Find you desire talents & make your work done" %>
 
+<% const filter = [
+    {
+        filterTitle: 'Job Type',
+        filterNumber: 'openSections[0]',
+        filterType: [{
+            filterDesc: 'Fixed-Price'
+        },
+        {
+            filterDesc: 'Fulltime'
+        },
+        {
+            filterDesc: 'Parttime'
+        },
+        {
+            filterDesc: 'Freelance'
+        }]
+    },
+    {
+        filterTitle: 'Category',
+        filterNumber: 'openSections[1]',
+        filterType: [{
+            filterDesc: 'Web Development'
+        },
+        {
+            filterDesc: 'Design & Creative'
+        },
+        {
+            filterDesc: 'IT & Development'
+        },
+        {
+            filterDesc: 'Web & Mobile Development'
+        },
+        {
+            filterDesc: 'Writing'
+        },
+        {
+            filterDesc: 'Sales & Marketing'
+        }]
+    },
+    {
+        filterTitle: 'Expert Level',
+        filterNumber: 'openSections[2]',
+        filterType: [{
+            filterDesc: 'Beginner'
+        },
+        {
+            filterDesc: 'Intermediate'
+        },
+        {
+            filterDesc: 'No-Experience'
+        },
+        {
+            filterDesc: 'Internship'
+        },
+        {
+            filterDesc: 'Expert'
+        }]
+    },
+    {
+        filterTitle: 'Qualification',
+        filterNumber: 'openSections[3]',
+        filterType: [{
+            filterDesc: 'Associate Degree'
+        },
+        {
+            filterDesc: 'Bachelor Degree'
+        },
+        {
+            filterDesc: 'Masters Degree'
+        },
+        {
+            filterDesc: 'None'
+        }]
+    }
+] %>
+
 <% const candidates = [
     {
         candidateImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
         candidateName: 'Julia Ark',
-        candidateRole: 'Graphic Designer'
+        candidateRole: 'Graphic Designer',
+        candidateSalary: '500k/year',
+        candidateLocation: 'Manila, PH',
+        candidateSkills: [{
+            skillDesc: 'Design'
+        },
+        {
+            skillDesc: 'UI'
+        },
+        {
+            skillDesc: 'Digital'
+        }]
     },
     {
         candidateImage: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
         candidateName: 'Juan Marko',
-        candidateRole: 'Javascript Developer'
+        candidateRole: 'Javascript Developer',
+        candidateSalary: '450k/year',
+        candidateLocation: 'Baguio City, PH',
+        candidateSkills: [{
+            skillDesc: 'Javascript'
+        },
+        {
+            skillDesc: 'aJax'
+        },
+        {
+            skillDesc: 'Node.JS'
+        }]
     },
     {
         candidateImage: 'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
         candidateName: 'Rashed Ka',
-        candidateRole: 'UI/UX Designer'
+        candidateRole: 'UI/UX Designer',
+        candidateSalary: '300k/year',
+        candidateLocation: 'Davao, PH',
+        candidateSkills: [{
+            skillDesc: 'Figma'
+        },
+        {
+            skillDesc: 'UI/UX'
+        },
+        {
+            skillDesc: 'Branding'
+        }]
     },
     {
         candidateImage: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
         candidateName: 'Shani Millar',
-        candidateRole: 'Telemarketing'
+        candidateRole: 'Telemarketing',
+        candidateSalary: '520k/year',
+        candidateLocation: 'Cebu, PH',
+        candidateSkills: [{
+            skillDesc: 'Marketing'
+        },
+        {
+            skillDesc: 'Sales'
+        },
+        {
+            skillDesc: 'Finance'
+        }]
     },
     {
         candidateImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
         candidateName: 'Juliana Shofie',
-        candidateRole: 'Data Entry'
+        candidateRole: 'Data Entry',
+        candidateSalary: '300k/year',
+        candidateLocation: 'Manila, PH',
+        candidateSkills: [{
+            skillDesc: 'Data Entry'
+        },
+        {
+            skillDesc: 'Excel'
+        },
+        {
+            skillDesc: 'Sheets'
+        }]
     },
     {
         candidateImage: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
         candidateName: 'Mark Cena',
-        candidateRole: 'Graphic Designer'
+        candidateRole: 'Graphic Designer',
+        candidateSalary: '400k/year',
+        candidateLocation: 'Makati, PH',
+        candidateSkills: [{
+            skillDesc: 'Design'
+        },
+        {
+            skillDesc: 'Art'
+        },
+        {
+            skillDesc: 'Digital'
+        }]
     }
 ]; %>
 
+<!-- page header -->
 <%- include('../components/molecules/page-header') %>
 
-<div class="bg-[#f0f6f4]">
-    <div>
-      <!-- filter mobile -->
-      <%- include('../components/molecules/filter-mobile') %>
-  
-      <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <!-- sort -->
-        <%- include('../components/molecules/sort') %>
-  
-        <section aria-labelledby="products-heading" class="pb-24 pt-6">
-          <h2 id="products-heading" class="sr-only">Products</h2>
-          <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-            <!-- filter-desktop -->
-            <%- include('../components/molecules/filter-desktop') %>
-  
-            <!-- candidates List-->
-            <div class="lg:col-span-3">
-              <ul role="list" class="grid grid-cols-1 gap-6 xl:grid-cols-3 sm:grid-cols-6">
-                <!-- candidate card -->
-                <% candidates.forEach(element => { %>
-                  <%- include('../components/molecules/candidate-card', element) %>
-                <% }) %>
-              </ul>
-              <%- include('../components/molecules/pagination-numbered') %>
-            </div>           
-          </div>
-        </section>
-      </main>
-    </div>
-</div>
+<!-- candidate card -->
+<%- include('../partials/job-listing/candidate-card', {filter,candidates}); %>

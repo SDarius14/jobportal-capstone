@@ -1,0 +1,26 @@
+<!-- Details -->
+<div class="bg-[#f0f6f4] px-6 py-20 lg:px-8">
+    <!-- job details -->
+    <div class="mx-auto max-w-2xl">
+      <div class="grid xl:grid-cols-5 grid-cols-2 gap-6">
+        <% detailsCard.forEach(element => { %>
+          <%- include('../../components/molecules/details-card', element ) %>
+        <% }) %>
+      </div>
+    </div>
+  
+    <!-- more job details -->
+    <div class="mx-auto max-w-2xl text-base leading-7 text-gray-700 mt-16">
+      <% detailsLabel.forEach(element => { %>
+        <%- include('../../components/molecules/details-text', element ) %>
+      <% }) %>
+      
+      <% qualificationGroup.forEach(({header, detailsList}) => { %>
+        <%- include('../../components/molecules/details-list', { header, detailsList }) %>
+      <% }) %>
+  
+      <div class="max-w-2xl mt-16">
+        <button type="submit" class="flex-none rounded-md bg-[#35785b] px-3.5 py-2.5 text-sm tracking-wider font-semibold text-white shadow-sm hover:bg-[#00bf58] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Apply for this position</button>
+      </div>
+    </div>
+  </div>

@@ -2,74 +2,136 @@
 <% text = "Job Listing" %>
 <% subtext = "We delivered blazing fast & striking work solution" %>
 
+<% const filter = [
+    {
+        filterTitle: 'Job Type',
+        filterNumber: 'openSections[0]',
+        filterType: [{
+            filterDesc: 'Fixed-Price'
+        },
+        {
+            filterDesc: 'Fulltime'
+        },
+        {
+            filterDesc: 'Parttime'
+        },
+        {
+            filterDesc: 'Freelance'
+        }]
+    },
+    {
+        filterTitle: 'Category',
+        filterNumber: 'openSections[1]',
+        filterType: [{
+            filterDesc: 'Web Development'
+        },
+        {
+            filterDesc: 'Design & Creative'
+        },
+        {
+            filterDesc: 'IT & Development'
+        },
+        {
+            filterDesc: 'Web & Mobile Development'
+        },
+        {
+            filterDesc: 'Writing'
+        },
+        {
+            filterDesc: 'Sales & Marketing'
+        }]
+    },
+    {
+        filterTitle: 'Expert Level',
+        filterNumber: 'openSections[2]',
+        filterType: [{
+            filterDesc: 'Beginner'
+        },
+        {
+            filterDesc: 'Intermediate'
+        },
+        {
+            filterDesc: 'No-Experience'
+        },
+        {
+            filterDesc: 'Internship'
+        },
+        {
+            filterDesc: 'Expert'
+        }]
+    },
+    {
+        filterTitle: 'Qualification',
+        filterNumber: 'openSections[3]',
+        filterType: [{
+            filterDesc: 'Associate Degree'
+        },
+        {
+            filterDesc: 'Bachelor Degree'
+        },
+        {
+            filterDesc: 'Masters Degree'
+        },
+        {
+            filterDesc: 'None'
+        }]
+    }
+] %>
+
 <% const jobs = [
     {
+        jobImage: 'https://html.creativegigstf.com/jobi/jobi/images/logo/media_24.png',
         jobTitle: 'Animator & 3D Artist',
         jobWorkingHours: 'Fulltime',
-        jobLocation: 'Manila, Philippines'
+        jobLocation: 'Manila, Philippines',
+        jobSalary: '₱25,000'
     },
     {
+        jobImage: 'https://html.creativegigstf.com/jobi/jobi/images/logo/media_25.png',
         jobTitle: 'Marketing Specialist',
         jobWorkingHours: 'Fulltime',
-        jobLocation: 'Makati, Philippines'
+        jobLocation: 'Makati, Philippines',
+        jobSalary: '₱20,000'
     },
     {
+        jobImage: 'https://html.creativegigstf.com/jobi/jobi/images/logo/media_26.png',
         jobTitle: 'Web Designer',
         jobWorkingHours: 'Fulltime',
-        jobLocation: 'Cebu, Philippines'
+        jobLocation: 'Cebu, Philippines',
+        jobSalary: '₱35,000'
     },
     {
+        jobImage: 'https://html.creativegigstf.com/jobi/jobi/images/logo/media_23.png',
         jobTitle: 'Full Stack Developer',
         jobWorkingHours: 'Fulltime',
-        jobLocation: 'Makati, Philippines'
+        jobLocation: 'Makati, Philippines',
+        jobSalary: '₱45,000'
     },
     {
+        jobImage: 'https://html.creativegigstf.com/jobi/jobi/images/logo/media_22.png',
         jobTitle: 'Hotel Manager',
         jobWorkingHours: 'Fulltime',
-        jobLocation: 'Manila, Philippines'
+        jobLocation: 'Manila, Philippines',
+        jobSalary: '₱25,000'
     },
     {
+        jobImage: 'https://html.creativegigstf.com/jobi/jobi/images/logo/media_18.png',
         jobTitle: 'Personal Assistant (HR)',
         jobWorkingHours: 'Fulltime',
-        jobLocation: 'Davao, Philippines'
+        jobLocation: 'Davao, Philippines',
+        jobSalary: '₱20,000'
     },
     {
+        jobImage: 'https://html.creativegigstf.com/jobi/jobi/images/logo/media_10.png',
         jobTitle: 'Interactive Designer',
         jobWorkingHours: 'Fulltime',
-        jobLocation: 'Manila, Philippines'
+        jobLocation: 'Manila, Philippines',
+        jobSalary: '₱30,000'
     }
 ]; %>
 
+<!-- page header -->
 <%- include('../components/molecules/page-header') %>
 
-<div class="bg-[#f0f6f4]">
-    <div>
-      <!-- filter mobile -->
-      <%- include('../components/molecules/filter-mobile') %>
-  
-      <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <!-- sort -->
-        <%- include('../components/molecules/sort') %>
-  
-        <section aria-labelledby="products-heading" class="pb-24 pt-6">
-          <h2 id="products-heading" class="sr-only">Products</h2>
-          <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-            <!-- filter-desktop -->
-            <%- include('../components/molecules/filter-desktop') %>
-  
-            <!-- job List -->
-            <div class="lg:col-span-3">
-              <ul role="list" class="grid grid-cols-1 gap-6">
-                <!-- job card -->
-                <% jobs.forEach(element => { %>
-                  <%- include('../components/molecules/job-card', element) %>
-                <% }) %>
-              </ul>
-              <%- include('../components/molecules/pagination-numbered') %>
-            </div>
-            
-          </div>
-        </section>
-      </main>
-    </div>
-  </div>
+<!-- job list -->
+<%- include('../partials/job-listing/job', {filter, jobs}) %>

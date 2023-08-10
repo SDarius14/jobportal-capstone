@@ -3,8 +3,30 @@
 @tailwind utilities;
 
 * {
-    font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
+
+.page-header {
+  position: relative;
+}
+
+.shape-02 {
+  position: absolute;
+  top: 0;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 100px;
+}
+
+.shape-03 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+  height: 60px;
+  }
+
 
 
     #particles-js {
