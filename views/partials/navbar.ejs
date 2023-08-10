@@ -39,7 +39,7 @@
         <button
           @click="open = true"
           type="button"
-          class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+          class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-green-400 transition duration-500"
           aria-expanded="false"
         >
           Dashboard
@@ -85,7 +85,7 @@
               <div class="flex-auto">
                 <a
                   href="/candidate-dashboard"
-                  class="block font-semibold text-gray-900"
+                  class="block font-semibold text-gray-900 hover:text-green-400 transition duration-500"
                 >
                   Candidate Dashboard
                   <span class="absolute inset-0"></span>
@@ -99,7 +99,7 @@
               <div class="flex-auto">
                 <a
                   href="/employer-dashboard"
-                  class="block font-semibold text-gray-900"
+                  class="block font-semibold text-gray-900 hover:text-green-400 transition duration-500"
                 >
                   Employer Dashboard
                   <span class="absolute inset-0"></span>
@@ -110,13 +110,13 @@
         </div>
       </div>
 
-      <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-      <a href="/job-list" class="text-sm font-semibold leading-6 text-gray-900"
+      <a href="/" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-400 transition duration-500">Home</a>
+      <a href="/job-list" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-400 transition duration-500"
         >Job</a
       >
       <a
         href="/candidates"
-        class="text-sm font-semibold leading-6 text-gray-900"
+        class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-400 transition duration-500"
         >Candidates</a
       >
     </div>
@@ -125,13 +125,13 @@
     >
       <a
         href="/login"
-        class="text-sm font-semibold leading-6 text-gray-900 mr-5"
+        class="text-sm font-semibold leading-6 text-gray-900 mr-5 hover:text-green-400 transition duration-500"
       >
         Log in/Sign up
       </a>
 
       <%- include('../components/molecules/post-a-job-button',{ bgColor:
-      'bg-[#3f634d]' }) %>
+      'bg-[#00bf58]' }) %>
     </div>
   </nav>
 
@@ -188,7 +188,7 @@
               <button
                 @click="open = true"
                 type="button"
-                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50"
+                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 hover:text-green-400 transition duration-500"
                 aria-controls="disclosure-1"
                 aria-expanded="false"
               >
@@ -226,41 +226,41 @@
               >
                 <a
                   href="/candidate-dashboard"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-green-50 hover:text-green-400 transition duration-500"
                   >Candidate Dashboard</a
                 >
 
                 <a
                   href="/employer-dashboard"
-                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-green-50 hover:text-green-400 transition duration-500"
                   >Employer Dashboard</a
                 >
               </div>
             </div>
             <a
               href="/"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:text-green-400 transition duration-500"
               >Home</a
             >
             <a
               href="/job-list"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:text-green-400 transition duration-500"
               >Job</a
             >
             <a
               href="/candidates"
-              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:text-green-400 transition duration-500"
               >Candidates</a
             >
           </div>
           <div class="py-6">
             <a
               href="/login"
-              class="block rounded-lg pt-2.5 pb-6 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              class="block rounded-lg pt-2.5 pb-6 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:text-green-400 transition duration-500"
               >Log in/Sign up</a
             >
             <%- include('../components/molecules/post-a-job-button', { bgColor:
-            'bg-[#3f634d]' }) %>
+            'bg-[#00bf58]' }) %>
           </div>
         </div>
       </div>
