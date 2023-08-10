@@ -1,0 +1,92 @@
+<div class="bg-[#f0f6f4] min-h-full px-6 py-4 lg:px-8">
+  <main class="py-10">  
+    <div class="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
+      <div class="space-y-6 lg:col-span-2 lg:col-start-1">
+        <!-- overview section -->
+        <section aria-labelledby="applicant-information-overview">
+          <div class="bg-white shadow sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900">Overview</h1>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+              <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">         
+                <div class="sm:col-span-2">
+                  <dd class="mt-1 text-sm text-gray-900">Hello, my name is Dani Martinez, and I’m a highly skilled Web Developer based in the Philippines. With a passion for crafting digital experiences and a keen eye for detail, I specialize in creating dynamic and user-friendly websites that leave a lasting impression. I bring to the table a wealth of experience in web development, having successfully delivered numerous projects for a diverse range of clients. My expertise spans the entire development process, from conceptualizing and designing intuitive user interfaces to implementing robust backend functionality. I am well-versed in a variety of programming languages and frameworks, ensuring that I can adapt and choose the best tools for each unique project.</dd>
+                </div>
+                <div class="sm:col-span-2">
+                  <dd class="mt-1 text-sm text-gray-900">What sets me apart is my dedication to staying current with the latest industry trends and technologies. This enables me to incorporate cutting-edge features and functionalities that enhance the user experience and keep websites ahead of the curve. Whether it's responsive design, performance optimization, or seamless integration of third-party services, I take pride in delivering solutions that not only meet but exceed expectations.</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <!-- education section -->
+        <section aria-labelledby="applicant-information-title">
+          <div class="bg-white shadow sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900">Education</h1>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+              <ul role="list" class="-mb-8">   
+                <% educationList.forEach(element => { %>
+                  <%- include('../../components/molecules/profile-list', element) %>
+                <% }) %>    
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- skills section -->
+        <section aria-labelledby="applicant-information-title">
+          <div class="bg-white shadow sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900">Skills</h1>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+              <% skillList.forEach(element => { %>
+                <%- include('../../components/atoms/skill', element) %>
+              <% }) %>
+              <%- include('../../components/atoms/skill-more') %>
+            </div>
+          </div>
+        </section>
+
+        <!-- work experience section -->
+        <section aria-labelledby="applicant-information-work">
+          <div class="bg-white shadow sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+              <h1 class="text-4xl font-bold tracking-tight text-gray-900">Work Experience</h1>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+              <ul role="list" class="-mb-8">   
+                <% workList.forEach(element => { %>
+                  <%- include('../../components/molecules/profile-list', element) %>
+                <% }) %>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section aria-labelledby="timeline-title" class="lg:col-span-1 lg:col-start-3">
+        <div class="bg-white px-4 py-5 shadow sm:rounded-lg sm:px-6">
+          <div class="py-4">
+            <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
+          src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+          alt="candidateImage">
+            <h3 class="text-2xl font-bold text-center tracking-tight text-gray-900">Dani Martinez</h3>
+          </div>
+          <!-- candidate details -->
+          <% candidateDetails.forEach(element => { %>
+            <%- include('../../components/molecules/candidate-details', element) %>
+          <% }) %>
+          <div class="mt-6 flex items-center justify-center gap-x-6">
+            <a href="/assets/Dani_Martinez_CV.pdf" class="rounded-md bg-[#35785b] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#00bf58] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" download>Download CV</a>
+            <a href="#" class="rounded-md border border-[#35785b] px-3.5 py-2.5 text-sm font-semibold text-[#35785b] shadow-sm hover:bg-[#00bf58] hover:text-white hover:border-[#00bf58] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" download>Message</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>

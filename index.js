@@ -29,7 +29,6 @@ app.get("/candidate-profile", (req, res) => {
   res.render("pages/candidate-profile");
 });
 
-
 app.get("/candidate-dashboard", (req, res) => {
   res.render("pages/candidate-dashboard", {
     layout: "layouts/dashboard",
@@ -40,6 +39,10 @@ app.get("/my-profile", (req, res) => {
   res.render("pages/my-profile", {
     layout: "layouts/dashboard",
   });
+});
+
+app.get("/404", (req, res) => {
+  res.render("pages/404");
 });
 
 app.listen(3300);

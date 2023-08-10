@@ -1,4 +1,4 @@
-<div class="bg-[#244034] px-6 py-24 sm:py-32 lg:px-8">
+<div class="page-header bg-[#244034] px-6 py-24 sm:py-32 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-4xl font-bold tracking-tight text-white font-bold sm:text-6xl">
             <%= text %>
@@ -6,23 +6,47 @@
         <p class="mt-6 text-lg leading-8 text-white font-semibold">
             <%= subtext %>
         </p>
-        <!-- <div class="bg-white shadow rounded-lg mt-6">
+
+        <div class="shape-02">
+            <img src="./assets/images/shape_02.svg" alt="SVG Image" class="svg-img">
+        </div>
+
+        <div class="shape-03">
+            <img src="./assets/images/shape_03.svg" alt="SVG Image" class="svg-img">
+        </div>
+
+        <% if (title === 'Candidates' || title === 'Job Listing') { %>
+        <div class="bg-white shadow rounded-lg mt-6">
             <div class="px-4 py-6 sm:p-6">
                 <form class="max-w-2xl">
                     <div class="flex gap-x-4">
-                        <label for="email-address" class="sr-only">Email address</label>
-                        <input id="email-address" name="email" type="email" autocomplete="email" required
-                            class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            placeholder="What are you looking for?">
-                        <label for="email-address" class="sr-only">Email address</label>
-                        <input id="email-address" name="email" type="email" autocomplete="email" required
-                            class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            placeholder="Category">
+                        <label for="email-address" class="sr-only">What are you looking for?</label>
+                        <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                            <option value="" selected>What are you looking for?</option>
+                            <option>UI Designer</option>
+                            <option>Content Creator</option>
+                            <option>Web Developer</option>
+                            <option>SEO Guru</option>
+                            <option>Digital Marketer</option>
+                            <option>Graphic Artist</option>
+                        </select>
+                     
+                        <label for="email-address" class="sr-only">Category</label>
+                        <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                            <option value="" selected>Category</option>
+                            <option>Web Design</option>
+                            <option>Design & Creative</option>
+                            <option>IT & Development</option>
+                            <option>Web and Mobile Development</option>
+                            <option>Writing</option>
+                            <option>Sales & Marketing</option>
+                        </select>
                         <button type="submit"
                             class="flex-none rounded-md bg-[#d2f34c] px-3.5 py-2.5 text-sm uppercase tracking-wider font-semibold text-black shadow-sm hover:bg-[#00bf58] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Search</button>
                     </div>
                 </form>
             </div>
-        </div> -->
+        </div>
+        <% } %>
     </div>
 </div>
