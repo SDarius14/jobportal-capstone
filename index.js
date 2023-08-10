@@ -13,6 +13,8 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+
+
 app.get("/login", (req, res) => {
   res.render("pages/login");
 });
@@ -84,6 +86,10 @@ app.get("/submit-job", (req, res) => {
   res.render("pages/submit-job", {
     layout: "layouts/dashboard-emp",
   });
+});
+
+app.get("", (req, res) => {
+  res.render("pages/404", { layout: "layouts/auth" });
 });
 
 
