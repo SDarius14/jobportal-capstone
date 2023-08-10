@@ -109,7 +109,7 @@
 
                       <li>
                         <a
-                          href="#"
+                          href="/messages"
                           class="<%= title === 'Messages' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                         >
                           <svg
@@ -131,29 +131,7 @@
                         </a>
                       </li>
 
-                      <li>
-                        <a
-                          href="#"
-                          class="<%= title === 'My Jobs' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                        >
-                          <svg
-                            class="h-6 w-6 shrink-0 <%= title === 'My Jobs' ? 'text-green-600' : 'text-gray-400 group-hover:text-green-600' %>"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-6 h-6"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9"
-                            />
-                          </svg>
-                          My Jobs
-                        </a>
-                      </li>
+
 
                       <li>
                         <a
@@ -280,7 +258,7 @@
 
                   <li>
                     <a
-                      href="#"
+                      href="/messages"
                       class="<%= title === 'Messages' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                     >
                       <svg
@@ -302,30 +280,7 @@
                       Messages
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="<%= title === 'My Jobs' ? 'bg-gray-50 text-green-600' : 'text-gray-700 hover:text-green-600 hover:bg-gray-50' %> group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                    >
-                      <svg
-                        class="h-6 w-6 shrink-0 <%= title === 'My Jobs' ? 'text-green-600' : 'text-gray-400 group-hover:text-green-600' %>"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-6 h-6"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9"
-                        />
-                      </svg>
 
-                      My Jobs
-                    </a>
-                  </li>
                   <li>
                     <a
                       href="/account-settings"
@@ -409,6 +364,51 @@
 
           <!-- Separator -->
           <div class="h-6 w-px bg-gray-200 lg:hidden" aria-hidden="true"></div>
+
+            <div class="flex flex-1 gap-x-4 justify-end lg:gap-x-6">
+              
+              <div class="flex items-center gap-x-4 lg:gap-x-6">
+                <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">View notifications</span>
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                  </svg>
+                </button>
+
+                <!-- Separator -->
+                <div class="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-200" aria-hidden="true"></div>
+
+                <!-- Profile dropdown -->
+                <div x-data="{ open: false }" class="relative">
+                  <button @click="open = !open" type="button" class="-m-1.5 flex items-center p-1.5" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="h-8 w-8 rounded-full bg-gray-50" src="https://html.creativegigstf.com/jobi/jobi/images/candidates/img_04.jpg" alt="">
+                    <span class="hidden lg:flex lg:items-center">
+                      <span class="ml-4 text-sm font-semibold leading-6 text-gray-900" aria-hidden="true">Lana Feelings</span>
+                      <svg class="ml-2 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </button>
+
+                  <!--
+                    Dropdown menu, show/hide based on menu state.
+
+                    Entering: "transition ease-out duration-100"
+                      From: "transform opacity-0 scale-95"
+                      To: "transform opacity-100 scale-100"
+                    Leaving: "transition ease-in duration-75"
+                      From: "transform opacity-100 scale-100"
+                      To: "transform opacity-0 scale-95"
+                  -->
+                  <div x-show="open" @click.away="open = false" class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                    <!-- Active: "bg-gray-50", Not Active: "" -->
+                    
+                    <a href="/" class="block px-3 py-1 text-sm leading-6 text-gray-900" role="menuitem" tabindex="-1" id="user-menu-item-1">Sign out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
 
         <main class=" py-10 bg-green-50 min-h-screen">

@@ -5,3 +5,11 @@
 * {
     font-family: 'DM Sans', sans-serif;
 }
+
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -999;
+    }
