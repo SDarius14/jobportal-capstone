@@ -8,20 +8,32 @@
     <title><%= typeof title !== 'undefined' ? title : 'Job Portal' %></title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.svg" />
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
 
     <!-- Alpine -->
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -36,5 +48,43 @@
     <!-- Particle.JS -->
     <script src="./assets/js/particles.js"></script>
     <script src="./assets/js/particleStats.js"></script>
+    <!-- Scroll Reveal -->
+    <script>
+      ScrollReveal().reveal("#scale-left", {
+        origin: "right",
+        distance: "30px",
+        duration: 1000, // Animation duration in milliseconds
+        easing: "ease-in-out", // Smooth animation
+        reset: true, // Resets the reveal state when elements exit the viewport
+      });
+
+      ScrollReveal().reveal("#scale-up", {
+        origin: "bottom", //specifies what direction elements come from when revealed
+        distance: "30px",
+        duration: 1000, // Animation duration in milliseconds
+        easing: "ease-in-out", // Smooth animation
+        reset: true, // Resets the reveal state when elements exit the viewport
+      });
+    </script>
+
+    <!-- Swiper -->
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 6,
+
+        autoplay: {
+          delay: 3000, // Set the time between slides (in milliseconds)
+          disableOnInteraction: false, // Continue autoplay even if user interacts
+          reverseDirection: true,
+        },
+
+        // Additional code to handle manual swiping smoothly
+        touchStartPreventDefault: false,
+        speed: 1000, // Set the speed of the swipe animation
+      });
+    </script>
   </body>
 </html>

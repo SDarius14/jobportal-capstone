@@ -1,16 +1,51 @@
-<section>
-  <div class="bg-white-900 py-14 sm:py-22">
+<section class="mt-10">
     <div class="relative isolate">
       <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div
           class="mx-auto flex max-w-2xl flex-col gap-16 px-6 py-16 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20"
         >
-          <img
+          <!-- <img
             class="h-auto w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
             src="./assets/images/talent-img-4.png"
             alt=""
-          />
-          <div class="w-full flex-auto">
+          /> -->
+
+          <!-- Photo -->
+          <div class="lg:col-span-7 md:col-span-11 mx-auto lg:order-first">
+            <div class="relative md:mt-50 pe-xl-5 me-xl-5">
+              <div class="flex">
+                <div class="md:w-1/2 sm:w-2/3 w-10/12">
+                  <img src="./assets/images/talent-img.jpg" alt="">
+                </div>
+                <div class="md:w-1/2 sm:w-2/3 w-10/12">
+                  <img src="./assets/images/talent-search.png" alt="" id="scale-left">
+                </div>
+              </div>
+              <div class="flex">
+                <div class="md:w-1/3 w-5/12">
+                  <img src="./assets/images/talent-img-2.jpg" alt="" class="mt-1">
+                </div>
+                
+                <div class="md:w-1/2 w-7/12">
+                  <img src="./assets/images/talent-img-3.jpg" alt="" class="mt-1">
+                </div>
+                
+              </div>
+              <div class="float">
+                
+                <div class="md:w-1/2 w-7/12">
+                  <img src="./assets/images/talent-candidates.png" alt="" class="mt-1" id="scale-up" >
+                </div>
+                
+              </div>
+              <!-- <img src="./assets/images/talent-search.png" alt="">
+              <img src="./assets/images/talent-payment.png" alt="">
+              <img src="./assets/images/talent-candidates.png" alt=""> -->
+            </div>
+          </div>
+
+          <!-- Contents -->
+          <div id="scale-left" class="w-full flex-auto">
             <p class="mt-6 text-lg font-semibold leading-8 text-green-600">
               <%- subTitle %>
             </p>
@@ -28,15 +63,14 @@
             </ul>
 
             <div class="mt-10 flex">
-              <button
+              <a
                 href="#"
                 class="leading-6 rounded-3xl bg-green-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
-                >Learn More</button
+                >Learn More</a
               >
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
