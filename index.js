@@ -13,6 +13,21 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+app.get("/login", (req, res) => {
+  res.render("pages/login");
+});
+
+app.get("/signup", (req, res) => {
+  res.render("pages/signup");
+});
+
+
+app.get("/messages", (req, res) => {
+  res.render("pages/messages", {
+    layout: "layouts/dashboard",
+  });
+});
+
 app.get("/job-list", (req, res) => {
   res.render("pages/job-list");
 });
@@ -28,7 +43,6 @@ app.get("/candidates", (req, res) => {
 app.get("/candidate-profile", (req, res) => {
   res.render("pages/candidate-profile");
 });
-
 
 app.get("/candidate-dashboard", (req, res) => {
   res.render("pages/candidate-dashboard", {
@@ -62,6 +76,12 @@ app.get("/employer-profile", (req, res) => {
 
 app.get("/employer-account-settings", (req, res) => {
   res.render("pages/employer-accountSettings", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+app.get("/submit-job", (req, res) => {
+  res.render("pages/submit-job", {
     layout: "layouts/dashboard-emp",
   });
 });

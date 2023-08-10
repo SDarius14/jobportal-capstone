@@ -1,0 +1,16 @@
+<li class="bg-white px-4 py-6 shadow sm:rounded-lg sm:px-6">
+    <div class="sm:flex sm:items-baseline sm:justify-between">
+    <h3 class="text-base font-medium">
+        <span class="text-gray-900"><%= senderName %></span>
+        <span class="text-gray-600">wrote</span>
+    </h3>
+    <p class="mt-1 whitespace-nowrap text-sm text-gray-600 sm:ml-3 sm:mt-0">
+        <time datetime="2021-01-27T16:35"><%= dateSent %></time>
+    </p>
+    </div>
+    <div class="mt-4 space-y-6 text-sm text-gray-800">
+        <p><%= emailContent1 %></p>
+        <p><%= emailContent2 %></p>
+        <p><strong style="font-weight: 600"><%= senderName %></strong><br><%= senderPosition %></p>
+    </div>
+</li>

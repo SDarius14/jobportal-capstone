@@ -1,0 +1,22 @@
+      <aside class="hidden xl:order-first xl:block xl:flex-shrink-0">
+        <div class="relative flex h-full w-96 flex-col border-r ">
+          <div class="flex-shrink-0">
+            <div class="flex h-16 flex-col justify-center px-6">
+              <div class="flex items-baseline space-x-3">
+                <h2 class="text-lg font-medium text-gray-900">Inbox</h2>
+                <p class="text-sm font-medium text-gray-500">10 messages</p>
+              </div>
+            </div>
+            <div class="border-b"></div>
+          </div>
+          <nav aria-label="Message list" class="min-h-0 flex-1 overflow-y-auto p-2">
+            <ul role="list" class="divide-y divide-gray-200 border border-gray-200 ">
+              <%- include('../../components/molecules/message-item', {senderName: 'Friends Connect', emailSubject: 'Jr. Backend Developer Role - Invitation for Interview', emailContentPreview: 'Hi Dani Martinez, I\'m excited to invite you for an interview at our company for the Jr. Backend Developer role.'}) %>
+              <% messageList.forEach((item) => { %>
+                <%- include('../../components/molecules/message-item', item) %>
+              <% }); %>
+
+            </ul>
+          </nav>
+        </div>
+      </aside>
