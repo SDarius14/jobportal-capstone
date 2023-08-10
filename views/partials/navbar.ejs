@@ -83,7 +83,10 @@
               class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
             >
               <div class="flex-auto">
-                <a href="/candidate-dashboard" class="block font-semibold text-gray-900">
+                <a
+                  href="/candidate-dashboard"
+                  class="block font-semibold text-gray-900"
+                >
                   Candidate Dashboard
                   <span class="absolute inset-0"></span>
                 </a>
@@ -94,7 +97,10 @@
               class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
             >
               <div class="flex-auto">
-                <a href="/employer-dashboard" class="block font-semibold text-gray-900">
+                <a
+                  href="/employer-dashboard"
+                  class="block font-semibold text-gray-900"
+                >
                   Employer Dashboard
                   <span class="absolute inset-0"></span>
                 </a>
@@ -105,12 +111,18 @@
       </div>
 
       <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-      <a href="/job-list" class="text-sm font-semibold leading-6 text-gray-900">Job</a>
-      <a href="/candidates" class="text-sm font-semibold leading-6 text-gray-900"
+      <a href="/job-list" class="text-sm font-semibold leading-6 text-gray-900"
+        >Job</a
+      >
+      <a
+        href="/candidates"
+        class="text-sm font-semibold leading-6 text-gray-900"
         >Candidates</a
       >
     </div>
-    <div class="hidden lg:flex lg:flex-1 justify-center items-center lg:justify-end">
+    <div
+      class="hidden lg:flex lg:flex-1 justify-center items-center lg:justify-end"
+    >
       <a
         href="/login"
         class="text-sm font-semibold leading-6 text-gray-900 mr-5"
@@ -118,23 +130,25 @@
         Log in/Sign up
       </a>
 
-      <%- include('../components/molecules/post-a-job-button',{
-        bgColor: 'bg-[#3f634d]'
-      }) %>
-
-
+      <%- include('../components/molecules/post-a-job-button',{ bgColor:
+      'bg-[#3f634d]' }) %>
     </div>
   </nav>
 
   <!-- Mobile menu, show/hide based on menu open state. -->
-  <div x-show="open" class="lg:hidden" role="dialog" aria-modal="true" 
-      x-transition:enter="transition ease-out duration-300 transform translate-x-full"
-      x-transition:enter-start="translate-x-full"
-      x-transition:enter-end="translate-x-0"
-      x-transition:leave="transition ease-in duration-300 transform translate-x-full"
-      x-transition:leave-start="translate-x-0"
-      x-transition:leave-end="translate-x-full"
-      class="lg:hidden fixed inset-0 z-50 bg-white">
+  <div
+    x-show="open"
+    class="lg:hidden"
+    role="dialog"
+    aria-modal="true"
+    x-data="{ isVisible: false }"
+    x-init="setTimeout(() => { isVisible = true; }, 100)"
+    x-show="isVisible"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    class="p-4 bg-gray-200 rounded-md"
+  >
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
     <div
@@ -242,12 +256,11 @@
           <div class="py-6">
             <a
               href="/login"
-              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+              class="block rounded-lg pt-2.5 pb-6 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >Log in/Sign up</a
             >
-            <%- include('../components/molecules/post-a-job-button', {
-              bgColor: 'bg-[#3f634d]'
-            }) %>
+            <%- include('../components/molecules/post-a-job-button', { bgColor:
+            'bg-[#3f634d]' }) %>
           </div>
         </div>
       </div>
