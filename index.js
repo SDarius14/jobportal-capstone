@@ -13,6 +13,25 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+app.get("/login", (req, res) => {
+  res.render("pages/login", {
+    layout: "layouts/auth",
+  });
+});
+
+app.get("/signup", (req, res) => {
+  res.render("pages/signup", {
+    layout: "layouts/auth",
+  });
+});
+
+
+app.get("/messages", (req, res) => {
+  res.render("pages/messages", {
+    layout: "layouts/dashboard",
+  });
+});
+
 app.get("/job-list", (req, res) => {
   res.render("pages/job-list");
 });
@@ -28,7 +47,6 @@ app.get("/candidates", (req, res) => {
 app.get("/candidate-profile", (req, res) => {
   res.render("pages/candidate-profile");
 });
-
 
 app.get("/candidate-dashboard", (req, res) => {
   res.render("pages/candidate-dashboard", {
