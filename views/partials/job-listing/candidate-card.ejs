@@ -1,15 +1,30 @@
 <div class="bg-[#f0f6f4]">
-  <div>
-    <!-- filter mobile -->
-    <div x-data="{ mobileFilterMenuOpen: false }" class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
-      <div x-show="mobileFilterMenuOpen" class="fixed inset-0 z-40 flex">
+  <div x-data="{ open: false }">
+    <!--
+      Mobile filter dialog
+
+      Off-canvas filters for mobile, show/hide based on off-canvas filters state.
+    -->
+    <div x-show="open" class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
+      <div class="fixed inset-0 z-40 flex">
+        <!--
+        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
+
+        Entering: "transition-opacity ease-linear duration-300"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "transition-opacity ease-linear duration-300"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
         <div class="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
           <div class="flex items-center justify-between px-4">
             <h2 class="text-lg font-medium text-gray-900">Filters</h2>
             <button
+              @click="open = !true"
               type="button"
               class="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
-              x-on:click="mobileFilterMenuOpen = false"
+              
             >
               <span class="sr-only">Close menu</span>
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -27,6 +42,15 @@
       </div>
     </div>
   
+
+
+
+
+
+
+
+
+
     <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- sort -->
       <div class="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
@@ -42,8 +66,38 @@
                 </svg>
               </button>
             </div>
+          
+          
+          <!--
+              Dropdown menu, show/hide based on menu state.
+
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+            <div class="hidden absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+              <div class="py-1" role="none">
+                <!--
+                  Active: "bg-gray-100", Not Active: ""
+
+                  Selected: "font-medium text-gray-900", Not Selected: "text-gray-500"
+                -->
+                <a href="#" class="font-medium text-gray-900 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Most Popular</a>
+
+                <a href="#" class="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Best Rating</a>
+
+                <a href="#" class="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Newest</a>
+
+                <a href="#" class="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Price: Low to High</a>
+
+                <a href="#" class="text-gray-500 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Price: High to Low</a>
+              </div>
+            </div>
           </div>
-  
+
           <button type="button" class="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
             <span class="sr-only">View grid</span>
             <svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 20 20" fill="currentColor">
@@ -52,6 +106,7 @@
           </button>
           
           <button
+            @click="open = true"
             type="button"
             class="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
             x-on:click="mobileFilterMenuOpen = !mobileFilterMenuOpen"
