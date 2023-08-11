@@ -3,7 +3,7 @@
       <div x-show="isSidebarOpen" class="lg:hidden">
         <!-- Off-canvas menu backdrop, show/hide based on off-canvas menu state. -->
         <div
-          class="fixed inset-0 bg-gray-900/80"
+          class="fixed inset-0  "
           x-on:click="isSidebarOpen = false"
         ></div>
 
@@ -20,7 +20,7 @@
             class="relative mr-16 flex w-full max-w-xs flex-1"
           >
             <!-- Close button, show/hide based on off-canvas menu state. -->
-            <div class="absolute left-full top-0 flex w-16 justify-center pt-5">
+            <div class="absolute left-64 top-0 flex w-16 justify-center pt-5">
               <button
                 @click="isSidebarOpen = false"
                 type="button"
@@ -46,7 +46,7 @@
 
             <!-- Sidebar component, swap this element with another sidebar if you like -->
             <div
-              class="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4"
+              class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 shadow-xl bg-white px-6 pb-4"
             >
               <!-- Sidebar content goes here -->
               <div class="flex h-16 shrink-0 items-center">

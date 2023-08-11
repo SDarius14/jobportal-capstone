@@ -603,6 +603,21 @@ video {
 .top-full {
   top: 100%;
 }
+.left-10 {
+  left: 2.5rem;
+}
+.left-20 {
+  left: 5rem;
+}
+.left-40 {
+  left: 10rem;
+}
+.left-60 {
+  left: 15rem;
+}
+.left-64 {
+  left: 16rem;
+}
 .isolate {
   isolation: isolate;
 }
@@ -1299,6 +1314,9 @@ video {
 .border-t {
   border-top-width: 1px;
 }
+.border-l {
+  border-left-width: 1px;
+}
 .border-\[\#35785b\] {
   --tw-border-opacity: 1;
   border-color: rgb(53 120 91 / var(--tw-border-opacity));
@@ -1324,6 +1342,10 @@ video {
 }
 .border-transparent {
   border-color: transparent;
+}
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .border-opacity-20 {
   --tw-border-opacity: 0.2;
@@ -2923,10 +2945,6 @@ video {
 
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .xl\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .xl\:gap-8 {
