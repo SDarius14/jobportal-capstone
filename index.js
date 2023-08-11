@@ -94,7 +94,7 @@ app.get("/submit-job", (req, res) => {
   });
 });
 
-app.get("", (req, res) => {
+app.get("*", (req, res) => {
   res.render("pages/404", { layout: "layouts/auth" });
 });
 
