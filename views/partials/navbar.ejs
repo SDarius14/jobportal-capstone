@@ -76,6 +76,7 @@
         -->
         <div
           x-show="open"
+          x-cloak
           @click.away="open = false"
           class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-[14rem] overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
           x-transition:enter="transition ease-out duration-300 transform opacity-0"

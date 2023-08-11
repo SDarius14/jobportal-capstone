@@ -35,3 +35,5 @@
       height: 100%;
       z-index: -999;
     }
+
+    [x-cloak] { display: none !important; }
