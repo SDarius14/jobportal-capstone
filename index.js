@@ -1,6 +1,7 @@
 const express = require("express");
 const expressEjsLayouts = require("express-ejs-layouts");
 const app = express();
+const port = process.env.PRT || 3300;
 
 app.use(expressEjsLayouts);
 app.use(express.static("public"));

@@ -16,7 +16,7 @@ Are you ready to embark on a journey toward your dream career? Look no further t
   </ol>
 </details>
 
-<!-- [![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=SDarius14)](https://github.com/SDarius14/github-readme-activity-graph) -->
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=SDarius14)](https://github.com/SDarius14/github-readme-activity-graph)
 
 ## Languages and Tools Used
 <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> 
@@ -35,6 +35,7 @@ Are you ready to embark on a journey toward your dream career? Look no further t
 <a href="https://github.com/SDarius14"><img src="https://img.shields.io/badge/dariushernandez-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a>
 <a href="https://github.com/emailjohnthomascaballero"><img src="https://img.shields.io/badge/johncaballero-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a>
 <a href="https://github.com/jebsonubaldo"><img src="https://img.shields.io/badge/jebsonubaldo-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a>
+<a href=""><img src="https://img.shields.io/badge/macaguirre-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a>
 
 ## Usage
 ```
