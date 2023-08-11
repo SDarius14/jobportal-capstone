@@ -18,9 +18,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm run copy-assets",
-    "copy-assets": "copyfiles -u 1 public/assets/**/* dist/",
-    "start": "node index",
     "dev": "nodemon index",
     "devcss": "postcss public/assets/styles/global.css -o public/assets/styles/style.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
