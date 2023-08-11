@@ -20,7 +20,7 @@
     "dev": "nodemon index",
     "devcss": "postcss public/assets/styles/global.css -o public/assets/styles/style.css -w",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node.index.js"
+    "start": "node index.js && npm run devcss"
   },
   "keywords": [],
   "author": "",
