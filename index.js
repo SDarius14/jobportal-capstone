@@ -2,6 +2,8 @@ const express = require("express");
 const expressEjsLayouts = require("express-ejs-layouts");
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 app.use(expressEjsLayouts);
 app.use(express.static("public"));
 
@@ -12,6 +14,8 @@ app.set("layout", "./layouts/master");
 app.get("/", (req, res) => {
   res.render("pages/index");
 });
+
+
 
 app.get("/login", (req, res) => {
   res.render("pages/login");
@@ -80,12 +84,24 @@ app.get("/employer-account-settings", (req, res) => {
   });
 });
 
+app.get("/employer-messages", (req, res) => {
+  res.render("pages/employer-messages", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
 app.get("/submit-job", (req, res) => {
   res.render("pages/submit-job", {
     layout: "layouts/dashboard-emp",
   });
 });
 
+app.get("*", (req, res) => {
+  res.render("pages/404", { layout: "layouts/auth" });
+});
 
-app.listen(3300);
-console.log("Server is live! Click here: http://localhost:3300/");
+
+app.listen(port, function () {
+  console.log("Server is live!");
+});
+
