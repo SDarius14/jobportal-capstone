@@ -82,6 +82,12 @@ app.get("/employer-account-settings", (req, res) => {
   });
 });
 
+app.get("/employer-messages", (req, res) => {
+  res.render("pages/employer-messages", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
 app.get("/submit-job", (req, res) => {
   res.render("pages/submit-job", {
     layout: "layouts/dashboard-emp",
