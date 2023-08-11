@@ -16,6 +16,13 @@
         @click="open = true"
         type="button"
         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+        x-data="{ isVisible: false }"
+        x-init="setTimeout(() => { isVisible = true; }, 100)"
+        x-show="isVisible"
+        x-transition:enter="transition ease-out duration-300 transform opacity-0"
+        x-transition:enter-start="translate-y-[-10%] opacity-0"
+        x-transition:enter-end="translate-y-0 opacity-100"
+        class="p-4 bg-gray-200 rounded-md"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -110,8 +117,14 @@
         </div>
       </div>
 
-      <a href="/" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-400 transition duration-500">Home</a>
-      <a href="/job-list" class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-400 transition duration-500"
+      <a
+        href="/"
+        class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-400 transition duration-500"
+        >Home</a
+      >
+      <a
+        href="/job-list"
+        class="text-sm font-semibold leading-6 text-gray-900 hover:text-green-400 transition duration-500"
         >Job</a
       >
       <a
@@ -142,12 +155,12 @@
     role="dialog"
     aria-modal="true"
     x-data="{ isVisible: false }"
-    x-init="setTimeout(() => { isVisible = true; }, 100)"
-    x-show="isVisible"
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="opacity-0"
-    x-transition:enter-end="opacity-100"
-    class="p-4 bg-gray-200 rounded-md"
+  x-init="setTimeout(() => { isVisible = true; }, 100)"
+  x-show="isVisible"
+  class="p-4 bg-gray-200 rounded-md custom-fade-slide"
+  x-transition:enter="transition ease-out duration-300"
+  x-transition:enter-start="opacity-0 transform translate-x-full"
+  x-transition:enter-end="opacity-100 transform translate-x-0"
   >
     <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 z-10"></div>
