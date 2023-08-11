@@ -134,13 +134,13 @@
       >
     </div>
     <div
-      class="hidden lg:flex lg:flex-1 justify-center items-center lg:justify-end"
+      class="hidden lg:flex gap-2 lg:flex-1 justify-center items-center lg:justify-end"
     >
       <a
         href="/login"
-        class="text-sm font-semibold leading-6 text-gray-900 mr-5 hover:text-green-400 transition duration-500"
-      >
-        Log in/Sign up
+        class="text-sm font-semibold border border-gray-500 leading-6 text-black px-5 py-2 bg-whiet hover:bg-[#00bf58] hover:text-white rounded-md">
+      
+        Login
       </a>
 
       <%- include('../components/molecules/post-a-job-button') %>
@@ -265,11 +265,11 @@
               >Candidates</a
             >
           </div>
-          <div class="py-6">
+          <div class="py-6 flex flex-col gap-2 justify-center items-start">
             <a
               href="/login"
-              class="block rounded-lg pt-2.5 pb-6 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:text-green-400 transition duration-500"
-              >Log in/Sign up</a
+              class="text-sm border border-gray-500 font-semibold leading-6 text-black px-5 py-2 bg-whiet hover:bg-[#00bf58] hover:text-white rounded-md">
+              Login</a
             >
             <%- include('../components/molecules/post-a-job-button', { bgColor:
             'bg-[#31795a]' }) %>
