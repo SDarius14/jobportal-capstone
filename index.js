@@ -2,6 +2,8 @@ const express = require("express");
 const expressEjsLayouts = require("express-ejs-layouts");
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 app.use(expressEjsLayouts);
 app.use(express.static("public"));
 
@@ -99,5 +101,7 @@ app.get("*", (req, res) => {
 });
 
 
-app.listen(3300);
-console.log("Server is live! Click here: http://localhost:3300/");
+app.listen(port, function () {
+  console.log("Server is live!");
+});
+
