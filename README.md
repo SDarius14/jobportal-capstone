@@ -178,22 +178,22 @@ _Below is an example of how you can install and setup the application on your de
 
 <h2 id="pages">VII. Pages</h2>
 
-- <a href="">Homepage</a>
-- <a href="">Login</a>
-- <a href="">Signup</a>
-- <a href="">Job</a>
-- <a href="">Job Details</a>
-- <a href="">Candidates</a>
-- <a href="">Candidate Profile</a>
-- <a href="">Candidate Dashboard</a>
-  - <a href="">My Profile</a>
-  - <a href="">Messages</a>
-  - <a href="">Account Settings</a>
-- <a href="">Employer Dashboard</a>
-  - <a href="">My Profile</a>
-  - <a href="">Messages</a>
-  - <a href="">Submit Job</a>
-  - <a href="">Account Settings</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/">Homepage</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/login">Login</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/signup">Signup</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/job-list">Job List</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/job-details">Job Details</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/candidates">Candidates</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/candidate-profile">Candidate Profile</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/candidate-dashboard">Candidate Dashboard</a>
+  - <a href="https://jobi-33f79864b783.herokuapp.com/my-profile">My Profile</a>
+  - <a href="https://jobi-33f79864b783.herokuapp.com/messages">Messages</a>
+  - <a href="https://jobi-33f79864b783.herokuapp.com/account-settings">Account Settings</a>
+- <a href="https://jobi-33f79864b783.herokuapp.com/employer-dashboard">Employer Dashboard</a>
+  - <a href="https://jobi-33f79864b783.herokuapp.com/employer-profile">My Profile</a>
+  - <a href="https://jobi-33f79864b783.herokuapp.com/employer-messages">Messages</a>
+  - <a href="https://jobi-33f79864b783.herokuapp.com/submit-job">Submit Job</a>
+  - <a href="https://jobi-33f79864b783.herokuapp.com/employer-account-settings">Account Settings</a>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,15 +211,3 @@ _Below is an example of how you can install and setup the application on your de
   <img src="./public/assets/presentation/step_3.png" class="steps"> 
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
-  
-  ## Graphs
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=SDarius14)](https://github.com/SDarius14/jobportal-capstone/graphs/commit-activity)
-<!-- Back to Top -->
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-[![Anurag's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=SDarius14&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/SDarius14/jobportal-capstone/graphs/commit-activity)
-
-### GitHub Stats:
-
-![](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=adityaseth777&&show_icons=true&theme=tokyonight)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=SDarius14/&theme=tokyonight&hide_border=false)<br/>
