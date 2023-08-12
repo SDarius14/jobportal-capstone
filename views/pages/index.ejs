@@ -1,25 +1,5 @@
 <% title = "Home Page" %>
 
-<!-- Logo Cloud Array -->
-<% const cloudCards = 
-[ 
-  { 
-    icon: include('../components/atoms/google-icon')
-  }, 
-  { 
-    icon: include('../components/atoms/shipbob-icon')
-  }, 
-  { 
-    icon: include('../components/atoms/dribbble-icon')
-  },
-  { 
-    icon: include('../components/atoms/slack-icon')
-  }, 
-  { 
-    icon: include('../components/atoms/vine-icon')
-  }
-]; %>
-
 <!-- Cards Array -->
 <% const cards = 
 [ 
@@ -95,25 +75,24 @@
 [ 
   { 
     title: 'Seamless Search', 
-    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+    description: 'Experience the next level of seamless searching. Navigate a world of information effortlessly with our intuitive and efficient Seamless Search technology.'
   }, 
   { 
     title: 'Hire top talents', 
-    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+    description: 'Unlock your potential with our top talent hiring services. Elevate your team\'s capabilities by recruiting exceptional professionals through our proven expertise.'
   }, 
   { 
     title: 'Protected payments, every time', 
-    description: 'It only takes 5 minutes. Set-up is smooth and simple, with fully customisable page design to reflect your brand.'
+    description: 'Your payments secured at every step. Trust in secure and reliable payment processes that ensure your financial transactions are safeguarded, every single time.'
   }, 
 ]; %>
 
 <!--Hero Section-->
 <%- include('../partials/home/hero', {
-  title: "Find & Hire Experts for any Job",
-  subTitle: "Jobs & Job search. Find jobs in global. Executive jobs & work.",
+  title: "Connect with Top Talent for Every Role",
+  subTitle: "Discover Global Opportunities. Executive Positions and Employment Search.",
   description: "Popular:",
-  descriptionTwo: "Design, Art, Business, Video Editing",
-  cloudCards
+  descriptionTwo: "Design, Art, Business, Video Editing"
 }); %>
 
 <!-- Jobcategory Section-->
@@ -125,7 +104,7 @@
 
 <!-- Workflow Section -->
 <%- include('../partials/home/workflow-categories', {
-  title: "How it's Work?",
+  title: "How it Works?",
   workflows}); %>
 
 <!-- Talent Section-->

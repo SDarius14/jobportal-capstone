@@ -1,0 +1,15 @@
+<!-- Job Title -->
+
+<%- include('../../components/molecules/input-profile', { inputLabel: 'Job Title', inputName: 'job-title', inputColSize: 'sm:col-span-4'}) %>
+
+<!-- Job Description -->
+<%- include('../../components/atoms/textarea-profile', {textareaLabel: 'Job Description'} ) %>
+
+<!-- Job Category -->
+<%- include('../../components/atoms/select-tag', {selectLabel: 'Job Category', selectColSize: 'sm:col-span-3', options: [ 'Designer', 'Developer', 'Writing', 'Management' ]} ) %>
+
+<!-- Job Type -->
+<%- include('../../components/atoms/select-tag', {selectLabel: 'Job Type', selectColSize: 'sm:col-span-3', options: ['Full Time', 'Part Time', 'Fixed', 'Contractual' ]} ) %>
+
+<!-- Salary -->
+<%- include('../../components/molecules/input-profile', { inputLabel: 'Salary', inputName: 'salary', inputColSize: 'sm:col-span-4'}) %>

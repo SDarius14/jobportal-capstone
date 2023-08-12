@@ -1,0 +1,92 @@
+<% title ='Messages' %> 
+
+<!-- Page Title -->
+<%- include('../components/molecules/page-title', {textTitle: 'Messages' }) %>
+
+<div class="bg-white border border-gray-300 m-2 my-5 w-full h-full rounded-xl flex">
+
+    <!-- Main area -->
+    <main class="min-w-0 flex-1  xl:flex">
+      <section aria-labelledby="message-heading" class="flex h-full min-w-0 flex-1 flex-col overflow-hidden xl:order-last">
+        <!-- Top section -->
+        <%- include('../partials/messages/top-section') %>
+
+        <!-- Message View Section -->
+        <div class="min-h-0 flex-1 overflow-y-auto">
+          <!-- Message Thread Header -->
+          <%- include('../partials/messages/thread-header', {emailSubject: 'Re: Jr. Backend Developer Role - Invitation for Interview', emailAddress: 'hr@friendsconnect.com'}) %>
+
+          <!-- Thread section-->
+          <% const messageThread = 
+          [
+            { 
+              senderName: 'Friends Connect', 
+              dateSent: 'Wednesday at 1:37pm',
+              emailContent1: 'Hi Dani Martinez, I\'m excited to invite you for an interview at our company for the Jr. Backend Developer role. Are you available next Wednesday at 10 AM?',
+              emailContent2: '',
+              senderPosition: 'HR Representative'
+            },
+            { 
+              senderName: 'Dani Martinez', 
+              dateSent: 'Wednesday at 2:05pm',
+              emailContent1: 'Hello! Thank you for the invitation. I\'m thrilled about the opportunity. Wednesday at 10 AM works perfectly for me.',
+              emailContent2: '',
+              senderPosition: 'Applicant'
+            },
+            { 
+              senderName: 'Friends Connect', 
+              dateSent: 'Wednesday at 2:12pm',
+              emailContent1: 'That\'s great to hear, Dani! We look forward to meeting you. We\'ll be sending you a confirmation email shortly with all the details. Feel free to reach out if you have any questions before the interview.',
+              emailContent2: '',
+              senderPosition: 'HR Representative'
+            },
+            { 
+              senderName: 'Dani Martinez', 
+              dateSent: 'Wednesday at 2:40pm',
+              emailContent1: 'Thank you so much. I appreciate it. I\'m looking forward to learning more about the role and the company. Will keep an eye on my inbox for the confirmation email.',
+              emailContent2: '',
+              senderPosition: 'Applicant'
+            },
+
+          ]; %>
+          <%- include('../partials/messages/thread-section', {messageThread}) %>
+
+        </div>
+      </section>
+
+      <!-- Message list-->
+
+      <% const messageList = 
+      [
+        { 
+          senderName: 'CodeMNL', 
+          emailSubject: 'Invitation for Interview', 
+          emailContentPreview: 'We are pleased to inform you that your application for the Jr. Bootcamp Instructor at CodeMNL has been thoroughly reviewed, and we are impressed with your qualifications and experience.'
+        },
+        { 
+          senderName: 'Leaf', 
+          emailSubject: 'Application Received', 
+          emailContentPreview: 'Greetings! We wanted to inform you that we have successfully received your application for the Jr. Software Developer at Leaf Corp. We appreciate your interest in joining our team.'
+        },
+        { 
+          senderName: 'Super Lightning', 
+          emailSubject: 'Technical Interview', 
+          emailContentPreview: 'Greetings! We have completed the initial review of your application for the Mid Backend Developer at Super Lightning Corp, and we\'re excited to invite you to the next stage: the technical interview.'
+        },
+        { 
+          senderName: 'Etica Digital', 
+          emailSubject: 'Invitation for Interview', 
+          emailContentPreview: 'Sending warm greetings your way through this email. We wanted to express our appreciation for your interest in the Software Engineer at Etica Digital.'
+        },
+        { 
+          senderName: 'Red Corp', 
+          emailSubject: 'Application Status', 
+          emailContentPreview: 'We hope this email finds you well. We sincerely appreciate the time and effort you invested in applying for the Web Developer Position at Red Corp.'
+        },
+
+      ]; %>
+      <%- include('../partials/messages/message-list', {messageList} ) %>
+
+    </main>
+
+</div>

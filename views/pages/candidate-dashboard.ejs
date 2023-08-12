@@ -67,12 +67,12 @@
 ]; %>
 
 <!-- Highlights -->
-<%- include('../partials/candidate-dashboard/highlights', {cards}); %>
+<%- include('../partials/candidate-dashboard/highlights', {sectionHeader: 'DASHBOARD', cards}); %>
 
-<div class="grid grid-rows-2 md:grid-cols-2 gap-2">
+<div class=" grid md:grid-cols-2 gap-2">
   <!-- profile views -->
-  <%- include('../partials/candidate-dashboard/viewsgraph'); %>
+  <%- include('../partials/candidate-dashboard/viewsgraph', {sectionHeader: 'Profile Views'}); %>
 
   <!-- Recent Activities -->
-  <%- include('../partials/candidate-dashboard/recent-activities', {jobs}); %>
+  <%- include('../partials/candidate-dashboard/recent-activities', {sectionHeader: 'Recently Applied Job', jobs}); %>
 </div>

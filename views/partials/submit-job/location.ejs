@@ -1,0 +1,35 @@
+<% const location = [
+    
+    { 
+      inputName: 'country', 
+      inputLabel: 'Country', 
+      inputColSize: 'sm:col-span-4'
+    },
+    { 
+      inputName:'street-adress', 
+      inputLabel: 'Street Address', 
+      inputColSize: 'col-span-full'
+    },
+    { 
+      inputName: 'city', 
+      inputLabel: 'City', 
+      inputColSize: 'sm:col-span-2 sm:col-start-1'
+    },
+    ,
+    { 
+      inputName: 'state-rovince', 
+      inputLabel: 'State/Province', 
+      inputColSize: 'sm:col-span-2'
+    },
+    { 
+      inputName: 'zip-code', 
+      inputLabel: 'ZIP/Postal Code', 
+      inputColSize: 'sm:col-span-2'
+    },
+]; %>
+
+<!-- Location Foreach -->
+
+<% location.forEach(element => { %>
+    <%- include('../../components/molecules/input-profile', element ) %>
+<% }) %>

@@ -1,0 +1,100 @@
+<%- include('../components/listing-header.ejs', { text: 'Hi, Welcome Back!',
+subtext: 'Explore more, log in now.' }) %>
+
+<div class="px-2 lg:px-6 mx-auto flex justify-center items-center bg-[#f0f6f4] ">
+  <div class="bg-white border border-gray-200 shadow-md rounded-md my-10 lg:mx-6 w-full md:w-[50dvw] mx-2">
+    <div class="p-4 lg:p-10 w-full flex flex-col items-center justify-center">
+      <h1 class="text-eb text-[#244034] text-4xl mb-2 font-semibold">Login</h1>
+      <h4 class="text-center text-xl mt-2 font-thin">
+        Still don't have an account?
+        <span><a href="/signup" class="text-green-800">Signup</a></span>
+      </h4>
+
+      <form class="flex flex-col gap-y-5 w-full px-4 lg:px-10 mt-6">
+        <div class="w-full">
+          <label for="email" class="">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="block px-5 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="you@example.com"
+          />
+        </div>
+        <div class="w-full">
+          <label for="email" class="">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="block px-5 w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="Enter Password"
+          />
+        </div>
+
+        <div class="flex justify-between">
+          <!-- Checkbox -->
+        <div class="relative flex items-start">
+          <div class="flex h-6 items-center">
+            <input
+              id="comments"
+              aria-describedby="comments-description"
+              name="comments"
+              type="checkbox"
+              class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+            />
+          </div>
+          <div class="ml-3 text-sm leading-6">
+            <label for="comments" class="font-medium text-gray-900"
+              >Keep me logged in</label
+            >
+          </div>
+        </div>
+        <!-- Checkbox -->
+
+        <h5 class="text-sm text-green-600"><a href="/">Forget Password?</a></h5>
+        </div>
+
+        <%- include('../components/molecules/wide-button.ejs', {
+          buttonText: 'Login'
+        })%>
+
+        <!-- divider -->
+        <%- include('../components/molecules/auth-divider', {
+          label: 'OR'
+        }) %>
+          <!-- divider -->
+
+
+        <div class="flex justify-between gap-x-5">
+          <%  const buttons = [
+           {
+            buttonText: 'Login with Google',
+            iconSrc: 'https://html.creativegigstf.com/jobi/jobi/images/icon/google.png'
+           },
+           {
+            buttonText: 'Login with Facebook',
+            iconSrc: 'https://html.creativegigstf.com/jobi/jobi/images/icon/facebook.png'
+           }
+          ]
+          %>
+
+        
+           
+          <% buttons.forEach(item => { %>
+            <%- include('../components/molecules/oAuth-button', item) %>
+         <% }); %>
+            
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  .text-eb {
+    font-family: EB Garamond, serif;
+  }
+</style>

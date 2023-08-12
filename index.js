@@ -3,6 +3,8 @@ const expressEjsLayouts = require("express-ejs-layouts");
 const app = express();
 const port = process.env.PORT || 3300;
 
+const port = process.env.PORT || 3000;
+
 app.use(expressEjsLayouts);
 app.use(express.static("public"));
 
@@ -12,6 +14,23 @@ app.set("layout", "./layouts/master");
 
 app.get("/", (req, res) => {
   res.render("pages/index");
+});
+
+
+
+app.get("/login", (req, res) => {
+  res.render("pages/login");
+});
+
+app.get("/signup", (req, res) => {
+  res.render("pages/signup");
+});
+
+
+app.get("/messages", (req, res) => {
+  res.render("pages/messages", {
+    layout: "layouts/dashboard",
+  });
 });
 
 app.get("/job-list", (req, res) => {
@@ -42,9 +61,48 @@ app.get("/my-profile", (req, res) => {
   });
 });
 
-app.get("/404", (req, res) => {
-  res.render("pages/404");
+app.get("/account-settings", (req, res) => {
+  res.render("pages/account-settings", {
+    layout: "layouts/dashboard",
+  });
 });
 
-app.listen(3300);
-console.log("listening to port: 3300");
+app.get("/employer-dashboard", (req, res) => {
+  res.render("pages/employer-dashboard", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+app.get("/employer-profile", (req, res) => {
+  res.render("pages/employer-profile", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+app.get("/employer-account-settings", (req, res) => {
+  res.render("pages/employer-accountSettings", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+app.get("/employer-messages", (req, res) => {
+  res.render("pages/employer-messages", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+app.get("/submit-job", (req, res) => {
+  res.render("pages/submit-job", {
+    layout: "layouts/dashboard-emp",
+  });
+});
+
+app.get("*", (req, res) => {
+  res.render("pages/404", { layout: "layouts/auth" });
+});
+
+
+app.listen(port, function () {
+  console.log("Server is live!");
+});
+
