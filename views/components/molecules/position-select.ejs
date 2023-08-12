@@ -1,0 +1,74 @@
+<div x-data="{ positionOpen: false, selectedPosition: '' }" class="my-1 mx-1 px-4 sm:mx-auto w-full">
+  <label id="listbox-label" class="block text-xs text-left text-gray-600">What are you looking for?</label>
+  <div class="relative mt-2">
+    <button
+      type="button"
+      x-on:click="positionOpen = !positionOpen"
+      class="relative w-full cursor-default rounded-md py-1.5 sm:px-10 text-left text-gray-900 focus:outline-none sm:text-sm"
+      aria-haspopup="listbox"
+      aria-expanded="true"
+      aria-labelledby="listbox-label"
+    >
+      <span class="block truncate" x-text="selectedPosition !== '' ? selectedPosition : 'Select Position'"></span>
+        
+      <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+        <!-- Expand Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 transform transition-transform" :class="{'rotate-180': positionOpen}">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </span>
+    </button>
+
+    <ul
+      x-show="positionOpen"
+      x-on:click.away="positionOpen = false"
+      class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+      tabindex="-1"
+      role="listbox"
+      aria-labelledby="listbox-label"
+      aria-activedescendant="listbox-option-3"
+    >
+      <li
+        x-on:click="selectedPosition = 'UI Designer'; positionOpen = false"
+        class="text-gray-900 relative cursor-pointer select-none py-2 pl-3 pr-9 hover:text-green-600"
+        x-bind:class="{ 'bg-green-600 text-white hover:bg-gray-100': selectedPosition === 'UI Designer', 'text-gray-900': selectedPosition !== 'UI Designer' }"
+        role="option"
+      >
+        UI Designer
+        
+      </li>
+      <li
+        x-on:click="selectedPosition = 'Web Developer'; positionOpen = false"
+        class="text-gray-900 relative cursor-pointer select-none py-2 pl-3 pr-9 hover:text-green-600"
+        x-bind:class="{ 'bg-green-600 text-white hover:bg-gray-100': selectedPosition === 'Web Developer', 'text-gray-900': selectedPosition !== 'Web Developer' }"
+        role="option"
+      >
+        Web Developer
+        
+      </li>
+
+      <li
+        x-on:click="selectedPosition = 'Content Creator'; positionOpen = false"
+        class="text-gray-900 relative cursor-pointer select-none py-2 pl-3 pr-9 hover:text-green-600"
+        x-bind:class="{ 'bg-green-600 text-white hover:bg-gray-100': selectedPosition === 'Content Creator', 'text-gray-900': selectedPosition !== 'Content Creator' }"
+        role="option"
+      >
+        Content Creator
+        
+      </li>
+
+      <li
+        x-on:click="selectedPosition = 'Digital Marketer'; positionOpen = false"
+        class="text-gray-900 relative cursor-pointer select-none py-2 pl-3 pr-9 hover:text-green-600"
+        x-bind:class="{ 'bg-green-600 text-white hover:bg-gray-100': selectedPosition === 'Digital Marketer', 'text-gray-900': selectedPosition !== 'Digital Marketer' }"
+        role="option"
+      >
+        Digital Marketer
+        
+      </li>
+
+      <!-- More items... -->
+    </ul>
+  </div>
+
+</div>
