@@ -779,6 +779,9 @@ video {
 .mt-3 {
   margin-top: 0.75rem;
 }
+.mt-32 {
+  margin-top: 8rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -794,11 +797,8 @@ video {
 .mt-auto {
   margin-top: auto;
 }
-.mt-36 {
-  margin-top: 9rem;
-}
-.mt-32 {
-  margin-top: 8rem;
+.mt-24 {
+  margin-top: 6rem;
 }
 .line-clamp-2 {
   overflow: hidden;
@@ -1544,22 +1544,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-.py-52 {
-  padding-top: 13rem;
-  padding-bottom: 13rem;
-}
-.py-40 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-.py-44 {
-  padding-top: 11rem;
-  padding-bottom: 11rem;
-}
-.py-48 {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
 }
 .pb-12 {
   padding-bottom: 3rem;
