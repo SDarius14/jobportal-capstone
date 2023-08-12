@@ -2020,6 +2020,11 @@ video {
   border-color: rgb(0 191 88 / var(--tw-border-opacity));
 }
 
+    .hover\:border-white:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
     .hover\:bg-\[\#00bf58\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 191 88 / var(--tw-bg-opacity));
