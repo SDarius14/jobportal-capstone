@@ -9,7 +9,9 @@
       aria-expanded="true"
       aria-labelledby="listbox-label"
     >
-      <span class="block truncate" x-text="selectedPosition !== '' ? selectedPosition : 'Select Position'"></span>
+      <span class="block truncate" 
+      x-bind:class="{ 'text-black': selectedPosition !== '', 'text-gray-500': selectedPosition === '' }"
+      x-text="selectedPosition !== '' ? selectedPosition : 'Select Position'"></span>
         
       <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
         <!-- Expand Icon -->
@@ -21,6 +23,7 @@
 
     <ul
       x-show="positionOpen"
+      x-cloack
       x-on:click.away="positionOpen = false"
       class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
       tabindex="-1"
