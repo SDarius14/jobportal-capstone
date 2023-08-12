@@ -42,7 +42,7 @@ marp: true
 
 <h2>Developers:</h2>
 
-<a href="https://github.com/SDarius14"><img src="https://img.shields.io/badge/dariushernandez-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a> <a href="https://github.com/emailjohnthomascaballero"><img src="https://img.shields.io/badge/johncaballero-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a> <a href="https://github.com/jebsonubaldo"><img src="https://img.shields.io/badge/jebsonubaldo-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a> <a href=""><img src="https://img.shields.io/badge/macaguirre-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a>
+<a href="https://github.com/SDarius14"><img src="https://img.shields.io/badge/dariushernandez-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a> - Project Manager </br> <a href="https://github.com/emailjohnthomascaballero"><img src="https://img.shields.io/badge/johncaballero-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a> - QA Analyst </br> <a href="https://github.com/jebsonubaldo"><img src="https://img.shields.io/badge/jebsonubaldo-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"></a> - DevOps Engineer
 
 --- 
 
@@ -102,7 +102,7 @@ Jobi is a cutting-edge job portal website that aims to redefine the way you sear
     - Planning <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"> <img src="https://img.shields.io/badge/git%20-%23F05032.svg?&style=for-the-badge&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/Excalidraw%20-%23FFDC00.svg?&style=for-the-badge&logo=Excalidraw&logoColor=black"/>
     - Design <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"> <img src="https://img.shields.io/badge/Envato%20Elements-00AEF0?style=for-the-badge&logo=envato&logoColor=white)](https://elements.envato.com/"> <img src="https://img.shields.io/badge/Google%20Fonts%20-%234285F4.svg?&style=for-the-badge&logo=Google%20Fonts&logoColor=white"> <img src="https://img.shields.io/badge/Unsplash%20-%2316a34a.svg?&style=for-the-badge&logo=Unsplash&logoColor=white">
     - Development <img src="https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio"> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> <img src="https://img.shields.io/badge/Embedded_Javascript%20-%23E74C3C.svg?&style=for-the-badge&logo=EJS&logoColor=white">
-    - Libraries <img src="https://img.shields.io/badge/tailwind%20css%20-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white"> <img src="https://img.shields.io/badge/node.js%20-%23008CC1.svg?&style=for-the-badge&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/Particle.js%20-%23007BFF.svg?&style=for-the-badge&logo=particle.js&logoColor=white"> <img src="https://img.shields.io/badge/Chart.js%20-%23FF6384.svg?&style=for-the-badge&logo=chart.js&logoColor=white"> <img src="https://img.shields.io/badge/Swiper.js%20-%23FF4500.svg?&style=for-the-badge&logo=Swiper.js&logoColor=white"> <img src="https://img.shields.io/badge/Alpine.js%20-%238BC34A.svg?&style=for-the-badge&logo=Alpine.js&logoColor=white"> <img src="https://img.shields.io/badge/ScrollReveal%20-%230A0A0A.svg?&style=for-the-badge&logo=ScrollReveal&logoColor=white"> 
+    - Libraries <img src="https://img.shields.io/badge/tailwind%20css%20-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white"> <img src="https://img.shields.io/badge/node.js%20-%23008CC1.svg?&style=for-the-badge&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/Express.js-47A248?style=for-the-badge&logo=express&logoColor=white"> <img src="https://img.shields.io/badge/Particle.js%20-%23007BFF.svg?&style=for-the-badge&logo=particle.js&logoColor=white"> <img src="https://img.shields.io/badge/Chart.js%20-%23FF6384.svg?&style=for-the-badge&logo=chart.js&logoColor=white"> <img src="https://img.shields.io/badge/Swiper.js%20-%23FF4500.svg?&style=for-the-badge&logo=Swiper.js&logoColor=white"> <img src="https://img.shields.io/badge/Alpine.js%20-%238BC34A.svg?&style=for-the-badge&logo=Alpine.js&logoColor=white"> <img src="https://img.shields.io/badge/ScrollReveal%20-%230A0A0A.svg?&style=for-the-badge&logo=ScrollReveal&logoColor=white"> 
     - Deployment <img src="https://img.shields.io/badge/Heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"> 
     - Presentation <img src="https://img.shields.io/badge/Marp%20-%23007ACC.svg?&style=for-the-badge&logo=Marp&logoColor=white"> 
 ---
@@ -113,17 +113,20 @@ Jobi is a cutting-edge job portal website that aims to redefine the way you sear
 
 * Creating <img src="https://img.shields.io/badge/Embedded_Javascript%20-%23E74C3C.svg?&style=for-the-badge&logo=EJS&logoColor=white"> boilerplate
 
-Workaround
-1. setting up route
-2. analyzation of page structure
-3. identification of components
-4. identification of partials
-5. building the whole page
-
 * Setup <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">  daily meetings for deliverables
 
 * Mentoring & discussing challenges via <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"> chat
 
+---
+
+<h2>Development</h2>
+
+* Workaround
+    * Setting up route
+    * Analyzation of page structure
+    * Identification of components
+    * Identification of partials
+    * Building the whole page
   
 ---
 ## Deployment
