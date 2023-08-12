@@ -58,7 +58,7 @@ Jobi is a cutting-edge job portal website that aims to redefine the way you sear
 <div class="planning">
 <div>
 
-* Screenshot of inspiration design
+* Screenshot of reference design
 
     <img src="./public/assets/presentation/inspiration_design.png" class="steps">
 
@@ -113,6 +113,13 @@ Jobi is a cutting-edge job portal website that aims to redefine the way you sear
 
 * Creating <img src="https://img.shields.io/badge/Embedded_Javascript%20-%23E74C3C.svg?&style=for-the-badge&logo=EJS&logoColor=white"> boilerplate
 
+Workaround
+1. setting up route
+2. analyzation of page structure
+3. identification of components
+4. identification of partials
+5. building the whole page
+
 * Setup <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">  daily meetings for deliverables
 
 * Mentoring & discussing challenges via <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"> chat
@@ -147,6 +154,7 @@ Jobi is a cutting-edge job portal website that aims to redefine the way you sear
 </div>
 </div>
 
+* Github Link: https://github.com/SDarius14/jobportal-capstone
 * Project Link: https://jobi-267797d59065.herokuapp.com/
 
 ---

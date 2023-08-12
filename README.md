@@ -212,3 +212,14 @@ _Below is an example of how you can install and setup the application on your de
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
+  ## Graphs
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=SDarius14)](https://github.com/SDarius14/jobportal-capstone/graphs/commit-activity)
+<!-- Back to Top -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[![Anurag's GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=SDarius14&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/SDarius14/jobportal-capstone/graphs/commit-activity)
+
+### GitHub Stats:
+
+![](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=adityaseth777&&show_icons=true&theme=tokyonight)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=SDarius14/&theme=tokyonight&hide_border=false)<br/>
