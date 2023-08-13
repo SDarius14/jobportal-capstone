@@ -36,4 +36,5 @@
       z-index: -999;
     }
 
-    [x-cloak] { display: none !important; }
+    /* [x-cloak] hides elements until Alpine.js applies animations. */
+    [x-cloak] { display: none !important; } 

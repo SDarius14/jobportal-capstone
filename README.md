@@ -67,7 +67,7 @@ Our vision at Jobi is to revolutionize the way people approach their careers by 
 
 <h2 id="project-link">IV. Project Link</h2>
 
-https://jobi-267797d59065.herokuapp.com/
+https://jobi-08d105e8e560.herokuapp.com/
 <!-- Back to Top -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
