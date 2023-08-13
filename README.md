@@ -1,29 +1,8 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Space+Mono:wght@400;700&display=swap');
-
-    * {
-      font-family: "DM Sans", sans-serif;
-    }
-
-    .header {
-      font-family: 'Space Mono', monospace;
-    }
-
-    h1 {
-      color: #16a34a;
-      font-weight: 900;
-    }
-
-    h2 {
-      color: #d2f34c;
-      font-weight: 400;
-    }
-</style>
-
+<!-- JOBI: JOB PORTAL PROJECT -->
 <h1 id="readme-top">JOBI : JOB PORTAL PROJECT</h1>
 <p class="header">Are you ready to embark on a journey toward your dream career? Look no further than Jobi, your ultimate job portal and the gateway to a world of professional opportunities. Whether you're a seasoned executive looking to take the next step in your career or a fresh graduate eager to make your mark, Jobi is here to guide you every step of the way.</p>
 
-<img src="./public/assets/images/banner.png"> 
+<img src="./public/assets/presentation/banner.png"> 
 
 </br>
 
@@ -57,66 +36,23 @@ Our vision at Jobi is to revolutionize the way people approach their careers by 
 <h2 id="languages">II. Languages and Tools Used</h2>
 
 #### Planning
-<!-- Notion -->
-<img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"> 
-<!-- Discord -->
-<img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"> 
-<!-- Git -->
-<img src="https://img.shields.io/badge/git%20-%23F05032.svg?&style=for-the-badge&logo=git&logoColor=white"/> 
-<!-- Github -->
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/> 
-<!-- Excalidraw -->
-<img src="https://img.shields.io/badge/Excalidraw%20-%23FFDC00.svg?&style=for-the-badge&logo=Excalidraw&logoColor=black"/>
+<img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"> <img src="https://img.shields.io/badge/git%20-%23F05032.svg?&style=for-the-badge&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/Excalidraw%20-%23FFDC00.svg?&style=for-the-badge&logo=Excalidraw&logoColor=black"/>
 </br>
 
 #### Design
-<!-- Figma -->
-<img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"> 
-<!-- Envato Elements -->
-<img src="https://img.shields.io/badge/Envato%20Elements-00AEF0?style=for-the-badge&logo=envato&logoColor=white)](https://elements.envato.com/"> 
-<!-- Google Fonts -->
-<img src="https://img.shields.io/badge/Google%20Fonts%20-%234285F4.svg?&style=for-the-badge&logo=Google%20Fonts&logoColor=white">
-<!-- Unsplash -->
-<img src="https://img.shields.io/badge/Unsplash%20-%2316a34a.svg?&style=for-the-badge&logo=Unsplash&logoColor=white">
-</br>
+<img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"> <img src="https://img.shields.io/badge/Envato%20Elements-00AEF0?style=for-the-badge&logo=envato&logoColor=white)](https://elements.envato.com/"> <img src="https://img.shields.io/badge/Google%20Fonts%20-%234285F4.svg?&style=for-the-badge&logo=Google%20Fonts&logoColor=white"> <img src="https://img.shields.io/badge/Unsplash%20-%2316a34a.svg?&style=for-the-badge&logo=Unsplash&logoColor=white">
 
 #### Development
-<!-- VS Code -->
-<img src="https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio"> 
-<!-- HTML -->
-<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> 
-<!-- CSS -->
-<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> 
-<!-- Javascript -->
-<img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> 
-<!-- EJS -->
-<img src="https://img.shields.io/badge/Embedded_Javascript%20-%23E74C3C.svg?&style=for-the-badge&logo=EJS&logoColor=white">
-</br>
+<img src="https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio"> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> <img src="https://img.shields.io/badge/Embedded_Javascript%20-%23E74C3C.svg?&style=for-the-badge&logo=EJS&logoColor=white">
 
 #### Libraries
-<!-- Tailwind CSS -->
-<img src="https://img.shields.io/badge/tailwind%20css%20-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white"> 
-<!-- Node.JS -->
-<img src="https://img.shields.io/badge/node.js%20-%23008CC1.svg?&style=for-the-badge&logo=node.js&logoColor=white"> 
-<!-- Particle.JS -->
-<img src="https://img.shields.io/badge/Particle.js%20-%23007BFF.svg?&style=for-the-badge&logo=particle.js&logoColor=white"> 
-<!-- Chart.JS -->
-<img src="https://img.shields.io/badge/Chart.js%20-%23FF6384.svg?&style=for-the-badge&logo=chart.js&logoColor=white"> 
-<!-- Swiper.JS -->
-<img src="https://img.shields.io/badge/Swiper.js%20-%23FF4500.svg?&style=for-the-badge&logo=Swiper.js&logoColor=white"> 
-<!-- Alpine.JS -->
-<img src="https://img.shields.io/badge/Alpine.js%20-%238BC34A.svg?&style=for-the-badge&logo=Alpine.js&logoColor=white"> 
-<!-- Scrollreveal -->
-<img src="https://img.shields.io/badge/ScrollReveal%20-%230A0A0A.svg?&style=for-the-badge&logo=ScrollReveal&logoColor=white"> 
-</br>
+<img src="https://img.shields.io/badge/tailwind%20css%20-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white"> <img src="https://img.shields.io/badge/node.js%20-%23008CC1.svg?&style=for-the-badge&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/Express.js-47A248?style=for-the-badge&logo=express&logoColor=white"> <img src="https://img.shields.io/badge/Particle.js%20-%23007BFF.svg?&style=for-the-badge&logo=particle.js&logoColor=white"> <img src="https://img.shields.io/badge/Chart.js%20-%23FF6384.svg?&style=for-the-badge&logo=chart.js&logoColor=white"> <img src="https://img.shields.io/badge/Swiper.js%20-%23FF4500.svg?&style=for-the-badge&logo=Swiper.js&logoColor=white"> <img src="https://img.shields.io/badge/Alpine.js%20-%238BC34A.svg?&style=for-the-badge&logo=Alpine.js&logoColor=white"> <img src="https://img.shields.io/badge/ScrollReveal%20-%230A0A0A.svg?&style=for-the-badge&logo=ScrollReveal&logoColor=white"> 
 
 #### Deployment
 <!-- Heroku -->
 <img src="https://img.shields.io/badge/Heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"> 
-</br>
 
 #### Presentation
-<!-- MARP -->
 <img src="https://img.shields.io/badge/Marp%20-%23007ACC.svg?&style=for-the-badge&logo=Marp&logoColor=white"> 
 <!-- Back to Top -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -131,7 +67,7 @@ Our vision at Jobi is to revolutionize the way people approach their careers by 
 
 <h2 id="project-link">IV. Project Link</h2>
 
-https://jobi-6e0b4dda90ab.herokuapp.com/
+https://jobi-267797d59065.herokuapp.com/
 <!-- Back to Top -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
