@@ -52,10 +52,11 @@
         >
           Dashboard
           <svg
-            class="h-5 w-5 flex-none text-gray-400"
+            class="h-5 w-5 flex-none text-gray-400 transform transition-transform"
             viewBox="0 0 20 20"
             fill="currentColor"
             aria-hidden="true"
+            :class="{'rotate-180': open}"
           >
             <path
               fill-rule="evenodd"
@@ -220,10 +221,11 @@
                   Open: "rotate-180", Closed: ""
                 -->
                 <svg
-                  class="h-5 w-5 flex-none"
+                  class="h-5 w-5 flex-none transform transition-transform"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
+                  :class="{'rotate-180': mobileMenuOpen}"
                 >
                   <path
                     fill-rule="evenodd"
