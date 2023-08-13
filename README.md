@@ -67,7 +67,7 @@ Our vision at Jobi is to revolutionize the way people approach their careers by 
 
 <h2 id="project-link">IV. Project Link</h2>
 
-https://jobi-267797d59065.herokuapp.com/
+https://jobi-08d105e8e560.herokuapp.com/
 <!-- Back to Top -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,22 +114,22 @@ _Below is an example of how you can install and setup the application on your de
 
 <h2 id="pages">VII. Pages</h2>
 
-- <a href="" target="_blank">Homepage</a>
-- <a href="" target="_blank">Login</a>
-- <a href="" target="_blank">Signup</a>
-- <a href="" target="_blank">Job List</a>
-- <a href="" target="_blank">Job Details</a>
-- <a href="" target="_blank">Candidates</a>
-- <a href="" target="_blank">Candidate Profile</a>
-- <a href="" target="_blank">Candidate Dashboard</a>
-  - <a href="" target="_blank">My Profile</a>
-  - <a href="" target="_blank">Messages</a>
-  - <a href="" target="_blank">Account Settings</a>
-- <a href="" target="_blank">Employer Dashboard</a>
-  - <a href="" target="_blank">My Profile</a>
-  - <a href="" target="_blank">Messages</a>
-  - <a href="" target="_blank">Submit Job</a>
-  - <a href="" target="_blank">Account Settings</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/" target="_blank">Homepage</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/login" target="_blank">Login</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/signup" target="_blank">Signup</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/job-list" target="_blank">Job List</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/job-details" target="_blank">Job Details</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/candidates" target="_blank">Candidates</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/candidate-profile" target="_blank">Candidate Profile</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/candidate-dashboard" target="_blank">Candidate Dashboard</a>
+  - <a href="https://jobi-08d105e8e560.herokuapp.com/my-profile" target="_blank">My Profile</a>
+  - <a href="https://jobi-08d105e8e560.herokuapp.com/messages" target="_blank">Messages</a>
+  - <a href="https://jobi-08d105e8e560.herokuapp.com/account-settings" target="_blank">Account Settings</a>
+- <a href="https://jobi-08d105e8e560.herokuapp.com/employer-dashboard" target="_blank">Employer Dashboard</a>
+  - <a href="https://jobi-08d105e8e560.herokuapp.com/employer-profile" target="_blank">My Profile</a>
+  - <a href="https://jobi-08d105e8e560.herokuapp.com/employer-messages" target="_blank">Messages</a>
+  - <a href="https://jobi-08d105e8e560.herokuapp.com/submit-job" target="_blank">Submit Job</a>
+  - <a href="https://jobi-08d105e8e560.herokuapp.com/employer-account-settings" target="_blank">Account Settings</a>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
