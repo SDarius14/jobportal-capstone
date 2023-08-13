@@ -1,121 +1,85 @@
 <section>
   <div class="bg-white relative isolate h-screen">
       <div id="particles-js"></div>
-    <div class="relative isolate px-6 lg:px-8">
+    <div class="relative isolate px-4 md:px-0">
     
 
       <!-- Main Hero -->
-      <div class="mx-auto max-w-2xl py-32 mt-32">
-        <div class="hidden sm:flex sm:justify-center"></div>
-        <div class="text-center flex flex-col justify-center items-center">
+        <div class="text-center h-screen flex flex-col justify-center items-center mt-12 sm:mt-20">
           <h1
             class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl max-w-xs sm:max-w-md md:max-w-2xl"
           >
             <%= title %>
           </h1>
-          <p class="text-lg leading-8 text-gray-600"><%= subTitle %></p> 
-        </div>
+          <p class="text-base leading-8 text-gray-600"><%= subTitle %></p> 
+        
         <!-- Search Section -->
-          <div class="mt-10 rounded-lg bg-white flex w-full flex-col justify-between border shadow-md border-gray-300 ">
+          <div class="mt-4 rounded-lg mx-4 sm:mx-0 bg-white flex w-full sm:max-w-2xl flex-col justify-between border shadow-md border-gray-300 ">
             <form class="w-full p-2 flex flex-col sm:flex-row sm:gap-4 justify-between items-center">
-              
-                    
-                        <!-- Job Category -->
-                        <%- include('../../components/molecules/category-select') %>
-                        <!-- Separator -->
-                        <div class="hidden sm:block h-16 w-px bg-gray-200" aria-hidden="true"></div>
-                        <div class="sm:hidden w-full border-t border-gray-200" aria-hidden="true"></div>
+                <!-- Job Category -->
+                <%- include('../../components/molecules/category-select') %>
+                <!-- Separator -->
+                <div class="hidden sm:block h-16 w-px bg-gray-200" aria-hidden="true"></div>
+                <div class="sm:hidden w-full border-t border-gray-200" aria-hidden="true"></div>
 
-                        <!-- Input Keyword/Title -->
-                        <%- include('../../components/molecules/hero-input') %>
-                        
-
-                        <a
-                          href="/job-list"
-                          class="px-14 w-full sm:w-auto flex-grow transition duration-500 rounded-md sm:px-5 py-2 sm:py-6 text-center text-base text-white shadow-sm bg-[#35785b] hover:bg-[#00bf58]"
-                        >
-                          Search
-                        </a>
-                    
-                  
+                <!-- Input Keyword/Title -->
+                <%- include('../../components/molecules/hero-input') %>
                 
+
+                <a
+                  href="/job-list"
+                  class="px-14 w-full sm:w-auto flex-grow transition duration-500 rounded-md sm:px-5 py-2 sm:py-6 text-center text-base text-white shadow-sm bg-[#35785b] hover:bg-[#00bf58]"
+                >
+                  Search
+                </a>
             </form>
           </div>
+          
 
           <p class="mt-4 text-sm leading-6 text-gray-900 text-center">
                   <span class="font-semibold"><%= description %></span> 
                   <%= descriptionTwo %>
                 </p>
-        
-        <!-- <div class="mt-10 flex items-center justify-center gap-x-6 ">
-          <form class="w-full max-w-xl lg:col-span-5 lg:pt-2">
-            <div
-              class="sm:border sm:border-gray-300 shadow-sm sm:shadow-md p-4 rounded-xl flex gap-x-4 bg-white"
-            >
-              
-              <label for="search" class="sr-only">Search</label>
-              <div
-                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
-              ></div>
-              <input
-                id="search"
-                name="search"
-                class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-green-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm sm:leading-6"
-                placeholder="Search Jobs..."
-                type="search"
-              />
-              
-              <a
-                href="/job-list"
-                class="inline-flex transition duration-500 items-center gap-x-2 rounded-md  px-5 py-2.5 text-base text-white shadow-sm bg-[#35785b] hover:bg-[#00bf58] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
-              >
-                Search
-              </a>
-            </div>
-            <p class="mt-4 text-sm leading-6 text-gray-900 text-center">
-              <span class="font-semibold"><%= description %></span> 
-              <%= descriptionTwo %>
-            </p>
-          </form>
-        </div> -->
         <!-- /Search Section -->
+        <!-- Slider main container -->
+        <div class="swiper max-w-full lg:px-8">
+          <!-- Additional required wrapper -->
+          <div
+            class="swiper-wrapper mx-auto mt-10 items-center gap-x-8 flex justify-center"
+          >
+            <!-- Slides -->
+              <div class="swiper-slide">
+                <%- include('../../components/atoms/google-icon'); %>
+              </div>
+              <div class="swiper-slide">
+                <%- include('../../components/atoms/shipbob-icon'); %>
+              </div>
+              <div class="swiper-slide">
+                <%- include('../../components/atoms/dribbble-icon'); %>
+              </div>
+              <div class="swiper-slide">
+                <%- include('../../components/atoms/slack-icon'); %>
+              </div>
+              <div class="swiper-slide">
+                <%- include('../../components/atoms/vine-icon'); %>
+              </div>
+              <div class="swiper-slide">
+                <%- include('../../components/atoms/airbnb-icon'); %>
+              </div>
+              <div class="swiper-slide">
+                <%- include('../../components/atoms/google-icon'); %>
+              </div>
+              <div class="swiper-slide">
+                <%- include('../../components/atoms/shipbob-icon'); %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- /Main Hero -->
     </div>
 
-    <!-- Slider main container -->
-    <div class="swiper max-w-full lg:px-8">
-      <!-- Additional required wrapper -->
-      <div
-        class="swiper-wrapper mx-auto mt-10 items-center gap-x-8 flex justify-center"
-      >
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <%- include('../../components/atoms/google-icon'); %>
-        </div>
-        <div class="swiper-slide">
-          <%- include('../../components/atoms/shipbob-icon'); %>
-        </div>
-        <div class="swiper-slide">
-          <%- include('../../components/atoms/dribbble-icon'); %>
-        </div>
-        <div class="swiper-slide">
-          <%- include('../../components/atoms/slack-icon'); %>
-        </div>
-        <div class="swiper-slide">
-          <%- include('../../components/atoms/vine-icon'); %>
-        </div>
-        <div class="swiper-slide">
-          <%- include('../../components/atoms/airbnb-icon'); %>
-        </div>
-        <div class="swiper-slide">
-          <%- include('../../components/atoms/google-icon'); %>
-        </div>
-        <div class="swiper-slide">
-          <%- include('../../components/atoms/shipbob-icon'); %>
-        </div>
-      </div>
-    </div>
+
   </div>
 </section>
 
