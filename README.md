@@ -129,7 +129,7 @@ _Below is an example of how you can install and setup the application on your de
   - <a href="https://jobi-6e0b4dda90ab.herokuapp.com/employer-profile">My Profile</a>
   - <a href="https://jobi-6e0b4dda90ab.herokuapp.com/employer-messages">Messages</a>
   - <a href="https://jobi-6e0b4dda90ab.herokuapp.com/submit-job">Submit Job</a>
-  - <a href="https://jobi-33f79864b783.herokuapp.com/employer-account-settings">Account Settings</a>
+  - <a href="https://jobi-6e0b4dda90ab.herokuapp.com/employer-account-settings">Account Settings</a>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
