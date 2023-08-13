@@ -67,7 +67,7 @@ Our vision at Jobi is to revolutionize the way people approach their careers by 
 
 <h2 id="project-link">IV. Project Link</h2>
 
-https://jobi-08d105e8e560.herokuapp.com/
+https://jobi-6e0b4dda90ab.herokuapp.com
 <!-- Back to Top -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +114,7 @@ _Below is an example of how you can install and setup the application on your de
 
 <h2 id="pages">VII. Pages</h2>
 
-- <a href="https://jobi-6e0b4dda90ab.herokuapp.com//">Homepage</a>
+- <a href="https://jobi-6e0b4dda90ab.herokuapp.com/">Homepage</a>
 - <a href="https://jobi-6e0b4dda90ab.herokuapp.com/login">Login</a>
 - <a href="https://jobi-6e0b4dda90ab.herokuapp.com/signup">Signup</a>
 - <a href="https://jobi-6e0b4dda90ab.herokuapp.com/job-list">Job List</a>
